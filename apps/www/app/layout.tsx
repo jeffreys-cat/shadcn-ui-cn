@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
+import Script from "next/script"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -100,6 +101,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <TailwindIndicator />
             <ThemeSwitcher />
             <Analytics />
+            {process.env.NODE_ENV !== "development" && (
+              <>
+                <Script
+                  src="https://www.googletagmanager.com/gtag/js?id=G-0F0ZLY79RS"
+                  strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                  {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){window.dataLayer.push(arguments);}
+                        gtag('js', new Date());
+
+                        gtag('config', 'G-0F0ZLY79RS');
+                        `}
+                </Script>
+              </>
+            )}
             <NewYorkToaster />
             <DefaultToaster />
             <NewYorkSonner />
