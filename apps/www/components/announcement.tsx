@@ -12,9 +12,7 @@ export function Announcement() {
     >
       <PieChart className="h-4 w-4" />{" "}
       <Separator className="mx-2 h-4" orientation="vertical" />{" "}
-      <span className="underline-offset-4 group-hover:underline">
-        Introducing Charts
-      </span>
+      <span className="underline-offset-4 group-hover:underline">表格介绍</span>
       <ArrowRightIcon className="ml-1 h-4 w-4" />
     </Link>
   )

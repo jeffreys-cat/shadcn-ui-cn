@@ -26,7 +26,7 @@ export function MainNav() {
             pathname === "/docs" ? "text-foreground" : "text-foreground/60"
           )}
         >
-          Docs
+          文档
         </Link>
         <Link
           href="/docs/components"
@@ -38,7 +38,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Components
+          组件
         </Link>
         <Link
           href="/blocks"
@@ -72,7 +72,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Themes
+          主题
         </Link>
         <Link
           href="/examples"
@@ -83,7 +83,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Examples
+          样例
         </Link>
         <Link
           href="/colors"

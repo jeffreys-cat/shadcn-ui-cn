@@ -52,7 +52,7 @@ export function MobileNav() {
               strokeLinejoin="round"
             ></path>
           </svg>
-          <span className="sr-only">Toggle Menu</span>
+          <span className="sr-only">菜单</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="pr-0">

@@ -14,7 +14,7 @@ export function SiteFooter() {
           >
             shadcn
           </a>
-          . The source code is available on{" "}
+          . 源代码可在{" "}
           <a
             href={siteConfig.links.github}
             target="_blank"
@@ -23,7 +23,7 @@ export function SiteFooter() {
           >
             GitHub
           </a>
-          .
+          上获得。
         </p>
       </div>
     </footer>
