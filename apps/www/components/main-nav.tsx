@@ -26,7 +26,7 @@ export function MainNav() {
             pathname === "/docs" ? "text-foreground" : "text-foreground/80"
           )}
         >
-          Docs
+          文档
         </Link>
         <Link
           href="/docs/components"
@@ -38,7 +38,7 @@ export function MainNav() {
               : "text-foreground/80"
           )}
         >
-          Components
+          组件
         </Link>
         <Link
           href="/blocks"
@@ -72,7 +72,18 @@ export function MainNav() {
               : "text-foreground/80"
           )}
         >
-          Themes
+          主题
+        </Link>
+        <Link
+          href="/examples"
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname?.startsWith("/examples")
+              ? "text-foreground"
+              : "text-foreground/60"
+          )}
+        >
+          样例
         </Link>
         <Link
           href="/colors"

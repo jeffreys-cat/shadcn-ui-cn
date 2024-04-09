@@ -47,7 +47,7 @@ export function MobileNav() {
               d="M3.75 9h16.5m-16.5 6.75h16.5"
             />
           </svg>
-          <span className="sr-only">Toggle Menu</span>
+          <span className="sr-only">菜单</span>
         </Button>
       </DrawerTrigger>
       <DrawerContent className="max-h-[60svh] p-0">
