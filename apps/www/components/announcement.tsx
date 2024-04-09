@@ -12,7 +12,7 @@ export function Announcement() {
     >
       <Blocks className="h-4 w-4" />{" "}
       <Separator className="mx-2 h-4" orientation="vertical" />{" "}
-      <span>Introducing Lift Mode</span>
+      <span>介绍 Lift 模式</span>
       <ArrowRightIcon className="ml-1 h-4 w-4" />
     </Link>
   )

@@ -20,14 +20,13 @@ export default function IndexPage() {
     <div className="container relative">
       <PageHeader>
         <Announcement />
-        <PageHeaderHeading>Build your component library</PageHeaderHeading>
+        <PageHeaderHeading>构建你的组件库</PageHeaderHeading>
         <PageHeaderDescription>
-          Beautifully designed components that you can copy and paste into your
-          apps. Accessible. Customizable. Open Source.
+          设计精美的组件，你可以复制和粘贴到你的应用程序。可访问。可定制的。开源的。
         </PageHeaderDescription>
         <PageActions>
           <Link href="/docs" className={cn(buttonVariants())}>
-            Get Started
+            快速开始
           </Link>
           <Link
             target="_blank"
