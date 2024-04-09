@@ -15,14 +15,14 @@ export function SiteFooter() {
             >
               shadcn
             </a>
-            . The source code is available on{" "}
+            . 源代码可在{" "}
             <a
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              GitHub
+              GitHub 上获得
             </a>
             .
           </div>

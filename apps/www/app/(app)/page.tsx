@@ -13,9 +13,9 @@ import {
 } from "@/components/page-header"
 import { Button } from "@/registry/new-york/ui/button"
 
-const title = "Build your component library"
+const title = "构建你的组件库"
 const description =
-  "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code."
+  "设计精美的组件，你可以复制和粘贴到你的应用程序。可访问。可定制的。开源的。"
 
 export const metadata: Metadata = {
   title,
@@ -50,10 +50,10 @@ export default function IndexPage() {
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm" className="rounded-md">
-            <Link href="/docs/installation">Get Started</Link>
+            <Link href="/docs/installation">快速开始</Link>
           </Button>
           <Button asChild size="sm" variant="ghost" className="rounded-md">
-            <Link href="/blocks">Browse Blocks</Link>
+            <Link href="/blocks">浏览 Blocks</Link>
           </Button>
         </PageActions>
       </PageHeader>
