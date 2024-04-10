@@ -53,7 +53,7 @@ export function ThemeCustomizer() {
       <Drawer>
         <DrawerTrigger asChild>
           <Button size="sm" className="md:hidden">
-            Customize
+            个性化
           </Button>
         </DrawerTrigger>
         <DrawerContent className="p-6 pt-0">
@@ -63,7 +63,7 @@ export function ThemeCustomizer() {
       <div className="hidden items-center md:flex">
         <Popover>
           <PopoverTrigger asChild>
-            <Button size="sm">Customize</Button>
+            <Button size="sm">个性化</Button>
           </PopoverTrigger>
           <PopoverContent
             align="start"
@@ -95,10 +95,10 @@ function Customizer() {
       <div className="flex items-start pt-4 md:pt-0">
         <div className="space-y-1 pr-2">
           <div className="font-semibold leading-none tracking-tight">
-            Theme Customizer
+            主题个性化
           </div>
           <div className="text-xs text-muted-foreground">
-            Customize your components colors.
+            为你的组件选择一个样式和颜色
           </div>
         </div>
         <Button
@@ -146,9 +146,8 @@ function Customizer() {
                     )}
                     style={
                       {
-                        "--theme-primary": `hsl(${
-                          theme?.activeColor[mode === "dark" ? "dark" : "light"]
-                        })`,
+                        "--theme-primary": `hsl(${theme?.activeColor[mode === "dark" ? "dark" : "light"]
+                          })`,
                       } as React.CSSProperties
                     }
                   >
@@ -184,7 +183,7 @@ function Customizer() {
                   }}
                   className={cn(
                     config.radius === parseFloat(value) &&
-                      "border-2 border-primary"
+                    "border-2 border-primary"
                   )}
                 >
                   {value}
@@ -262,21 +261,20 @@ function CopyCodeButton({
           {...props}
         >
           {hasCopied ? <Check /> : <Copy />}
-          Copy code
-        </Button>
-      )}
+          复制代码
+        </Button >
+      )
+      }
       <Dialog>
         <DialogTrigger asChild>
           <Button className={cn("hidden md:flex", className)} {...props}>
-            Copy code
+            复制代码
           </Button>
         </DialogTrigger>
         <DialogContent className="max-w-2xl outline-none">
           <DialogHeader>
-            <DialogTitle>Theme</DialogTitle>
-            <DialogDescription>
-              Copy and paste the following code into your CSS file.
-            </DialogDescription>
+            <DialogTitle>主题</DialogTitle>
+            <DialogDescription>复制并粘贴到你的 CSS 文件中</DialogDescription>
           </DialogHeader>
           <ThemeWrapper defaultTheme="zinc" className="relative">
             <CustomizerCode />
@@ -342,7 +340,7 @@ function CustomizerCode() {
                   &nbsp;&nbsp;&nbsp;&nbsp;--{prefix}:{" "}
                   {
                     activeTheme?.cssVars.light[
-                      prefix as keyof typeof activeTheme.cssVars.light
+                    prefix as keyof typeof activeTheme.cssVars.light
                     ]
                   }
                   ;
@@ -351,7 +349,7 @@ function CustomizerCode() {
                   &nbsp;&nbsp;&nbsp;&nbsp;--{prefix}-foreground:{" "}
                   {
                     activeTheme?.cssVars.light[
-                      `${prefix}-foreground` as keyof typeof activeTheme.cssVars.light
+                    `${prefix}-foreground` as keyof typeof activeTheme.cssVars.light
                     ]
                   }
                   ;
@@ -380,7 +378,7 @@ function CustomizerCode() {
                     &nbsp;&nbsp;&nbsp;&nbsp;--{prefix}:{" "}
                     {
                       activeTheme?.cssVars.light[
-                        prefix as keyof typeof activeTheme.cssVars.light
+                      prefix as keyof typeof activeTheme.cssVars.light
                       ]
                     }
                     ;
@@ -413,7 +411,7 @@ function CustomizerCode() {
                   &nbsp;&nbsp;&nbsp;&nbsp;--{prefix}:{" "}
                   {
                     activeTheme?.cssVars.dark[
-                      prefix as keyof typeof activeTheme.cssVars.dark
+                    prefix as keyof typeof activeTheme.cssVars.dark
                     ]
                   }
                   ;
@@ -422,7 +420,7 @@ function CustomizerCode() {
                   &nbsp;&nbsp;&nbsp;&nbsp;--{prefix}-foreground:{" "}
                   {
                     activeTheme?.cssVars.dark[
-                      `${prefix}-foreground` as keyof typeof activeTheme.cssVars.dark
+                    `${prefix}-foreground` as keyof typeof activeTheme.cssVars.dark
                     ]
                   }
                   ;
@@ -448,7 +446,7 @@ function CustomizerCode() {
                     &nbsp;&nbsp;&nbsp;&nbsp;--{prefix}:{" "}
                     {
                       activeTheme?.cssVars.dark[
-                        prefix as keyof typeof activeTheme.cssVars.dark
+                      prefix as keyof typeof activeTheme.cssVars.dark
                       ]
                     }
                     ;
