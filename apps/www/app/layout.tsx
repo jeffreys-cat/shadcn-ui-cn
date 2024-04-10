@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "shadcn",
-      url: "https://shadcn.com",
+      url: "https://shadcn.com.cn",
     },
   ],
   creator: "shadcn",
