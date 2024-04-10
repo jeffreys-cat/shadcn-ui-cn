@@ -48,11 +48,11 @@ export function BlockCopyButton({
           }}
           {...props}
         >
-          <span className="sr-only">Copy</span>
+          <span className="sr-only">复制</span>
           {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
         </Button>
       </TooltipTrigger>
-      <TooltipContent>Copy code</TooltipContent>
+      <TooltipContent>复制代码</TooltipContent>
     </Tooltip>
   )
 }
