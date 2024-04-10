@@ -1,29 +1,27 @@
 ---
 title: components.json
-description: Configuration for your project.
+description: 项目配置
 ---
 
-The `components.json` file holds configuration for your project.
+`components.json` 文件保存了项目配置。
 
-We use it to understand how your project is set up and how to generate components customized for your project.
+shadcn/ui 用它来了解项目是如何设置的，以及如何为您的项目生成个性化的组件。
 
 <Callout className="mt-6">
-  Note: The `components.json` file is optional and **only required if you're
-  using the CLI** to add components to your project. If you're using the copy
-  and paste method, you don't need this file.
+  注意：`components.json` 文件是可选的，**仅在使用 CLI 向项目添加组件时才需要**。如果你通过复制粘贴的方式，不需要这个文件。
 </Callout>
 
-You can create a `components.json` file in your project by running the following command:
+您可以通过运行以下命令在项目中创建 `components.json` :
 
 ```bash
 npx shadcn@latest init
 ```
 
-See the <Link href="/docs/cli">CLI section</Link> for more information.
+更多信息请查看 <Link href="/docs/cli">CLI section</Link>。
 
 ## $schema
 
-You can see the JSON Schema for `components.json` [here](https://ui.shadcn.com/schema.json).
+你可以在这里查看`components.json`的 JSON Schema  [here](https://ui.shadcn.com/schema.json)。
 
 ```json title="components.json"
 {
@@ -31,9 +29,9 @@ You can see the JSON Schema for `components.json` [here](https://ui.shadcn.com/s
 }
 ```
 
-## style
+## 风格
 
-The style for your components. **This cannot be changed after initialization.**
+组件的样式， **初始化后无法更改！**
 
 ```json title="components.json"
 {
@@ -45,9 +43,9 @@ The `default` style has been deprecated. Use the `new-york` style instead.
 
 ## tailwind
 
-Configuration to help the CLI understand how Tailwind CSS is set up in your project.
+帮助 CLI 了解如何你项目中 Tailwind CSS 的配置。
 
-See the <Link href="/docs/installation">installation section</Link> for how to set up Tailwind CSS.
+如何设置 Tailwind CSS，请查看 <Link href="/docs/installation">installation section</Link>.
 
 ### tailwind.config
 
@@ -63,7 +61,7 @@ Path to where your `tailwind.config.js` file is located. **For Tailwind CSS v4, 
 
 ### tailwind.css
 
-Path to the CSS file that imports Tailwind CSS into your project.
+将 CSS 文件 导入到项目 Tailwind CSS 配置中。
 
 ```json title="components.json"
 {
@@ -75,7 +73,7 @@ Path to the CSS file that imports Tailwind CSS into your project.
 
 ### tailwind.baseColor
 
-This is used to generate the default color palette for your components. **This cannot be changed after initialization.**
+用于生成组件的默认调色板。 **初始化后无法更改！**
 
 ```json title="components.json"
 {
@@ -87,9 +85,9 @@ This is used to generate the default color palette for your components. **This c
 
 ### tailwind.cssVariables
 
-You can choose between using CSS variables or Tailwind CSS utility classes for theming.
+您可以选择使用 CSS 变量或 Tailwind CSS 工具类进行主题设置。
 
-To use utility classes for theming set `tailwind.cssVariables` to `false`. For CSS variables, set `tailwind.cssVariables` to `true`.
+使用 Tailwind CSS 工具类进行主题设置 set `tailwind.cssVariables` to `false`. 使用 CSS variables, set `tailwind.cssVariables` to `true`.
 
 ```json title="components.json"
 {
@@ -99,13 +97,13 @@ To use utility classes for theming set `tailwind.cssVariables` to `false`. For C
 }
 ```
 
-For more information, see the <Link href="/docs/theming">theming docs</Link>.
+更多信息请查看 <Link href="/docs/theming">主题文档</Link>.
 
-**This cannot be changed after initialization.** To switch between CSS variables and utility classes, you'll have to delete and re-install your components.
+**初始化后无法更改** 要在 Tailwind CSS 的 CSS 变量和工具类之间切换，您必须删除并重新安装组件。
 
 ### tailwind.prefix
 
-The prefix to use for your Tailwind CSS utility classes. Components will be added with this prefix.
+用于 Tailwind CSS 工具类的前缀，将添加带有此前缀的组件。
 
 ```json title="components.json"
 {
@@ -117,9 +115,9 @@ The prefix to use for your Tailwind CSS utility classes. Components will be adde
 
 ## rsc
 
-Whether or not to enable support for React Server Components.
+是否启用对 React Server Component 的支持
 
-The CLI automatically adds a `use client` directive to client components when set to `true`.
+当设置为 true 时，CLI 会自动向客户端组件添加 `use client` 指令。
 
 ```json title="components.json"
 {
@@ -129,9 +127,9 @@ The CLI automatically adds a `use client` directive to client components when se
 
 ## tsx
 
-Choose between TypeScript or JavaScript components.
+选择使用 TypeScript 或 JavaScript 组件
 
-Setting this option to `false` allows components to be added as JavaScript with the `.jsx` file extension.
+设置改选项为 `false` 允许组件添加扩展名 `.jsx` 的文件。
 
 ```json title="components.json"
 {
@@ -141,18 +139,17 @@ Setting this option to `false` allows components to be added as JavaScript with 
 
 ## aliases
 
-The CLI uses these values and the `paths` config from your `tsconfig.json` or `jsconfig.json` file to place generated components in the correct location.
+CLI 使用这些值以及 `tsconfig.json` 或 `jsconfig.json` 文件中的 `paths` 配置来将生成的组件放置在正确的位置。
 
-Path aliases have to be set up in your `tsconfig.json` or `jsconfig.json` file.
+必须在 `tsconfig.json` 或 `jsconfig.json` 文件中设置 `Path aliases`。
 
 <Callout className="mt-6">
-  **Important:** If you're using the `src` directory, make sure it is included
-  under `paths` in your `tsconfig.json` or `jsconfig.json` file.
+  **重要提示:** 如果您使用 `src` 目录，请确保它包含在 `tsconfig.json` 或 `jsconfig.json` 文件的 `paths` 下
 </Callout>
 
 ### aliases.utils
 
-Import alias for your utility functions.
+设置 utility 函数别名。
 
 ```json title="components.json"
 {
@@ -164,7 +161,8 @@ Import alias for your utility functions.
 
 ### aliases.components
 
-Import alias for your components.
+设置组件别名。
+
 
 ```json title="components.json"
 {
@@ -176,9 +174,9 @@ Import alias for your components.
 
 ### aliases.ui
 
-Import alias for `ui` components.
+设置 `ui`组件的别名。
 
-The CLI will use the `aliases.ui` value to determine where to place your `ui` components. Use this config if you want to customize the installation directory for your `ui` components.
+CLI 将使用 `aliases.ui` 值来确定 `ui` 组件的位置。如果您想自定义 `ui` 组件的安装目录，请使用此配置。
 
 ```json title="components.json"
 {
