@@ -53,11 +53,11 @@ export function ChartCopyButton({
           }}
           {...props}
         >
-          <span className="sr-only">Copy</span>
+          <span className="sr-only">复制</span>
           {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
         </Button>
       </TooltipTrigger>
-      <TooltipContent className="bg-black text-white">Copy code</TooltipContent>
+      <TooltipContent className="bg-black text-white">复制代码</TooltipContent>
     </Tooltip>
   )
 }

@@ -1,9 +1,34 @@
 ---
-title: Theming
-description: Using CSS Variables and color utilities for theming.
+title: 主题
+description: 使用 CSS 变量或 Tailwind CSS 自定义主题。
 ---
 
-You can choose between using CSS variables (recommended) or utility classes for theming.
+你可以使用 CSS 变量 (推荐) 或 Tailwind CSS utility classes 自定义主题。
+
+## Utility classes
+
+```tsx /bg-zinc-950/ /text-zinc-50/ /dark:bg-white/ /dark:text-zinc-950/
+<div className="bg-zinc-950 dark:bg-white" />
+```
+
+使用 utility classes 自定义主题请在 `components.json` 文件中将 `tailwind.cssVariables` 设置为 `false`。
+
+```json {8} title="components.json"
+{
+  "style": "default",
+  "rsc": true,
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "app/globals.css",
+    "baseColor": "slate",
+    "cssVariables": false
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  }
+}
+```
 
 ## CSS Variables
 
@@ -11,7 +36,7 @@ You can choose between using CSS variables (recommended) or utility classes for 
 <div className="bg-background text-foreground" />
 ```
 
-To use CSS variables for theming set `tailwind.cssVariables` to `true` in your `components.json` file.
+要使用 CSS 变量进行主题设置，请在 `components.json` 文件中将 `tailwind.cssVariables` 设置为 `true`。
 
 ```json {8} title="components.json"
 {
