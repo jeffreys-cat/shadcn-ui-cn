@@ -27,13 +27,13 @@ export default function ThemesPage() {
         <PageHeader className="w-full">
           <Announcement />
           <PageHeaderHeading className="hidden md:block">
-            Add colors. Make it yours.
+            添加颜色
           </PageHeaderHeading>
           <PageHeaderHeading className="md:hidden">
-            Make it yours
+            自定义你的主题
           </PageHeaderHeading>
           <PageHeaderDescription>
-            Hand-picked themes that you can copy and paste into your apps.
+            精心挑选的主题，你可以复制并粘贴到你的应用中
           </PageHeaderDescription>
           <PageActions>
             <ThemeCustomizer />

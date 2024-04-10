@@ -61,7 +61,7 @@ export function ThemeCustomizer() {
       <Drawer>
         <DrawerTrigger asChild>
           <Button size="sm" className="md:hidden">
-            Customize
+            个性化
           </Button>
         </DrawerTrigger>
         <DrawerContent className="p-6 pt-0">
@@ -71,7 +71,7 @@ export function ThemeCustomizer() {
       <div className="hidden items-center md:flex">
         <Popover>
           <PopoverTrigger asChild>
-            <Button size="sm">Customize</Button>
+            <Button size="sm">个性化</Button>
           </PopoverTrigger>
           <PopoverContent
             align="start"
@@ -172,10 +172,10 @@ function Customizer() {
       <div className="flex items-start pt-4 md:pt-0">
         <div className="space-y-1 pr-2">
           <div className="font-semibold leading-none tracking-tight">
-            Customize
+            个性化
           </div>
           <div className="text-xs text-muted-foreground">
-            Pick a style and color for your components.
+            为你的组件选择一个样式和颜色
           </div>
         </div>
         <Button
@@ -395,21 +395,19 @@ function CopyCodeButton({
           ) : (
             <CopyIcon className="mr-2 h-4 w-4" />
           )}
-          Copy code
+          复制代码
         </Button>
       )}
       <Dialog>
         <DialogTrigger asChild>
           <Button className={cn("hidden md:flex", className)} {...props}>
-            Copy code
+            复制代码
           </Button>
         </DialogTrigger>
         <DialogContent className="max-w-2xl outline-none">
           <DialogHeader>
-            <DialogTitle>Theme</DialogTitle>
-            <DialogDescription>
-              Copy and paste the following code into your CSS file.
-            </DialogDescription>
+            <DialogTitle>主题</DialogTitle>
+            <DialogDescription>复制并粘贴到你的 CSS 文件中</DialogDescription>
           </DialogHeader>
           <ThemeWrapper defaultTheme="zinc" className="relative">
             <CustomizerCode />

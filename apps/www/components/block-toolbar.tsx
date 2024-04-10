@@ -73,7 +73,7 @@ export function BlockToolbar({
             className="space-y-3 rounded-[0.5rem] text-sm"
           >
             <p className="font-medium">
-              What is the difference between the New York and Default style?
+              “New York”和“Default”风格之间有什么不同？
             </p>
             <p>
               A style comes with its own set of components, animations, icons
