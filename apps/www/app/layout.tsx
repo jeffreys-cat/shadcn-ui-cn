@@ -80,7 +80,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+        <head>
+          <meta name="baidu-site-verification" content="codeva-SASBH9ur3N" />
+        </head>
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
