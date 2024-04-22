@@ -32,6 +32,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "next-sitemap.config.mjs"  ],
   "exclude": ["node_modules", "./scripts/build-registry.mts"]
 }
