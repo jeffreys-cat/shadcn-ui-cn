@@ -23,38 +23,43 @@ interface ExamplesLayoutProps {
 
 export default function ExamplesLayout({ children }: ExamplesLayoutProps) {
   return (
-    <div className="container relative">
-      <PageHeader>
-        <Announcement />
-        <PageHeaderHeading className="hidden md:block">
-          Check out some examples
-        </PageHeaderHeading>
-        <PageHeaderHeading className="md:hidden">Examples</PageHeaderHeading>
-        <PageHeaderDescription>
-          Dashboard, cards, authentication. Some examples built using the
-          components. Use this as a guide to build your own.
-        </PageHeaderDescription>
-        <PageActions>
-          <Link href="/docs" className={cn(buttonVariants(), "rounded-[6px]")}>
-            Get Started
-          </Link>
-          <Link
-            href="/components"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "rounded-[6px]"
-            )}
-          >
-            Components
-          </Link>
-        </PageActions>
-      </PageHeader>
-      <section>
-        <ExamplesNav />
-        <div className="overflow-hidden rounded-[0.5rem] border bg-background shadow">
-          {children}
-        </div>
-      </section>
-    </div>
+    <>
+      <div className="container relative">
+        <PageHeader>
+          <Announcement />
+          <PageHeaderHeading className="hidden md:block">
+            下面是一些例子
+          </PageHeaderHeading>
+          <PageHeaderHeading className="md:hidden">Examples</PageHeaderHeading>
+          <PageHeaderDescription>
+            Dashboard (仪表盘), cards (卡片), authentication
+            (身份验证)，使用这些组件构建的一些示例。将此作为构建您自己的指南。
+          </PageHeaderDescription>
+          <PageActions>
+            <Link
+              href="/docs"
+              className={cn(buttonVariants(), "rounded-[6px]")}
+            >
+              快速开始
+            </Link>
+            <Link
+              href="/components"
+              className={cn(
+                buttonVariants({ variant: "outline" }),
+                "rounded-[6px]"
+              )}
+            >
+              组件
+            </Link>
+          </PageActions>
+        </PageHeader>
+        <section>
+          <ExamplesNav />
+          <div className="overflow-hidden rounded-[0.5rem] border bg-background shadow-md md:shadow-xl">
+            {children}
+          </div>
+        </section>
+      </div>
+    </>
   )
 }
