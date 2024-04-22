@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://shadcn.com.cn
+
+# Sitemaps
+Sitemap: https://shadcn.com.cn/sitemap.xml

@@ -106,37 +106,37 @@ export function Mail({
             isCollapsed={isCollapsed}
             links={[
               {
-                title: "Inbox",
+                title: "收件箱",
                 label: "128",
                 icon: Inbox,
                 variant: "default",
               },
               {
-                title: "Drafts",
+                title: "草稿",
                 label: "9",
                 icon: File,
                 variant: "ghost",
               },
               {
-                title: "Sent",
+                title: "已发送",
                 label: "",
                 icon: Send,
                 variant: "ghost",
               },
               {
-                title: "Junk",
+                title: "垃圾邮件",
                 label: "23",
                 icon: ArchiveX,
                 variant: "ghost",
               },
               {
-                title: "Trash",
+                title: "废纸篓",
                 label: "",
                 icon: Trash2,
                 variant: "ghost",
               },
               {
-                title: "Archive",
+                title: "已归档",
                 label: "",
                 icon: Archive,
                 variant: "ghost",
