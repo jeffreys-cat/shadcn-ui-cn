@@ -25,16 +25,16 @@ export default function ChartsLayout({
     <div className="container relative">
       <PageHeader>
         <Announcement />
-        <PageHeaderHeading>Beautiful Charts</PageHeaderHeading>
+        <PageHeaderHeading>漂亮的图表</PageHeaderHeading>
         <PageHeaderDescription>
-          Built using Recharts. Copy and paste into your apps. Open Source.
+          基于 Recharts 构建、复制粘贴到你的应用中、开源。
         </PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm">
-            <a href="#charts">Browse Charts</a>
+            <a href="#charts">浏览图表</a>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link href="/docs/components/chart">Documentation</Link>
+            <Link href="/docs/components/chart">文档</Link>
           </Button>
         </PageActions>
       </PageHeader>
