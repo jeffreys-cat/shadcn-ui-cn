@@ -32,8 +32,8 @@ export default function ExamplesLayout({ children }: ExamplesLayoutProps) {
           </PageHeaderHeading>
           <PageHeaderHeading className="md:hidden">Examples</PageHeaderHeading>
           <PageHeaderDescription>
-            Dashboard (仪表盘), cards (卡片), authentication
-            (身份验证)，使用这些组件构建的一些示例。将此作为构建您自己的指南。
+            Dashboard (仪表盘)、Cards (卡片)、Authentication
+            (身份认证)，使用这些组件构建的一些示例。
           </PageHeaderDescription>
           <PageActions>
             <Link
