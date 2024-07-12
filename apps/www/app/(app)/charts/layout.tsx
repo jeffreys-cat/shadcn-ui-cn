@@ -52,7 +52,7 @@ export default function ChartsLayout({
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm">
-            <a href="#charts">浏览图表</a>
+            <a href="#charts">浏览 Charts</a>
           </Button>
           <Button asChild variant="ghost" size="sm">
             <Link href="/docs/components/chart">文档</Link>
