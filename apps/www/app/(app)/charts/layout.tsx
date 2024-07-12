@@ -26,13 +26,13 @@ export default function ChartsLayout({
     <>
       <PageHeader>
         <Announcement />
-        <PageHeaderHeading>漂亮的图表</PageHeaderHeading>
+        <PageHeaderHeading>Beautiful Charts</PageHeaderHeading>
         <PageHeaderDescription>
-          基于 Recharts 构建、复制粘贴到你的应用中、开源。
+          基于 Recharts 构建、复制粘贴到你的应用中。
         </PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm">
-            <a href="#charts">浏览图表</a>
+            <a href="#charts">浏览 Charts</a>
           </Button>
           <Button asChild variant="ghost" size="sm">
             <Link href="/docs/components/chart">文档</Link>
