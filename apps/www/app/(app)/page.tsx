@@ -19,7 +19,7 @@ export default function IndexPage() {
         <Announcement />
         <PageHeaderHeading>构建你的组件库</PageHeaderHeading>
         <PageHeaderDescription>
-          设计精美的组件，你可以复制和粘贴到你的应用程序。可访问。可定制的。开源的。
+          设计精美的组件，你可以复制和粘贴到你的应用程序。易访问、易定制、开源
         </PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm">
