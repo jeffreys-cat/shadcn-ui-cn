@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://shadcn.com.cn',
+  siteUrl: "https://www.shadcn.com.cn",
   generateRobotsTxt: true,
 }
