@@ -39,15 +39,15 @@ export const docsConfig: DocsConfig = {
   ],
   sidebarNav: [
     {
-      title: "快速开始",
+      title: "Getting Started",
       items: [
         {
-          title: "介绍",
+          title: "Introduction",
           href: "/docs",
           items: [],
         },
         {
-          title: "安装",
+          title: "Installation",
           href: "/docs/installation",
           items: [],
         },
@@ -57,12 +57,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "主题",
+          title: "Theming",
           href: "/docs/theming",
           items: [],
         },
         {
-          title: "暗黑模式",
+          title: "Dark mode",
           href: "/docs/dark-mode",
           items: [],
         },
@@ -89,7 +89,6 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Typography",
-          title: "印刷格式 (Typography)",
           href: "/docs/components/typography",
           items: [],
         },
@@ -109,7 +108,7 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "更新纪录",
+          title: "Changelog",
           href: "/docs/changelog",
           items: [],
         },
@@ -167,10 +166,6 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: "Accordion",
-      title: "组件",
-      items: [
-        {
-          title: "Accordion (手风琴)",
           href: "/docs/components/accordion",
           items: [],
         },
