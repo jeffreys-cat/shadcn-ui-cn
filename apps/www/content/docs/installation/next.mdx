@@ -1,6 +1,6 @@
 ---
 title: Next.js
-description: 安装和配置 Next.js。
+description: Install and configure Next.js.
 ---
 
 <Callout className="bg-blue-50 border-blue-600 dark:border-blue-900 dark:bg-blue-950 mb-6 [&_code]:bg-blue-100 dark:[&_code]:bg-blue-900">
@@ -10,7 +10,7 @@ description: 安装和配置 Next.js。
 
 <Steps>
 
-### 创建项目
+### Create project
 
 Run the `init` command to create a new Next.js project or to setup an existing one:
 
@@ -22,7 +22,7 @@ Choose between a Next.js project or a Monorepo.
 
 ### Add Components
 
-系统将询问您几个问题来配置 `components.json`:
+You will be asked a few questions to configure `components.json`:
 
 ```txt showLineNumbers
 Which style would you like to use? › New York
@@ -32,12 +32,13 @@ Do you want to use CSS variables for colors? › no / yes
 
 ### That's it
 
-现在，可以开始向项目添加组件。
+You can now start adding components to your project.
 
 ```bash
 npx shadcn@latest add button
 ```
-上面的命令会将 `Button` 组件添加到项目中，然后可以像这样导入它：
+
+The command above will add the `Button` component to your project. You can then import it like this:
 
 ```tsx {1,6} showLineNumbers
 import { Button } from "@/components/ui/button"
