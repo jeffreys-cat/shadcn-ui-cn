@@ -559,7 +559,11 @@ importers:
         version: 1.29.2
       '@types/lodash':
         specifier: ^4.17.7
+<<<<<<< HEAD
         version: 4.17.15
+=======
+        version: 4.17.14
+>>>>>>> c693a6ab (feat: sync upstream)
       '@types/node':
         specifier: ^17.0.45
         version: 17.0.45
@@ -630,6 +634,27 @@ importers:
         specifier: ^5.4.1
         version: 5.4.1
     devDependencies:
+<<<<<<< HEAD
+=======
+      '@types/babel__core':
+        specifier: ^7.20.1
+        version: 7.20.1
+      '@types/diff':
+        specifier: ^5.0.3
+        version: 5.0.3
+      '@types/fs-extra':
+        specifier: ^11.0.1
+        version: 11.0.1
+      '@types/lodash':
+        specifier: ^4.17.7
+        version: 4.17.14
+      '@types/prompts':
+        specifier: ^2.4.2
+        version: 2.4.2
+      rimraf:
+        specifier: ^4.1.3
+        version: 4.1.3
+>>>>>>> c693a6ab (feat: sync upstream)
       tsup:
         specifier: ^6.6.3
         version: 6.7.0(postcss@8.5.1)(ts-node@10.9.2(@types/node@22.13.0)(typescript@5.7.3))(typescript@5.7.3)
@@ -714,7 +739,14 @@ importers:
         version: 5.2.3
       '@types/fs-extra':
         specifier: ^11.0.1
+<<<<<<< HEAD
         version: 11.0.4
+=======
+        version: 11.0.1
+      '@types/lodash.template':
+        specifier: ^4.5.1
+        version: 4.5.1
+>>>>>>> c693a6ab (feat: sync upstream)
       '@types/prompts':
         specifier: ^2.4.2
         version: 2.4.9
@@ -3169,8 +3201,16 @@ packages:
   '@types/keyv@3.1.4':
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
 
+<<<<<<< HEAD
   '@types/lodash@4.17.15':
     resolution: {integrity: sha512-w/P33JFeySuhN6JLkysYUK2gEmy9kHHFN7E8ro0tkfmlDOgxBDzWEZ/J8cWA+fHqFevpswDTFZnDx+R9lbL6xw==}
+=======
+  '@types/lodash.template@4.5.1':
+    resolution: {integrity: sha512-0y71S2dGgmwdkSsyW95JBp8HSZchgKCsjr6F0lsT3eSMtaT3Nn9rcMHU1U4UKu6XjQT3YC6/PNwgFI7k9f+ltw==}
+
+  '@types/lodash@4.17.14':
+    resolution: {integrity: sha512-jsxagdikDiDBeIRaPYtArcT8my4tN1og7MtMRquFT3XNA6axxyHDRUemqDz/taRDdOUn0GnGHRCuff4q48sW9A==}
+>>>>>>> c693a6ab (feat: sync upstream)
 
   '@types/mdast@3.0.15':
     resolution: {integrity: sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ==}
@@ -11500,7 +11540,15 @@ snapshots:
     dependencies:
       '@types/node': 20.17.16
 
+<<<<<<< HEAD
   '@types/lodash@4.17.15': {}
+=======
+  '@types/lodash.template@4.5.1':
+    dependencies:
+      '@types/lodash': 4.17.14
+
+  '@types/lodash@4.17.14': {}
+>>>>>>> c693a6ab (feat: sync upstream)
 
   '@types/mdast@3.0.15':
     dependencies:
@@ -13029,10 +13077,17 @@ snapshots:
     dependencies:
       debug: 4.3.7
       enhanced-resolve: 5.16.1
+<<<<<<< HEAD
       eslint: 8.57.1
       eslint-module-utils: 2.12.0(@typescript-eslint/parser@5.61.0(eslint@8.57.1)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1)
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@5.61.0(eslint@8.57.1)(typescript@5.7.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1)
       fast-glob: 3.3.3
+=======
+      eslint: 8.44.0
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.44.0))(eslint@8.44.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.44.0)
+      fast-glob: 3.3.2
+>>>>>>> c693a6ab (feat: sync upstream)
       get-tsconfig: 4.7.5
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -13042,6 +13097,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
+<<<<<<< HEAD
   eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.61.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.19.0(jiti@2.4.2)):
     dependencies:
       debug: 4.3.7
@@ -13060,6 +13116,9 @@ snapshots:
       - supports-color
 
   eslint-module-utils@2.12.0(@typescript-eslint/parser@5.61.0(eslint@8.57.1)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1):
+=======
+  eslint-module-utils@2.8.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.44.0))(eslint@8.44.0):
+>>>>>>> c693a6ab (feat: sync upstream)
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -13092,7 +13151,11 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
+<<<<<<< HEAD
       eslint-module-utils: 2.12.0(@typescript-eslint/parser@5.61.0(eslint@8.57.1)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1)
+=======
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.44.0))(eslint@8.44.0)
+>>>>>>> c693a6ab (feat: sync upstream)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -17400,9 +17463,15 @@ snapshots:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
+<<<<<<< HEAD
       '@types/node': 20.5.1
       acorn: 8.14.0
       acorn-walk: 8.3.4
+=======
+      '@types/node': 20.11.27
+      acorn: 8.11.3
+      acorn-walk: 8.3.2
+>>>>>>> c693a6ab (feat: sync upstream)
       arg: 4.1.3
       create-require: 1.1.1
       diff: 4.0.2
