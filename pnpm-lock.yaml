@@ -321,7 +321,7 @@ importers:
         version: 1.1.7
       '@types/lodash':
         specifier: ^4.17.7
-        version: 4.17.7
+        version: 4.17.14
       '@types/node':
         specifier: ^17.0.45
         version: 17.0.45
@@ -460,7 +460,7 @@ importers:
         version: 11.0.1
       '@types/lodash':
         specifier: ^4.17.7
-        version: 4.17.7
+        version: 4.17.14
       '@types/prompts':
         specifier: ^2.4.2
         version: 2.4.2
@@ -560,7 +560,7 @@ importers:
         version: 11.0.1
       '@types/lodash.template':
         specifier: ^4.5.1
-        version: 4.5.3
+        version: 4.5.1
       '@types/prompts':
         specifier: ^2.4.2
         version: 2.4.2
@@ -2879,11 +2879,11 @@ packages:
   '@types/keyv@3.1.4':
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
 
-  '@types/lodash.template@4.5.3':
-    resolution: {integrity: sha512-Mo0UYKLu1oXgkV9TVoXZLlXXjyIXlW7ZQRxi/4gQJmzJr63dmicE8gG0OkPjYTKBrBic852q0JzqrtNUWLBIyA==}
+  '@types/lodash.template@4.5.1':
+    resolution: {integrity: sha512-0y71S2dGgmwdkSsyW95JBp8HSZchgKCsjr6F0lsT3eSMtaT3Nn9rcMHU1U4UKu6XjQT3YC6/PNwgFI7k9f+ltw==}
 
-  '@types/lodash@4.17.7':
-    resolution: {integrity: sha512-8wTvZawATi/lsmNu10/j2hk1KEP0IvjubqPE3cu1Xz7xfXXt5oCq3SNUz4fMIP4XGF9Ky+Ue2tBA3hcS7LSBlA==}
+  '@types/lodash@4.17.14':
+    resolution: {integrity: sha512-jsxagdikDiDBeIRaPYtArcT8my4tN1og7MtMRquFT3XNA6axxyHDRUemqDz/taRDdOUn0GnGHRCuff4q48sW9A==}
 
   '@types/mdast@3.0.15':
     resolution: {integrity: sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ==}
@@ -9688,11 +9688,11 @@ snapshots:
     dependencies:
       '@types/node': 20.14.0
 
-  '@types/lodash.template@4.5.3':
+  '@types/lodash.template@4.5.1':
     dependencies:
-      '@types/lodash': 4.17.7
+      '@types/lodash': 4.17.14
 
-  '@types/lodash@4.17.7': {}
+  '@types/lodash@4.17.14': {}
 
   '@types/mdast@3.0.15':
     dependencies:
@@ -10925,7 +10925,7 @@ snapshots:
       debug: 4.3.7
       enhanced-resolve: 5.16.1
       eslint: 8.44.0
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.44.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.44.0))(eslint@8.44.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.44.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.5
@@ -10937,7 +10937,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.44.0):
+  eslint-module-utils@2.8.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.44.0))(eslint@8.44.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -10958,7 +10958,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.44.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.44.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@5.61.0(eslint@8.44.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.44.0))(eslint@8.44.0)
       hasown: 2.0.2
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -14519,7 +14519,7 @@ snapshots:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.14.0
+      '@types/node': 20.11.27
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
