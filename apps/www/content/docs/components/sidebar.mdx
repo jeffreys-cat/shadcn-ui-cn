@@ -1,6 +1,6 @@
 ---
-title: Sidebar
-description: A composable, themeable and customizable sidebar component.
+title: 侧边栏 Sidebar
+description: 一个可组合、可主题化且可自定义的侧边栏组件
 component: true
 ---
 
@@ -17,14 +17,11 @@ component: true
   </figcaption>
 </figure>
 
-Sidebars are one of the most complex components to build. They are central
-to any application and often contain a lot of moving parts.
+侧边栏是最复杂的组件之一，它们是任何应用程序的核心部分，通常包含许多动态元素。
 
-I don't like building sidebars. So I built 30+ of them. All kinds of
-configurations. Then I extracted the core components into `sidebar.tsx`.
+我并不喜欢构建侧边栏，所以我构建了 30 多个不同配置的侧边栏，然后，我将核心组件提取到了 sidebar.tsx 文件中。
 
-We now have a solid foundation to build on top of. Composable. Themeable.
-Customizable.
+现在，我们有了一个坚实的基础，可以在其上进行构建——可组合、可主题化、可自定义。
 
 [Browse the Blocks Library](/blocks).
 
@@ -34,19 +31,19 @@ Customizable.
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">手动安装</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
 <Steps>
 
-<Step>Run the following command to install `sidebar.tsx`</Step>
+<Step>运行以下命令进行安装`sidebar.tsx`</Step>
 
 ```bash
 npx shadcn@latest add sidebar
 ```
 
-<Step>Add the following colors to your CSS file</Step>
+<Step>将以下颜色添加到您的 CSS 文件中</Step>
 
 The command above should install the colors for you. If not, copy and paste the following in your CSS file.
 
@@ -86,13 +83,13 @@ We'll go over the colors later in the [theming section](/docs/components/sidebar
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将以下代码复制并粘贴到您的项目中：</Step>
 
 <ComponentSource name="sidebar" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>更新导入路径以匹配您的项目设置</Step>
 
-<Step>Add the following colors to your CSS file</Step>
+<Step>将以下颜色添加到您的 CSS 文件中</Step>
 
 We'll go over the colors later in the [theming section](/docs/components/sidebar#theming).
 
@@ -174,7 +171,7 @@ A `Sidebar` component is composed of the following parts:
   className="border hidden dark:block rounded-lg overflow-hidden mt-6 w-full"
 />
 
-## Usage
+## 使用示例
 
 ```tsx showLineNumbers title="app/layout.tsx"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
@@ -1172,7 +1169,7 @@ async function NavProjects() {
 }
 ```
 
-```tsx showLineNumbers {8-10} title="Usage with React Suspense."
+```tsx showLineNumbers {8-10} title="使用示例 with React Suspense."
 function AppSidebar() {
   return (
     <Sidebar>
