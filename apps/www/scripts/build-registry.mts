@@ -411,7 +411,7 @@ async function buildStylesIndex() {
   for (const style of styles) {
     const targetPath = path.join(REGISTRY_PATH, "styles", style.name)
 
-    const payload: z.infer<typeof registryItemSchema> = {
+    const payload: any = {
       name: style.name,
       type: "registry:style",
       dependencies: [

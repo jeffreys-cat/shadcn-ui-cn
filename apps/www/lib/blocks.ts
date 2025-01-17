@@ -6,7 +6,7 @@ import { z } from "zod"
 import { Style } from "@/registry/registry-styles"
 
 export async function getAllBlockIds(
-  types: z.infer<typeof registryItemSchema>["type"][] = [
+  types: any["type"][] = [
     "registry:block",
     "registry:internal",
   ],
@@ -14,17 +14,17 @@ export async function getAllBlockIds(
   style: Style["name"] = "new-york"
 ): Promise<string[]> {
   const { Index } = await import("@/__registry__")
-  const index = z.record(registryItemSchema).parse(Index[style])
+  const index: any = z.record(registryItemSchema as any).parse(Index[style])
 
   return Object.values(index)
     .filter(
-      (block) =>
+      (block: any) =>
         types.includes(block.type) &&
         (categories.length === 0 ||
-          block.categories?.some((category) =>
+          block.categories?.some((category: any) =>
             categories.includes(category)
           )) &&
         !block.name.startsWith("chart-")
     )
-    .map((block) => block.name)
+    .map((block: any) => block.name)
 }

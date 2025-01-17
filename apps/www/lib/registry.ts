@@ -76,7 +76,7 @@ export async function getRegistryItem(
   return parsed.data
 }
 
-async function getFileContent(file: z.infer<typeof registryItemFileSchema>) {
+async function getFileContent(file: any) {
   const raw = await fs.readFile(file.path, "utf-8")
 
   const project = new Project({
@@ -131,7 +131,7 @@ async function getFileMeta(filePath: string) {
   }
 }
 
-function getFileTarget(file: z.infer<typeof registryItemFileSchema>) {
+function getFileTarget(file: any) {
   let target = file.target
 
   if (!target || target === "") {
@@ -184,7 +184,7 @@ function extractVariable(sourceFile: SourceFile, name: string) {
   return value
 }
 
-function fixFilePaths(files: z.infer<typeof registryItemSchema>["files"]) {
+function fixFilePaths(files: any["files"]) {
   if (!files) {
     return []
   }
@@ -193,7 +193,7 @@ function fixFilePaths(files: z.infer<typeof registryItemSchema>["files"]) {
   const firstFilePath = files[0].path
   const firstFilePathDir = path.dirname(firstFilePath)
 
-  return files.map((file) => {
+  return files.map((file: any) => {
     return {
       ...file,
       path: path.relative(firstFilePathDir, file.path),

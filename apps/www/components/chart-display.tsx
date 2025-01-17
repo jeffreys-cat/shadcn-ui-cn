@@ -7,7 +7,7 @@ import { getRegistryItem } from "@/lib/registry"
 import { cn } from "@/lib/utils"
 import { ChartToolbar } from "@/components/chart-toolbar"
 
-export type Chart = z.infer<typeof registryItemSchema> & {
+export type Chart = any & {
   highlightedCode: string
 }
 
