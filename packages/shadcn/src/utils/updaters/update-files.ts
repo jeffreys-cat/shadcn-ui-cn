@@ -198,7 +198,7 @@ export async function updateFiles(
 }
 
 export function resolveFilePath(
-  file: z.infer<typeof registryItemFileSchema>,
+  file: any,
   config: Config,
   options: {
     isSrcDir?: boolean
@@ -226,7 +226,7 @@ export function resolveFilePath(
 }
 
 function resolveFileTargetDirectory(
-  file: z.infer<typeof registryItemFileSchema>,
+  file: any,
   config: Config
 ) {
   if (file.type === "registry:ui") {

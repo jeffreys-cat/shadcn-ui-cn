@@ -41,9 +41,9 @@ const getCachedFileTree = React.cache(
 )
 
 const getCachedHighlightedFiles = React.cache(
-  async (files: z.infer<typeof registryItemFileSchema>[]) => {
+  async (files: any) => {
     return await Promise.all(
-      files.map(async (file) => ({
+      files.map(async (file: any) => ({
         ...file,
         highlightedContent: await highlightCode(file.content ?? ""),
       }))

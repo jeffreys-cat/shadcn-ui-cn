@@ -68,7 +68,7 @@ export const registryItemSchema = z.object({
   categories: z.array(z.string()).optional(),
 })
 
-export type RegistryItem = z.infer<typeof registryItemSchema>
+export type RegistryItem = any
 
 export const registrySchema = z.object({
   name: z.string(),

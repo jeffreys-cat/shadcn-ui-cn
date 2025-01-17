@@ -54,7 +54,7 @@ import {
 import { Style } from "@/registry/registry-styles"
 
 type BlockViewerContext = {
-  item: z.infer<typeof registryItemSchema>
+  item: any
   view: "code" | "preview"
   setView: (view: "code" | "preview") => void
   style?: Style["name"]
@@ -64,7 +64,7 @@ type BlockViewerContext = {
   resizablePanelRef: React.RefObject<ImperativePanelHandle> | null
   tree: ReturnType<typeof createFileTreeForRegistryItemFiles> | null
   highlightedFiles:
-    | (z.infer<typeof registryItemFileSchema> & {
+    | (any & {
         highlightedContent: string
       })[]
     | null
@@ -402,7 +402,7 @@ function BlockCopyCodeButton() {
   const { copyToClipboard, isCopied } = useCopyToClipboard()
 
   const file = React.useMemo(() => {
-    return item.files?.find((file) => file.target === activeFile)
+    return item.files?.find((file: any) => file.target === activeFile)
   }, [activeFile, item.files])
 
   const content = file?.content

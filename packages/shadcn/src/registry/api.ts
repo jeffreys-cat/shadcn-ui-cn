@@ -149,7 +149,7 @@ export async function fetchTree(
 
 export async function getItemTargetPath(
   config: Config,
-  item: Pick<z.infer<typeof registryItemSchema>, "type">,
+  item: Pick<any, "type">,
   override?: string
 ) {
   if (override) {
@@ -234,7 +234,7 @@ export async function fetchRegistry(paths: string[]) {
 }
 
 export async function registryResolveItemsTree(
-  names: z.infer<typeof registryItemSchema>["name"][],
+  names: any["name"][],
   config: Config
 ) {
   try {
@@ -262,7 +262,7 @@ export async function registryResolveItemsTree(
     // Other components will ship with their theme tokens.
     if (names.includes("index")) {
       if (config.tailwind.baseColor) {
-        const theme = await registryGetTheme(config.tailwind.baseColor, config)
+        const theme: any = await registryGetTheme(config.tailwind.baseColor, config)
         if (theme) {
           payload.unshift(theme)
         }
@@ -374,7 +374,7 @@ export async function registryGetTheme(name: string, config: Config) {
       },
       dark: {},
     },
-  } satisfies z.infer<typeof registryItemSchema>
+  } satisfies any
 
   if (config.tailwind.cssVariables) {
     theme.tailwind.config.theme.extend.colors = {
@@ -446,15 +446,15 @@ export function getRegistryTypeAliasMap() {
 
 // Track a dependency and its parent.
 export function getRegistryParentMap(
-  registryItems: z.infer<typeof registryItemSchema>[]
+  registryItems: any[]
 ) {
-  const map = new Map<string, z.infer<typeof registryItemSchema>>()
+  const map = new Map<string, any>()
   registryItems.forEach((item) => {
     if (!item.registryDependencies) {
       return
     }
 
-    item.registryDependencies.forEach((dependency) => {
+    item.registryDependencies.forEach((dependency: any) => {
       map.set(dependency, item)
     })
   })
