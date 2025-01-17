@@ -45,9 +45,9 @@ npx shadcn@latest add sidebar
 
 <Step>将以下颜色添加到您的 CSS 文件中</Step>
 
-The command above should install the colors for you. If not, copy and paste the following in your CSS file.
+上面的命令应该会为您安装所需的颜色如果没有，您可以复制并粘贴以下内容到您的 CSS 文件中。
 
-We'll go over the colors later in the [theming section](/docs/components/sidebar#theming).
+稍后我们将在[主题部分](/docs/components/sidebar#theming)中详细讲解颜色的使用。
 
 ```css title="app/globals.css"
 @layer base {
@@ -91,7 +91,7 @@ We'll go over the colors later in the [theming section](/docs/components/sidebar
 
 <Step>将以下颜色添加到您的 CSS 文件中</Step>
 
-We'll go over the colors later in the [theming section](/docs/components/sidebar#theming).
+稍后我们将在[主题部分](/docs/components/sidebar#theming)中详细讲解颜色的使用。
 
 ```css title="app/globals.css"
 @layer base {
@@ -119,10 +119,9 @@ We'll go over the colors later in the [theming section](/docs/components/sidebar
 }
 ```
 
-<Step>Add the Sidebar tailwind config into `tailwind.config.js`</Step>
+<Step>将 Sidebar Tailwind 配置添加到 `tailwind.config.js`</Step>
 
-Add the following object in the `theme.extend.colors` section of your `tailwind.config.js` file
-this config enable sidebar related style utilities like bg-sidebar
+将以下对象添加到 `tailwind.config.js` 文件的 `theme.extend.colors` 部分 这个配置启用与 Sidebar 相关的样式工具类，比如 bg-sidebar
 
 ```javascript title="tailwind.config.js"
 // ...
@@ -145,16 +144,16 @@ sidebar: {
 
 </CodeTabs>
 
-## Structure
+## 结构
 
-A `Sidebar` component is composed of the following parts:
+一个 `Sidebar` 组件由以下部分组成:
 
-- `SidebarProvider` - Handles collapsible state.
-- `Sidebar` - The sidebar container.
-- `SidebarHeader` and `SidebarFooter` - Sticky at the top and bottom of the sidebar.
-- `SidebarContent` - Scrollable content.
-- `SidebarGroup` - Section within the `SidebarContent`.
-- `SidebarTrigger` - Trigger for the `Sidebar`.
+- `SidebarProvider` - 处理可折叠状态
+- `Sidebar` - 侧边栏容器
+- `SidebarHeader` 和 `SidebarFooter` - 固定(Sticky)在侧边栏的顶部和底部 
+- `SidebarContent` - 可滚动内容
+- `SidebarGroup` - `SidebarContent` 中的一个部分
+- `SidebarTrigger` - 触发 `Sidebar` 的按钮
 
 <Image
   src="/images/sidebar-structure.png"
@@ -213,14 +212,14 @@ export function AppSidebar() {
 }
 ```
 
-## Your First Sidebar
+## 第一个 Sidebar
 
-Let's start with the most basic sidebar. A collapsible sidebar with a menu.
+让我们从最基础的侧边栏开始，一个可折叠的侧边栏，里面有菜单。
 
 <Steps>
 
 <Step>
-  Add a `SidebarProvider` and `SidebarTrigger` at the root of your application.
+  在应用的根目录添加 `SidebarProvider` 和 `SidebarTrigger`
 </Step>
 
 ```tsx showLineNumbers title="app/layout.tsx"
@@ -240,7 +239,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 }
 ```
 
-<Step>Create a new sidebar component at `components/app-sidebar.tsx`.</Step>
+<Step>创建一个新的侧边栏组件 `components/app-sidebar.tsx`.</Step>
 
 ```tsx showLineNumbers title="components/app-sidebar.tsx"
 import { Sidebar, SidebarContent } from "@/components/ui/sidebar"
@@ -254,9 +253,9 @@ export function AppSidebar() {
 }
 ```
 
-<Step>Now, let's add a `SidebarMenu` to the sidebar.</Step>
+<Step>现在，添加一个 `SidebarMenu` 到侧边栏</Step>
 
-We'll use the `SidebarMenu` component in a `SidebarGroup`.
+我们将在 `SidebarGroup` 中使用 `SidebarMenu` 组件
 
 ```tsx showLineNumbers title="components/app-sidebar.tsx"
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
@@ -328,55 +327,56 @@ export function AppSidebar() {
 }
 ```
 
-<Step>You've created your first sidebar.</Step>
+<Step>你已经创建了你的第一个侧边栏</Step>
 
 <figure className="flex flex-col gap-4">
   <ComponentPreview
     name="sidebar-demo"
     title="Sidebar"
     type="block"
-    description="Your first sidebar."
+    description="你的第一个侧边栏"
     className="w-full"
   />
   <figcaption className="text-center text-sm text-gray-500">
-    Your first sidebar.
+    你的第一个侧边栏
   </figcaption>
 </figure>
 
 </Steps>
 
-## Components
+## 组件
 
-The components in `sidebar.tsx` are built to be composable i.e you build your sidebar by putting the provided components together. They also compose well with other shadcn/ui components such as `DropdownMenu`, `Collapsible` or `Dialog` etc.
+`sidebar.tsx` 中的组件是可组合的，即你可以通过将提供的组件组合在一起构建侧边栏，它们还可以很好地与其他 shadcn/ui 组件（如 `DropdownMenu`, `Collapsible` 或 `Dialog` 等）一起使用
 
-**If you need to change the code in `sidebar.tsx`, you are encouraged to do so. The code is yours. Use `sidebar.tsx` as a starting point and build your own.**
+**如果你需要修改 `sidebar.tsx` 中的代码，可以随意更改。代码是你的，可以以 `sidebar.tsx` 作为起点并根据需求进行自定义。**
 
-In the next sections, we'll go over each component and how to use them.
+在接下来的部分中，我们将详细介绍每个组件及其使用方法
 
 ## SidebarProvider
 
-The `SidebarProvider` component is used to provide the sidebar context to the `Sidebar` component. You should always wrap your application in a `SidebarProvider` component.
+`SidebarProvider` 组件用于提供侧边栏的上下文。你应该始终在你的应用程序中将其包裹在 `SidebarProvider` 组件中。
 
 ### Props
 
 | Name           | Type                      | Description                                  |
 | -------------- | ------------------------- | -------------------------------------------- |
-| `defaultOpen`  | `boolean`                 | Default open state of the sidebar.           |
-| `open`         | `boolean`                 | Open state of the sidebar (controlled).      |
-| `onOpenChange` | `(open: boolean) => void` | Sets open state of the sidebar (controlled). |
+| `defaultOpen`  | `boolean`                 | 侧边栏的默认打开状态           |
+| `open`         | `boolean`                 | 侧边栏的打开状态（受控）      |
+| `onOpenChange` | `(open: boolean) => void` | 设置侧边栏的打开状态（受控） |
 
 ### Width
 
-If you have a single sidebar in your application, you can use the `SIDEBAR_WIDTH` and `SIDEBAR_WIDTH_MOBILE` variables in `sidebar.tsx` to set the width of the sidebar.
+如果你的应用中只有一个侧边栏，你可以在 `sidebar.tsx` 文件中使用 `SIDEBAR_WIDTH` 和 `SIDEBAR_WIDTH_MOBILE` 变量来设置侧边栏的宽度。
 
 ```tsx showLineNumbers title="components/ui/sidebar.tsx"
 const SIDEBAR_WIDTH = "16rem"
 const SIDEBAR_WIDTH_MOBILE = "18rem"
 ```
 
-For multiple sidebars in your application, you can use the `style` prop to set the width of the sidebar.
+如果你的应用中有多个侧边栏，你可以使用 `style` 属性来设置侧边栏的宽度。
 
-To set the width of the sidebar, you can use the `--sidebar-width` and `--sidebar-width-mobile` CSS variables in the `style` prop.
+你可以在 `style` 属性中使用 `--sidebar-width` 和 `--sidebar-width-mobile` CSS 变量来设置侧边栏的宽度。
+
 
 ```tsx showLineNumbers title="components/ui/sidebar.tsx"
 <SidebarProvider
@@ -389,25 +389,28 @@ To set the width of the sidebar, you can use the `--sidebar-width` and `--sideba
 </SidebarProvider>
 ```
 
-This will handle the width of the sidebar but also the layout spacing.
+这将同时处理侧边栏的宽度和布局的间距。
 
-### Keyboard Shortcut
+### 键盘快捷键
 
-The `SIDEBAR_KEYBOARD_SHORTCUT` variable is used to set the keyboard shortcut used to open and close the sidebar.
+`SIDEBAR_KEYBOARD_SHORTCUT` 变量用于设置打开和关闭侧边栏的键盘快捷键。
 
-To trigger the sidebar, you use the `cmd+b` keyboard shortcut on Mac and `ctrl+b` on Windows.
+在 Mac 上，使用 `cmd+b` 快捷键，Windows 上使用 `ctrl+b` 快捷键来触发侧边栏。
 
-You can change the keyboard shortcut by updating the `SIDEBAR_KEYBOARD_SHORTCUT` variable.
+你可以通过更新 `SIDEBAR_KEYBOARD_SHORTCUT` 变量来修改快捷键
+
 
 ```tsx showLineNumbers title="components/ui/sidebar.tsx"
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
 ```
 
-### Persisted State
+### 持久化状态
 
-The `SidebarProvider` supports persisting the sidebar state across page reloads and server-side rendering. It uses cookies to store the current state of the sidebar. When the sidebar state changes, a default cookie named `sidebar_state` is set with the current open/closed state. This cookie is then read on subsequent page loads to restore the sidebar state.
 
-To persist sidebar state in Next.js, set up your `SidebarProvider` in `app/layout.tsx` like this:
+`SidebarProvider` 支持跨页面重载和服务器端渲染时持久化侧边栏状态。它使用 cookies 来存储当前的侧边栏状态。当侧边栏状态发生变化时，会设置一个默认的 cookie，名为 `sidebar:state`，它保存当前的开/关状态。这个 cookie 会在后续页面加载时读取，并恢复侧边栏的状态。
+
+要在 Next.js 中持久化侧边栏状态，可以在 `app/layout.tsx` 中像这样设置 `SidebarProvider`：
+
 
 ```tsx showLineNumbers title="app/layout.tsx"
 import { cookies } from "next/headers"
