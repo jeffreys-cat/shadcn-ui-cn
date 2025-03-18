@@ -60,7 +60,8 @@ export const dynamicParams = false
 
 export async function generateStaticParams() {
   const { Index } = await import("@/__registry__")
-  const index = z.record(registryItemSchema).parse(Index)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const index = z.record(registryItemSchema as any).parse(Index)
 
   return Object.values(index)
     .filter((block) =>

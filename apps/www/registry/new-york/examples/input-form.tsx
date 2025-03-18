@@ -25,7 +25,7 @@ const FormSchema = z.object({
 
 export default function InputForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+    resolver: zodResolver(FormSchema as any),
     defaultValues: {
       username: "",
     },

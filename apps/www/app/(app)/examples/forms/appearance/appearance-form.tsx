@@ -38,7 +38,7 @@ const defaultValues: Partial<AppearanceFormValues> = {
 
 export function AppearanceForm() {
   const form = useForm<AppearanceFormValues>({
-    resolver: zodResolver(appearanceFormSchema),
+    resolver: zodResolver(appearanceFormSchema as any),
     defaultValues,
   })
 

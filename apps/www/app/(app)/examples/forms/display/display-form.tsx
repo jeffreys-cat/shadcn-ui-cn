@@ -59,7 +59,7 @@ const defaultValues: Partial<DisplayFormValues> = {
 
 export function DisplayForm() {
   const form = useForm<DisplayFormValues>({
-    resolver: zodResolver(displayFormSchema),
+    resolver: zodResolver(displayFormSchema as any),
     defaultValues,
   })
 

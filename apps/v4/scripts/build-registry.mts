@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { exec } from "child_process"
 import { promises as fs } from "fs"
 import path from "path"
@@ -15,7 +16,7 @@ const DEPRECATED_ITEMS = ["toast"]
 const registry = {
   name: "shadcn/ui",
   homepage: "https://ui.shadcn.com",
-  items: z.array(registryItemSchema).parse(
+  items: z.array(registryItemSchema as any).parse(
     [
       {
         name: "index",
@@ -91,7 +92,7 @@ import * as React from "react"
 export const Index: Record<string, any> = {`
   for (const item of registry.items) {
     const resolveFiles = item.files?.map(
-      (file) => `registry/new-york-v4/${file.path}`
+      (file: any) => `registry/new-york-v4/${file.path}`
     )
     if (!resolveFiles) {
       continue
@@ -107,7 +108,7 @@ export const Index: Record<string, any> = {`
     description: "${item.description ?? ""}",
     type: "${item.type}",
     registryDependencies: ${JSON.stringify(item.registryDependencies)},
-    files: [${item.files?.map((file) => {
+    files: [${item.files?.map((file: any) => {
       const filePath = `registry/${typeof file === "string" ? file : file.path}`
       const resolvedFilePath = path.resolve(filePath)
       return typeof file === "string"
@@ -144,7 +145,7 @@ async function buildRegistryJsonFile() {
   const fixedRegistry = {
     ...registry,
     items: registry.items.map((item) => {
-      const files = item.files?.map((file) => {
+      const files = item.files?.map((file: any) => {
         return {
           ...file,
           path: `registry/new-york-v4/${file.path}`,

@@ -52,7 +52,7 @@ const FormSchema = z.object({
 
 export default function CheckboxReactHookFormMultiple() {
   const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+    resolver: zodResolver(FormSchema as any),
     defaultValues: {
       items: ["recents", "home"],
     },
