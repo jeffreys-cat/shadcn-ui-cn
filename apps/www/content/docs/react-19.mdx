@@ -1,32 +1,27 @@
 ---
 title: Next.js 15 + React 19
-description: Using shadcn/ui with Next.js 15 and React 19.
+description: 在 Next.js 15 和 React 19 中使用 shadcn/ui。
 ---
 
 <Callout className="bg-blue-50 border-blue-600 dark:border-blue-900 dark:bg-blue-950 mb-6 [&_code]:bg-blue-100 dark:[&_code]:bg-blue-900">
-  **Update:** We have added full support for React 19 and Tailwind v4 in the
-  `canary` release. See the docs for [Tailwind v4](/docs/tailwind-v4) for more
-  information.
+  **更新：** 我们在 `canary` 版本中已添加了对 React 19 和 Tailwind v4 的全面支持。请查看 [Tailwind v4](/docs/tailwind-v4) 文档以获取更多信息。
 </Callout>
 
 <Callout>
-  **The following guide applies to any framework that supports React 19**. I
-  titled this page "Next.js 15 + React 19" to help people upgrading to Next.js
-  15 find it. We are working with package maintainers to help upgrade to React
-  19.
+  **以下指南适用于任何支持 React 19 的框架**。我将此页面命名为 "Next.js 15 + React 19"，以便帮助升级到 Next.js 15 的人找到它。我们正在与包维护者合作，帮助升级到 React 19。
 </Callout>
 
-## TL;DR
+## 简而言之
 
-If you're using `npm`, you can install shadcn/ui dependencies with a flag. The `shadcn` CLI will prompt you to select a flag when you run it. No flags required for pnpm, bun, or yarn.
+如果你使用的是 `npm`，可以通过添加标志来安装 shadcn/ui 依赖项。运行 `shadcn` CLI 时，它会提示你选择一个标志。对于 pnpm、bun 或 yarn 不需要标志。
 
-See [Upgrade Status](#upgrade-status) for the status of React 19 support for each package.
+请查看 [升级状态](#upgrade-status) 以了解每个包对 React 19 支持的状态。
 
-## What's happening?
+## 发生了什么？
 
-React 19 is now [rc](https://www.npmjs.com/package/react?activeTab=versions) and is [tested and supported in the latest Next.js 15 release](https://nextjs.org/blog/next-15#react-19).
+React 19 现已达到 [rc](https://www.npmjs.com/package/react?activeTab=versions) 阶段，并且在 [最新的 Next.js 15 版本中经过测试和支持](https://nextjs.org/blog/next-15#react-19)。
 
-To support React 19, package maintainers will need to test and update their packages to include React 19 as a peer dependency. This is [already](https://github.com/radix-ui/primitives/pull/2952) [in](https://github.com/pacocoursey/cmdk/pull/318) [progress](https://github.com/emilkowalski/vaul/pull/498).
+为了支持 React 19，包维护者需要测试并更新他们的包，将 React 19 包含为对等依赖。这一工作 [已经](https://github.com/radix-ui/primitives/pull/2952) [在](https://github.com/pacocoursey/cmdk/pull/318) [进行中](https://github.com/emilkowalski/vaul/pull/498)。
 
 ```diff /^19.0/
 "peerDependencies": {
@@ -38,11 +33,10 @@ To support React 19, package maintainers will need to test and update their pack
 ```
 
 <Callout>
-  You can check if a package lists React 19 as a peer dependency by running
-  `npm info <package> peerDependencies`.
+  你可以通过运行 `npm info <package> peerDependencies` 检查一个包是否将 React 19 列为对等依赖。
 </Callout>
 
-In the meantime, if you are installing a package that **does not** list React 19 as a peer dependency, you will see an error message like this:
+与此同时，如果你安装的包 **未将 React 19 列为对等依赖**，你会看到如下错误信息：
 
 ```bash
 npm error code ERESOLVE
@@ -55,14 +49,14 @@ npm error   react@"19.0.0-rc-69d4b800-20241021" from the root project
 ```
 
 <Callout>
-  **Note:** This is npm only. PNPM and Bun will only show a silent warning.
+  **注意：** 这仅适用于 npm。PNPM 和 Bun 只会显示一个无声警告。
 </Callout>
 
-## How to fix this
+## 如何解决这个问题
 
-### Solution 1: `--force` or `--legacy-peer-deps`
+### 解决方案 1：`--force` 或 `--legacy-peer-deps`
 
-You can force install a package with the `--force` or the `--legacy-peer-deps` flag.
+你可以使用 `--force` 或 `--legacy-peer-deps` 标志强制安装包。
 
 ```bash
 npm i <package> --force
@@ -70,45 +64,41 @@ npm i <package> --force
 npm i <package> --legacy-peer-deps
 ```
 
-This will install the package and ignore the peer dependency warnings.
+这将安装包并忽略对等依赖警告。
 
 <Accordion type="multiple">
   <AccordionItem value="flags">
     <AccordionTrigger className="font-medium">
-      What do the `--force` and `--legacy-peer-deps` flag do?
+      `--force` 和 `--legacy-peer-deps` 标志的作用是什么？
     </AccordionTrigger>
     <AccordionContent className="[&_ul]:mt-0">
 
-      - `--force`: Ignores and overrides any dependency conflicts, forcing the
-        installation of packages.
-      - `--legacy-peer-deps`: Skips strict peer dependency checks, allowing
-        installation of packages with unmet peer dependencies to avoid errors.
+      - `--force`：忽略并覆盖任何依赖冲突，强制安装包。
+      - `--legacy-peer-deps`：跳过严格的对等依赖检查，允许安装未满足对等依赖的包以避免错误。
 
     </AccordionContent>
-
   </AccordionItem>
 </Accordion>
 
-### Solution 2: Use React 18
+### 解决方案 2：使用 React 18
 
-You can downgrade `react` and `react-dom` to version 18, which is compatible with the package you are installing and upgrade when the dependency is updated.
+你可以将 `react` 和 `react-dom` 降级到与你安装的包兼容的版本 18，并在依赖更新时再升级。
 
 ```bash
 npm i react@18 react-dom@18
 ```
 
-Whichever solution you choose, make sure you test your app thoroughly to ensure
-there are no regressions.
+无论你选择哪种解决方案，请务必彻底测试你的应用，以确保没有回归问题。
 
-## Using shadcn/ui on Next.js 15
+## 在 Next.js 15 上使用 shadcn/ui
 
-### Using pnpm, bun, or yarn
+### 使用 pnpm、bun 或 yarn
 
-Follow the instructions in the [installation guide](/docs/installation/next) to install shadcn/ui. No flags are needed.
+按照 [安装指南](/docs/installation/next) 中的说明安装 shadcn/ui。不需要标志。
 
-### Using npm
+### 使用 npm
 
-When you run `npx shadcn@latest init -d`, you will be prompted to select an option to resolve the peer dependency issues.
+当你运行 `npx shadcn@latest init -d` 时，会提示你选择一个选项来解决对等依赖问题。
 
 ```bash
 It looks like you are using React 19.
