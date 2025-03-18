@@ -356,7 +356,7 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "侧边栏 Sheet",
+          title: "侧边弹窗 Sheet",
           href: "/docs/components/sheet",
           items: [],
         },
