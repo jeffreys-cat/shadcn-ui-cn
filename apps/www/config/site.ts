@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "shadcn/ui 中文站 | shadncnui 文档 | shadcn/ui 中文文档 | shadcn/ui 文档 | shadncnui 中文文档 ",
+  name: "shadcn/ui 中文站",
   url: "https://www.shadcn.com.cn",
   ogImage: "https://www.shadcn.com.cn/og.jpg",
   description:
