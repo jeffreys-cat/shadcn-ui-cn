@@ -1,16 +1,16 @@
 ---
 title: Alert
-description: Displays a callout for user attention.
+description: 用于展示需要用户注意的提醒信息。
 component: true
 ---
 
 <ComponentPreview
   name="alert-demo"
-  title="An alert with an icon, title and description."
-  description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
+  title="带有图标、标题与描述的提醒。"
+  description="包含图标、标题与描述的提醒示例。标题为 “Heads up!” ，描述为 “You can add components to your app using the cli.”。"
 />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -30,11 +30,11 @@ npx shadcn@latest add alert
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="alert" title="components/ui/alert.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -42,7 +42,7 @@ npx shadcn@latest add alert
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -51,9 +51,9 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 ```tsx showLineNumbers
 <Alert variant="default | destructive">
   <Terminal />
-  <AlertTitle>Heads up!</AlertTitle>
+  <AlertTitle>注意！</AlertTitle>
   <AlertDescription>
-    You can add components and dependencies to your app using the cli.
+    可以通过 CLI 向应用添加组件与依赖。
   </AlertDescription>
 </Alert>
 ```

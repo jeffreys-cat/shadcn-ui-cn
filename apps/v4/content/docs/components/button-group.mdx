@@ -1,12 +1,12 @@
 ---
 title: Button Group
-description: A container that groups related buttons together with consistent styling.
+description: 将相关按钮置于同一个容器中并保持统一样式。
 component: true
 ---
 
 <ComponentPreview name="button-group-demo" />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -26,17 +26,17 @@ npx shadcn@latest add button-group
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-slot
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将如下代码复制到你的项目中。</Step>
 
 <ComponentSource name="button-group" title="components/ui/button-group.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -44,7 +44,7 @@ npm install @radix-ui/react-slot
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx
 import {
@@ -56,98 +56,98 @@ import {
 
 ```tsx
 <ButtonGroup>
-  <Button>Button 1</Button>
-  <Button>Button 2</Button>
+  <Button>按钮 1</Button>
+  <Button>按钮 2</Button>
 </ButtonGroup>
 ```
 
-## Accessibility
+## 无障碍
 
-- The `ButtonGroup` component has the `role` attribute set to `group`.
-- Use <Kbd>Tab</Kbd> to navigate between the buttons in the group.
-- Use `aria-label` or `aria-labelledby` to label the button group.
+- `ButtonGroup` 组件的 `role` 属性被设置为 `group`。
+- 使用 <Kbd>Tab</Kbd> 在组内按钮之间导航。
+- 使用 `aria-label` 或 `aria-labelledby` 为按钮组提供名称。
 
 ```tsx showLineNumbers
 <ButtonGroup aria-label="Button group">
-  <Button>Button 1</Button>
-  <Button>Button 2</Button>
+  <Button>按钮 1</Button>
+  <Button>按钮 2</Button>
 </ButtonGroup>
 ```
 
-## ButtonGroup vs ToggleGroup
+## ButtonGroup 与 ToggleGroup
 
-- Use the `ButtonGroup` component when you want to group buttons that perform an action.
-- Use the `ToggleGroup` component when you want to group buttons that toggle a state.
+- 当你需要将执行动作的按钮归组时，使用 `ButtonGroup`。
+- 需要将切换状态的按钮归组时，使用 `ToggleGroup`。
 
-## Examples
+## 示例
 
-### Orientation
+### 排布方向
 
-Set the `orientation` prop to change the button group layout.
+通过 `orientation` 属性调整按钮组的排布方向。
 
 <ComponentPreview name="button-group-orientation" />
 
-### Size
+### 尺寸
 
-Control the size of buttons using the `size` prop on individual buttons.
+在单个按钮上使用 `size` 属性控制尺寸。
 
 <ComponentPreview name="button-group-size" />
 
-### Nested
+### 嵌套
 
-Nest `<ButtonGroup>` components to create button groups with spacing.
+通过嵌套 `<ButtonGroup>` 组件创建带间距的按钮组。
 
 <ComponentPreview name="button-group-nested" />
 
-### Separator
+### 分隔符
 
-The `ButtonGroupSeparator` component visually divides buttons within a group.
+`ButtonGroupSeparator` 组件用于在组内视觉上分隔按钮。
 
-Buttons with variant `outline` do not need a separator since they have a border. For other variants, a separator is recommended to improve the visual hierarchy.
+`outline` 变体的按钮自带边框，无需分隔符。其他变体建议配合分隔符以改善层次感。
 
 <ComponentPreview name="button-group-separator" />
 
-### Split
+### 分离式
 
-Create a split button group by adding two buttons separated by a `ButtonGroupSeparator`.
+通过在两个按钮之间插入 `ButtonGroupSeparator` 来构建分离式按钮组。
 
 <ComponentPreview name="button-group-split" />
 
-### Input
+### 输入框
 
-Wrap an `Input` component with buttons.
+在按钮组中包裹 `Input` 组件。
 
 <ComponentPreview name="button-group-input" />
 
-### Input Group
+### 输入组合
 
-Wrap an `InputGroup` component to create complex input layouts.
+通过包裹 `InputGroup` 组件创建更复杂的输入布局。
 
 <ComponentPreview name="button-group-input-group" />
 
-### Dropdown Menu
+### 下拉菜单
 
-Create a split button group with a `DropdownMenu` component.
+结合 `DropdownMenu` 组件创建分离式按钮组。
 
 <ComponentPreview name="button-group-dropdown" />
 
-### Select
+### 选择器
 
-Pair with a `Select` component.
+与 `Select` 组件搭配使用。
 
 <ComponentPreview name="button-group-select" />
 
-### Popover
+### 气泡卡片
 
-Use with a `Popover` component.
+配合 `Popover` 组件使用。
 
 <ComponentPreview name="button-group-popover" />
 
-## API Reference
+## API 参考
 
 ### ButtonGroup
 
-The `ButtonGroup` component is a container that groups related buttons together with consistent styling.
+`ButtonGroup` 组件是一个容器，用来将相关按钮组合在一起并保持统一样式。
 
 | Prop          | Type                         | Default        |
 | ------------- | ---------------------------- | -------------- |
@@ -155,12 +155,12 @@ The `ButtonGroup` component is a container that groups related buttons together 
 
 ```tsx
 <ButtonGroup>
-  <Button>Button 1</Button>
-  <Button>Button 2</Button>
+  <Button>按钮 1</Button>
+  <Button>按钮 2</Button>
 </ButtonGroup>
 ```
 
-Nest multiple button groups to create complex layouts with spacing. See the [nested](#nested) example for more details.
+可以嵌套多个按钮组来创建带间距的复杂布局，详见 [嵌套](#嵌套) 示例。
 
 ```tsx
 <ButtonGroup>
@@ -171,7 +171,7 @@ Nest multiple button groups to create complex layouts with spacing. See the [nes
 
 ### ButtonGroupSeparator
 
-The `ButtonGroupSeparator` component visually divides buttons within a group.
+`ButtonGroupSeparator` 组件用于在按钮组中划分视觉区域。
 
 | Prop          | Type                         | Default      |
 | ------------- | ---------------------------- | ------------ |
@@ -179,15 +179,15 @@ The `ButtonGroupSeparator` component visually divides buttons within a group.
 
 ```tsx
 <ButtonGroup>
-  <Button>Button 1</Button>
+  <Button>按钮 1</Button>
   <ButtonGroupSeparator />
-  <Button>Button 2</Button>
+  <Button>按钮 2</Button>
 </ButtonGroup>
 ```
 
 ### ButtonGroupText
 
-Use this component to display text within a button group.
+用于在按钮组内显示文本。
 
 | Prop      | Type      | Default |
 | --------- | --------- | ------- |

@@ -1,6 +1,6 @@
 ---
 title: Alert Dialog
-description: A modal dialog that interrupts the user with important content and expects a response.
+description: 以模态对话框形式向用户展示重要信息并要求作出响应。
 featured: true
 component: true
 links:
@@ -10,11 +10,11 @@ links:
 
 <ComponentPreview
   name="alert-dialog-demo"
-  title="An alert dialog with cancel and continue buttons."
-  description="An alert dialog with cancel and continue buttons."
+  title="包含取消与继续按钮的警示对话框。"
+  description="包含取消与继续按钮的警示对话框。"
 />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -34,17 +34,17 @@ npx shadcn@latest add alert-dialog
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-alert-dialog
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="alert-dialog" title="components/ui/alert-dialog.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>依据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -52,7 +52,7 @@ npm install @radix-ui/react-alert-dialog
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import {
@@ -70,18 +70,17 @@ import {
 
 ```tsx showLineNumbers
 <AlertDialog>
-  <AlertDialogTrigger>Open</AlertDialogTrigger>
+  <AlertDialogTrigger>打开</AlertDialogTrigger>
   <AlertDialogContent>
     <AlertDialogHeader>
-      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+      <AlertDialogTitle>你确定要继续吗？</AlertDialogTitle>
       <AlertDialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
+        该操作无法撤销，将永久删除你的账户并移除服务器上的全部数据。
       </AlertDialogDescription>
     </AlertDialogHeader>
     <AlertDialogFooter>
-      <AlertDialogCancel>Cancel</AlertDialogCancel>
-      <AlertDialogAction>Continue</AlertDialogAction>
+      <AlertDialogCancel>取消</AlertDialogCancel>
+      <AlertDialogAction>继续</AlertDialogAction>
     </AlertDialogFooter>
   </AlertDialogContent>
 </AlertDialog>

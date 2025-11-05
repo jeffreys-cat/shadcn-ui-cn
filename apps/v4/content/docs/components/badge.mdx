@@ -1,16 +1,16 @@
 ---
 title: Badge
-description: Displays a badge or a component that looks like a badge.
+description: 用于展示徽章或拥有徽章外观的组件。
 component: true
 ---
 
 <ComponentPreview
   name="badge-demo"
-  title="Badge"
-  description="A default badge"
+  title="徽章"
+  description="默认外观的徽章"
 />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -30,11 +30,11 @@ npx shadcn@latest add badge
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="badge" title="components/ui/badge.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -42,7 +42,7 @@ npx shadcn@latest add badge
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx
 import { Badge } from "@/components/ui/badge"
@@ -52,9 +52,9 @@ import { Badge } from "@/components/ui/badge"
 <Badge variant="default | outline | secondary | destructive">Badge</Badge>
 ```
 
-### Link
+### 链接
 
-You can use the `asChild` prop to make another component look like a badge. Here's an example of a link that looks like a badge.
+可以通过 `asChild` 属性让其他组件呈现徽章样式。下面展示一个看起来像徽章的链接。
 
 ```tsx showLineNumbers
 import Link from "next/link"

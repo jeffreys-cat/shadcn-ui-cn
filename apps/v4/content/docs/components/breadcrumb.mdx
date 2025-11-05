@@ -1,16 +1,16 @@
 ---
 title: Breadcrumb
-description: Displays the path to the current resource using a hierarchy of links.
+description: 通过链接层级展示当前位置的路径。
 component: true
 ---
 
 <ComponentPreview
   name="breadcrumb-demo"
   className="[&_.preview]:p-2"
-  description="A breadcrumb with a collapsible dropdown."
+  description="带有可折叠下拉菜单的面包屑。"
 />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -30,11 +30,11 @@ npx shadcn@latest add breadcrumb
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="breadcrumb" title="components/ui/breadcrumb.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>按项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -42,7 +42,7 @@ npx shadcn@latest add breadcrumb
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import {
@@ -59,11 +59,11 @@ import {
 <Breadcrumb>
   <BreadcrumbList>
     <BreadcrumbItem>
-      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+      <BreadcrumbLink href="/">首页</BreadcrumbLink>
     </BreadcrumbItem>
     <BreadcrumbSeparator />
     <BreadcrumbItem>
-      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+      <BreadcrumbLink href="/components">组件</BreadcrumbLink>
     </BreadcrumbItem>
     <BreadcrumbSeparator />
     <BreadcrumbItem>
@@ -73,15 +73,15 @@ import {
 </Breadcrumb>
 ```
 
-## Examples
+## 示例
 
-### Custom separator
+### 自定义分隔符
 
-Use a custom component as `children` for `<BreadcrumbSeparator />` to create a custom separator.
+为 `<BreadcrumbSeparator />` 提供自定义组件作为 `children`，即可实现自定义分隔符。
 
 <ComponentPreview
   name="breadcrumb-separator"
-  description="A breadcrumb with a custom separator"
+  description="带自定义分隔符的面包屑"
 />
 
 ```tsx showLineNumbers {1,10-12}
@@ -92,13 +92,13 @@ import { SlashIcon } from "lucide-react"
 <Breadcrumb>
   <BreadcrumbList>
     <BreadcrumbItem>
-      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+      <BreadcrumbLink href="/">首页</BreadcrumbLink>
     </BreadcrumbItem>
     <BreadcrumbSeparator>
       <SlashIcon />
     </BreadcrumbSeparator>
     <BreadcrumbItem>
-      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+      <BreadcrumbLink href="/components">组件</BreadcrumbLink>
     </BreadcrumbItem>
   </BreadcrumbList>
 </Breadcrumb>
@@ -106,14 +106,14 @@ import { SlashIcon } from "lucide-react"
 
 ---
 
-### Dropdown
+### 下拉菜单
 
-You can compose `<BreadcrumbItem />` with a `<DropdownMenu />` to create a dropdown in the breadcrumb.
+可以将 `<BreadcrumbItem />` 与 `<DropdownMenu />` 组合，在面包屑中加入下拉菜单。
 
 <ComponentPreview
   name="breadcrumb-dropdown"
   className="[&_.preview]:p-2"
-  description="A breadcrumb with a dropdown."
+  description="带下拉菜单的面包屑。"
 />
 
 ```tsx showLineNumbers {1-6,11-21}
@@ -142,14 +142,14 @@ import {
 
 ---
 
-### Collapsed
+### 收起状态
 
-We provide a `<BreadcrumbEllipsis />` component to show a collapsed state when the breadcrumb is too long.
+当路径过长时，可以使用 `<BreadcrumbEllipsis />` 组件展示收起状态。
 
 <ComponentPreview
   name="breadcrumb-ellipsis"
   className="[&_.preview]:p-2"
-  description="A breadcrumb showing a collapsed state."
+  description="展示收起状态的面包屑。"
 />
 
 ```tsx showLineNumbers {1,9}
@@ -170,13 +170,13 @@ import { BreadcrumbEllipsis } from "@/components/ui/breadcrumb"
 
 ---
 
-### Link component
+### 自定义链接组件
 
-To use a custom link component from your routing library, you can use the `asChild` prop on `<BreadcrumbLink />`.
+如果想使用路由库中的自定义链接组件，可在 `<BreadcrumbLink />` 上启用 `asChild` 属性。
 
 <ComponentPreview
   name="breadcrumb-link"
-  description="A breadcrumb with a custom Link component"
+  description="使用自定义 Link 组件的面包屑"
 />
 
 ```tsx showLineNumbers {1,8-10}
@@ -188,7 +188,7 @@ import Link from "next/link"
   <BreadcrumbList>
     <BreadcrumbItem>
       <BreadcrumbLink asChild>
-        <Link href="/">Home</Link>
+        <Link href="/">首页</Link>
       </BreadcrumbLink>
     </BreadcrumbItem>
     {/* ... */}

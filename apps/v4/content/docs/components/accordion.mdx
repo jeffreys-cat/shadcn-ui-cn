@@ -1,6 +1,6 @@
 ---
 title: Accordion
-description: A vertically stacked set of interactive headings that each reveal a section of content.
+description: 垂直堆叠的交互式标题，可展开显示对应内容区块。
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/accordion
@@ -10,11 +10,11 @@ links:
 <ComponentPreview
   name="accordion-demo"
   className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[80%] **:[.preview]:min-h-[400px]"
-  description="An accordion with three items"
+  description="包含三个条目的手风琴示例"
   align="start"
 />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -35,17 +35,17 @@ npx shadcn@latest add accordion
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-accordion
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="accordion" title="components/ui/accordion.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -53,7 +53,7 @@ npm install @radix-ui/react-accordion
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import {
@@ -67,9 +67,9 @@ import {
 ```tsx showLineNumbers
 <Accordion type="single" collapsible>
   <AccordionItem value="item-1">
-    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionTrigger>它符合可访问性规范吗？</AccordionTrigger>
     <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
+      是的，组件遵循 WAI-ARIA 设计模式。
     </AccordionContent>
   </AccordionItem>
 </Accordion>

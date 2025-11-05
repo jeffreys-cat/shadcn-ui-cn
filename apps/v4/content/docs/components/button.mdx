@@ -1,6 +1,6 @@
 ---
 title: Button
-description: Displays a button or a component that looks like a button.
+description: 用于展示按钮或具有按钮外观的组件。
 featured: true
 component: true
 ---
@@ -8,13 +8,12 @@ component: true
 import { InfoIcon } from "lucide-react"
 
 <Callout variant="info" icon={<InfoIcon />}>
-**Updated:** We have updated the button component to add new sizes: `icon-sm` and `icon-lg`. See the
-[changelog](/docs/components/button#changelog) for more details. Follow the
-instructions to update your project.
+**更新：** 我们为按钮组件新增了 `icon-sm` 与 `icon-lg` 两种尺寸，详情参见
+[更新日志](/docs/components/button#changelog)。请按照说明更新你的项目。
 
 </Callout>
 
-<ComponentPreview name="button-demo" description="A button" className="mb-4" />
+<ComponentPreview name="button-demo" description="一个按钮" className="mb-4" />
 
 ```tsx showLineNumbers
 <Button variant="outline">Button</Button>
@@ -23,7 +22,7 @@ instructions to update your project.
 </Button>
 ```
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -43,17 +42,17 @@ npx shadcn@latest add button
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-slot
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将如下代码复制到你的项目中。</Step>
 
 <ComponentSource name="button" title="components/ui/button.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -61,7 +60,7 @@ npm install @radix-ui/react-slot
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx
 import { Button } from "@/components/ui/button"
@@ -71,11 +70,11 @@ import { Button } from "@/components/ui/button"
 <Button variant="outline">Button</Button>
 ```
 
-## Cursor
+## 光标
 
-Tailwind v4 [switched](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor) from `cursor: pointer` to `cursor: default` for the button component.
+Tailwind v4 已将按钮组件的默认光标从 `cursor: pointer` [调整](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor) 为 `cursor: default`。
 
-If you want to keep the `cursor: pointer` behavior, add the following code to your CSS file:
+如果希望保留 `cursor: pointer` 行为，可在 CSS 中加入以下代码：
 
 ```css showLineNumbers title="globals.css"
 @layer base {
@@ -86,9 +85,9 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 }
 ```
 
-## Examples
+## 示例
 
-### Size
+### 尺寸
 
 <ComponentPreview name="button-size" className="mb-4" />
 
@@ -112,11 +111,11 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 </Button>
 ```
 
-### Default
+### 默认样式
 
 <ComponentPreview
   name="button-default"
-  description="A primary button"
+  description="主按钮"
   className="mb-4"
 />
 
@@ -128,7 +127,7 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 
 <ComponentPreview
   name="button-outline"
-  description="A button using the outline variant."
+  description="使用 outline 变体的按钮。"
   className="mb-4"
 />
 
@@ -140,7 +139,7 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 
 <ComponentPreview
   name="button-secondary"
-  description="A secondary button"
+  description="次级按钮"
   className="mb-4"
 />
 
@@ -152,7 +151,7 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 
 <ComponentPreview
   name="button-ghost"
-  description="A button using the ghost variant"
+  description="使用 ghost 变体的按钮"
   className="mb-4"
 />
 
@@ -164,7 +163,7 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 
 <ComponentPreview
   name="button-destructive"
-  description="A destructive button"
+  description="危险操作按钮"
   className="mb-4"
 />
 
@@ -176,7 +175,7 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 
 <ComponentPreview
   name="button-link"
-  description="A button using the link variant."
+  description="使用 link 变体的按钮。"
   className="mb-4"
 />
 
@@ -188,7 +187,7 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 
 <ComponentPreview
   name="button-icon"
-  description="An icon button"
+  description="图标按钮"
   className="mb-4"
 />
 
@@ -198,14 +197,13 @@ If you want to keep the `cursor: pointer` behavior, add the following code to yo
 </Button>
 ```
 
-### With Icon
+### 带图标的文本按钮
 
-The spacing between the icon and the text is automatically adjusted
-based on the size of the button. You do not need any margin on the icon.
+图标与文字之间的间距会根据按钮尺寸自动调整，无需为图标单独设置外边距。
 
 <ComponentPreview
   name="button-with-icon"
-  description="A button with an icon"
+  description="带图标的按钮"
   className="mb-4"
 />
 
@@ -215,9 +213,9 @@ based on the size of the button. You do not need any margin on the icon.
 </Button>
 ```
 
-### Rounded
+### 圆形
 
-Use the `rounded-full` class to make the button rounded.
+使用 `rounded-full` 类让按钮成为圆形。
 
 <ComponentPreview name="button-rounded" className="mb-4" />
 
@@ -227,11 +225,11 @@ Use the `rounded-full` class to make the button rounded.
 </Button>
 ```
 
-### Spinner
+### 加载态
 
 <ComponentPreview
   name="button-loading"
-  description="A button with a loading state."
+  description="带加载状态的按钮。"
   className="mb-4"
 />
 
@@ -242,28 +240,28 @@ Use the `rounded-full` class to make the button rounded.
 </Button>
 ```
 
-### Button Group
+### 按钮组
 
-To create a button group, use the `ButtonGroup` component. See the [Button Group](/docs/components/button-group) documentation for more details.
+若要创建按钮组，可使用 `ButtonGroup` 组件。更多细节请参阅 [Button Group](/docs/components/button-group) 文档。
 
 <ComponentPreview name="button-group-demo" className="mb-4" />
 
 ```tsx showLineNumbers
 <ButtonGroup>
   <ButtonGroup>
-    <Button variant="outline" size="icon" aria-label="Go Back">
+    <Button variant="outline" size="icon" aria-label="返回">
       <ArrowLeftIcon />
     </Button>
   </ButtonGroup>
   <ButtonGroup>
-    <Button variant="outline">Archive</Button>
-    <Button variant="outline">Report</Button>
+    <Button variant="outline">归档</Button>
+    <Button variant="outline">举报</Button>
   </ButtonGroup>
   <ButtonGroup>
-    <Button variant="outline">Snooze</Button>
+    <Button variant="outline">稍后处理</Button>
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" aria-label="More Options">
+        <Button variant="outline" size="icon" aria-label="更多选项">
           <MoreHorizontalIcon />
         </Button>
       </DropdownMenuTrigger>
@@ -273,9 +271,9 @@ To create a button group, use the `ButtonGroup` component. See the [Button Group
 </ButtonGroup>
 ```
 
-### Link
+### 链接按钮
 
-You can use the `asChild` prop to make another component look like a button. Here's an example of a link that looks like a button.
+可以使用 `asChild` 属性让其他组件呈现按钮样式。下方示例演示了一个看起来像按钮的链接。
 
 ```tsx showLineNumbers
 import Link from "next/link"
@@ -285,17 +283,17 @@ import { Button } from "@/components/ui/button"
 export function LinkAsButton() {
   return (
     <Button asChild>
-      <Link href="/login">Login</Link>
+      <Link href="/login">登录</Link>
     </Button>
   )
 }
 ```
 
-## API Reference
+## API 参考
 
 ### Button
 
-The `Button` component is a wrapper around the `button` element that adds a variety of styles and functionality.
+`Button` 组件基于原生 `button` 元素封装，提供多种样式与功能。
 
 | Prop      | Type                                                                          | Default     |
 | --------- | ----------------------------------------------------------------------------- | ----------- |
@@ -303,11 +301,11 @@ The `Button` component is a wrapper around the `button` element that adds a vari
 | `size`    | `"default" \| "sm" \| "lg" \| "icon" \| "icon-sm" \| "icon-lg"`               | `"default"` |
 | `asChild` | `boolean`                                                                     | `false`     |
 
-## Changelog
+## 更新日志
 
-### 2025-09-24 New sizes
+### 2025-09-24 新增尺寸
 
-We have added two new sizes to the button component: `icon-sm` and `icon-lg`. These sizes are used to create icon buttons. To add them, edit `button.tsx` and add the following code under `size` in `buttonVariants`:
+我们为按钮组件新增了 `icon-sm` 与 `icon-lg` 两种尺寸，用于构建图标按钮。要启用它们，请在 `button.tsx` 中的 `buttonVariants` 配置里为 `size` 添加如下代码：
 
 ```tsx showLineNumbers title="components/ui/button.tsx"
 const buttonVariants = cva("...", {
