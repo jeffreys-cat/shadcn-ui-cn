@@ -37,6 +37,10 @@ export const siteConfig = {
       href: "/colors",
       label: "配色",
     },
+    {
+      href: "https://www.shadcn.com.cn/dashboard",
+      label: "Dashboard",
+    },
   ],
 }
 

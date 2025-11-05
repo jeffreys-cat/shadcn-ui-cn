@@ -21,6 +21,7 @@ export function MainNav({
         <Button key={item.href} variant="ghost" asChild size="sm">
           <Link
             href={item.href}
+            target={item.href.startsWith("http") ? "_blank" : undefined}
             className={cn(pathname === item.href && "text-primary")}
           >
             {item.label}
