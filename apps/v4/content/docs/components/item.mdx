@@ -1,16 +1,16 @@
 ---
 title: Item
-description: A versatile component that you can use to display any content.
+description: 通用的内容展示组件，可灵活组合标题、描述与操作。
 component: true
 ---
 
-The `Item` component is a straightforward flex container that can house nearly any type of content. Use it to display a title, description, and actions. Group it with the `ItemGroup` component to create a list of items.
+`Item` 是一个简单的 Flex 容器，可容纳几乎所有类型的内容，用于展示标题、描述与操作。配合 `ItemGroup` 可以构建条目列表。
 
-You can pretty much achieve the same result with the `div` element and some classes, but **I've built this so many times** that I decided to create a component for it. Now I use it all the time.
+虽然用 `div` 加类名也能实现类似效果，但**因为实在写过太多次**，因此提炼出了这个组件，现在我已经离不开它。
 
 <ComponentPreview name="item-demo" className="[&_.preview]:p-4" />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -30,11 +30,11 @@ npx shadcn@latest add item
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="item" title="components/ui/item.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -42,7 +42,7 @@ npx shadcn@latest add item
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import {
@@ -59,32 +59,32 @@ import {
 
 ```tsx showLineNumbers
 <Item>
-  <ItemHeader>Item Header</ItemHeader>
+  <ItemHeader>条目标题</ItemHeader>
   <ItemMedia />
   <ItemContent>
-    <ItemTitle>Item</ItemTitle>
-    <ItemDescription>Item</ItemDescription>
+    <ItemTitle>条目名称</ItemTitle>
+    <ItemDescription>条目描述</ItemDescription>
   </ItemContent>
   <ItemActions />
-  <ItemFooter>Item Footer</ItemFooter>
+  <ItemFooter>条目页脚</ItemFooter>
 </Item>
 ```
 
 ## Item vs Field
 
-Use `Field` if you need to display a form input such as a checkbox, input, radio, or select.
+若需要展示复选框、输入框、单选框或下拉等表单控件，请使用 `Field`。
 
-If you only need to display content such as a title, description, and actions, use `Item`.
+若只需展示标题、描述与操作等内容，则使用 `Item` 即可。
 
 ## Examples
 
-### Variants
+### 变体
 
 <ComponentPreview name="item-variant" className="[&_.preview]:p-4" />
 
-### Size
+### 尺寸
 
-The `Item` component has different sizes for different use cases. For example, you can use the `sm` size for a compact item or the `default` size for a standard item.
+`Item` 支持多种尺寸，例如使用 `sm` 获得更紧凑的条目，`default` 则为标准尺寸。
 
 <ComponentPreview name="item-size" className="[&_.preview]:p-4" />
 
@@ -108,9 +108,9 @@ The `Item` component has different sizes for different use cases. For example, y
 
 <ComponentPreview name="item-header" className="[&_.preview]:p-4" />
 
-### Link
+### 链接
 
-To render an item as a link, use the `asChild` prop. The hover and focus states will be applied to the anchor element.
+如果需要将条目渲染为链接，可使用 `asChild`，悬停与聚焦状态将作用于链接元素。
 
 <ComponentPreview name="item-link" className="[&_.preview]:p-4" />
 
@@ -131,11 +131,11 @@ To render an item as a link, use the `asChild` prop. The hover and focus states 
 
 <ComponentPreview name="item-dropdown" className="[&_.preview]:p-4" />
 
-## API Reference
+## API 参考
 
 ### Item
 
-The main component for displaying content with media, title, description, and actions.
+用于展示媒体、标题、描述与操作的核心组件。
 
 | Prop      | Type                                | Default     |
 | --------- | ----------------------------------- | ----------- |
@@ -154,7 +154,7 @@ The main component for displaying content with media, title, description, and ac
 </Item>
 ```
 
-You can use the `asChild` prop to render a custom component as the item, for example a link. The hover and focus states will be applied to the custom component.
+可通过 `asChild` 将自定义组件（如链接）渲染为条目，此时悬停与聚焦状态会应用到自定义组件上。
 
 ```tsx showLineNumbers
 import {
@@ -201,7 +201,7 @@ The `ItemGroup` component is a container that groups related items together with
 
 ### ItemSeparator
 
-The `ItemSeparator` component is a separator that separates items in the item group.
+在条目组中用于分隔条目的组件。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -217,7 +217,7 @@ The `ItemSeparator` component is a separator that separates items in the item gr
 
 ### ItemMedia
 
-Use the `ItemMedia` component to display media content such as icons, images, or avatars.
+用于展示图标、图片或头像等媒体内容。
 
 | Prop        | Type                             | Default     |
 | ----------- | -------------------------------- | ----------- |
@@ -238,9 +238,9 @@ Use the `ItemMedia` component to display media content such as icons, images, or
 
 ### ItemContent
 
-The `ItemContent` component wraps the title and description of the item.
+用于包裹条目的标题与描述。
 
-You can skip `ItemContent` if you only need a title.
+若仅需要标题可省略 `ItemContent`。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -255,7 +255,7 @@ You can skip `ItemContent` if you only need a title.
 
 ### ItemTitle
 
-Use the `ItemTitle` component to display the title of the item.
+显示条目标题。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -267,7 +267,7 @@ Use the `ItemTitle` component to display the title of the item.
 
 ### ItemDescription
 
-Use the `ItemDescription` component to display the description of the item.
+展示条目描述。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -279,7 +279,7 @@ Use the `ItemDescription` component to display the description of the item.
 
 ### ItemActions
 
-Use the `ItemActions` component to display action buttons or other interactive elements.
+用于展示操作按钮或其他交互元素。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -294,7 +294,7 @@ Use the `ItemActions` component to display action buttons or other interactive e
 
 ### ItemHeader
 
-Use the `ItemHeader` component to display a header in the item.
+用于在条目中展示页眉信息。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -306,7 +306,7 @@ Use the `ItemHeader` component to display a header in the item.
 
 ### ItemFooter
 
-Use the `ItemFooter` component to display a footer in the item.
+用于在条目中展示页脚内容。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |

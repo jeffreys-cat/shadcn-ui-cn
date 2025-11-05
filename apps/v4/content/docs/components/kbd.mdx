@@ -1,12 +1,12 @@
 ---
 title: Kbd
-description: Used to display textual user input from keyboard.
+description: 用于展示键盘输入提示的组件。
 component: true
 ---
 
 <ComponentPreview name="kbd-demo" />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -26,11 +26,11 @@ npx shadcn@latest add kbd
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="kbd" title="components/ui/kbd.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -38,7 +38,7 @@ npx shadcn@latest add kbd
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx
 import { Kbd } from "@/components/ui/kbd"
@@ -48,37 +48,37 @@ import { Kbd } from "@/components/ui/kbd"
 <Kbd>Ctrl</Kbd>
 ```
 
-## Examples
+## 示例
 
 ### Group
 
-Use the `KbdGroup` component to group keyboard keys together.
+使用 `KbdGroup` 将多个键组合展示。
 
 <ComponentPreview name="kbd-group" />
 
 ### Button
 
-Use the `Kbd` component inside a `Button` component to display a keyboard key inside a button.
+在 `Button` 中嵌入 `Kbd` 展示快捷键提示。
 
 <ComponentPreview name="kbd-button" />
 
 ### Tooltip
 
-You can use the `Kbd` component inside a `Tooltip` component to display a tooltip with a keyboard key.
+在 `Tooltip` 中使用 `Kbd` 显示键盘提示信息。
 
 <ComponentPreview name="kbd-tooltip" />
 
 ### Input Group
 
-You can use the `Kbd` component inside a `InputGroupAddon` component to display a keyboard key inside an input group.
+在 `InputGroupAddon` 中使用 `Kbd` 提示快捷键。
 
 <ComponentPreview name="kbd-input-group" />
 
-## API Reference
+## API 参考
 
 ### Kbd
 
-Use the `Kbd` component to display a keyboard key.
+用于显示单个键。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -90,7 +90,7 @@ Use the `Kbd` component to display a keyboard key.
 
 ### KbdGroup
 
-Use the `KbdGroup` component to group `Kbd` components together.
+用于将多个 `Kbd` 组合在一起。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |

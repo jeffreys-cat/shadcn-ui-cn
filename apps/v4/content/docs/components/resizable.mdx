@@ -1,6 +1,6 @@
 ---
 title: Resizable
-description: Accessible resizable panel groups and layouts with keyboard support.
+description: 支持键盘操作的可调整大小面板与布局。
 component: true
 links:
   doc: https://github.com/bvaughn/react-resizable-panels
@@ -9,14 +9,14 @@ links:
 
 <ComponentPreview
   name="resizable-demo"
-  description="A group of resizable horizontal and vertical panels."
+  description="同时包含水平与垂直可调节面板的示例。"
 />
 
-## About
+## 关于
 
-The `Resizable` component is built on top of [react-resizable-panels](https://github.com/bvaughn/react-resizable-panels) by [bvaughn](https://github.com/bvaughn).
+`Resizable` 基于 [bvaughn](https://github.com/bvaughn) 的 [react-resizable-panels](https://github.com/bvaughn/react-resizable-panels) 构建。
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -36,17 +36,17 @@ npx shadcn@latest add resizable
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install react-resizable-panels
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="resizable" title="components/ui/resizable.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -54,7 +54,7 @@ npm install react-resizable-panels
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import {
@@ -66,9 +66,9 @@ import {
 
 ```tsx showLineNumbers
 <ResizablePanelGroup direction="horizontal">
-  <ResizablePanel>One</ResizablePanel>
+  <ResizablePanel>面板一</ResizablePanel>
   <ResizableHandle />
-  <ResizablePanel>Two</ResizablePanel>
+  <ResizablePanel>面板二</ResizablePanel>
 </ResizablePanelGroup>
 ```
 
@@ -76,7 +76,7 @@ import {
 
 ### Vertical
 
-Use the `direction` prop to set the direction of the resizable panels.
+通过 `direction` 属性控制面板的伸缩方向。
 
 <ComponentPreview
   name="resizable-vertical"
@@ -93,9 +93,9 @@ import {
 export default function Example() {
   return (
     <ResizablePanelGroup direction="vertical">
-      <ResizablePanel>One</ResizablePanel>
+      <ResizablePanel>面板一</ResizablePanel>
       <ResizableHandle />
-      <ResizablePanel>Two</ResizablePanel>
+      <ResizablePanel>面板二</ResizablePanel>
     </ResizablePanelGroup>
   )
 }
@@ -103,7 +103,7 @@ export default function Example() {
 
 ### Handle
 
-You can set or hide the handle by using the `withHandle` prop on the `ResizableHandle` component.
+可通过 `ResizableHandle` 的 `withHandle` 属性设置或隐藏拖拽手柄。
 
 <ComponentPreview
   name="resizable-handle"
@@ -120,9 +120,9 @@ import {
 export default function Example() {
   return (
     <ResizablePanelGroup direction="horizontal">
-      <ResizablePanel>One</ResizablePanel>
+      <ResizablePanel>面板一</ResizablePanel>
       <ResizableHandle withHandle />
-      <ResizablePanel>Two</ResizablePanel>
+      <ResizablePanel>面板二</ResizablePanel>
     </ResizablePanelGroup>
   )
 }

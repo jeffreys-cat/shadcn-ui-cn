@@ -1,6 +1,6 @@
 ---
 title: Navigation Menu
-description: A collection of links for navigating websites.
+description: 用于网站导航的链接集合。
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/navigation-menu
@@ -12,7 +12,7 @@ links:
   className="[&_.preview]:!items-start [&_.preview]:p-4 [&_.preview]:pt-8 md:[&_.preview]:pt-16"
 />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -32,20 +32,20 @@ npx shadcn@latest add navigation-menu
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-navigation-menu
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource
   name="navigation-menu"
   title="components/ui/navigation-menu.tsx"
 />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -53,7 +53,7 @@ npm install @radix-ui/react-navigation-menu
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import {
@@ -72,9 +72,9 @@ import {
 <NavigationMenu>
   <NavigationMenuList>
     <NavigationMenuItem>
-      <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+      <NavigationMenuTrigger>菜单项 1</NavigationMenuTrigger>
       <NavigationMenuContent>
-        <NavigationMenuLink>Link</NavigationMenuLink>
+        <NavigationMenuLink>链接</NavigationMenuLink>
       </NavigationMenuContent>
     </NavigationMenuItem>
   </NavigationMenuList>
@@ -83,7 +83,7 @@ import {
 
 ## Link
 
-You can use the `asChild` prop to make another component look like a navigation menu trigger. Here's an example of a link that looks like a navigation menu trigger.
+可以通过 `asChild` 让其他组件呈现导航菜单触发器的外观。以下示例展示了一个链接触发器。
 
 ```tsx showLineNumbers title="components/example-navigation-menu.tsx"
 import Link from "next/link"

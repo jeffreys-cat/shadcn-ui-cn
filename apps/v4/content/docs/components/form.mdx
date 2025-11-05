@@ -1,45 +1,45 @@
 ---
 title: Form
-description: Building forms with React Hook Form and Zod.
+description: 使用 React Hook Form 与 Zod 构建表单。
 links:
   doc: https://react-hook-form.com
 ---
 
 import { InfoIcon } from "lucide-react"
 
-<Callout icon={<InfoIcon />} title="We are not actively developing this component anymore.">
+<Callout icon={<InfoIcon />} title="该组件不再持续迭代">
 
-The Form component is an abstraction over the `react-hook-form` library. Going forward, we recommend using the [`<Field />`](/docs/components/field) component to build forms. See the [Form](/docs/forms) documentation for more information.
+`Form` 组件是对 `react-hook-form` 的封装。后续推荐使用 [`<Field />`](/docs/components/field) 来构建表单。详情可见 [Form](/docs/forms) 文档。
 
 </Callout>
 
-Forms are tricky. They are one of the most common things you'll build in a web application, but also one of the most complex.
+表单非常常见，也十分复杂。
 
-Well-designed HTML forms are:
+良好的 HTML 表单应当：
 
-- Well-structured and semantically correct.
-- Easy to use and navigate (keyboard).
-- Accessible with ARIA attributes and proper labels.
-- Has support for client and server side validation.
-- Well-styled and consistent with the rest of the application.
+- 结构合理、语义正确。
+- 便于使用与键盘导航。
+- 具备合适的 ARIA 属性与标签。
+- 支持客户端与服务端校验。
+- 样式统一，与应用整体保持一致。
 
-In this guide, we will take a look at building forms with [`react-hook-form`](https://react-hook-form.com/) and [`zod`](https://zod.dev). We're going to use a `<FormField>` component to compose accessible forms using Radix UI components.
+本指南将演示如何使用 [`react-hook-form`](https://react-hook-form.com/) 与 [`zod`](https://zod.dev) 构建表单，并通过 `<FormField>` 与 Radix UI 组件组合出可访问表单。
 
-## Features
+## 功能特性
 
-The `<Form />` component is a wrapper around the `react-hook-form` library. It provides a few things:
+`<Form />` 对 `react-hook-form` 做了封装，提供以下能力：
 
-- Composable components for building forms.
-- A `<FormField />` component for building controlled form fields.
-- Form validation using `zod`.
-- Handles accessibility and error messages.
-- Uses `React.useId()` for generating unique IDs.
-- Applies the correct `aria` attributes to form fields based on states.
-- Built to work with all Radix UI components.
-- Bring your own schema library. We use `zod` but you can use anything you want.
-- **You have full control over the markup and styling.**
+- 可组合的表单组件。
+- `<FormField />` 用于构建受控字段。
+- 结合 `zod` 的表单校验。
+- 内置无障碍与错误消息处理。
+- 使用 `React.useId()` 生成唯一 ID。
+- 根据状态自动设置合适的 `aria` 属性。
+- 与所有 Radix UI 组件兼容。
+- 可自选 schema 库（示例使用 `zod`，也可替换）。
+- **完全掌控标记与样式。**
 
-## Anatomy
+## 结构解析
 
 ```tsx showLineNumbers
 <Form>
@@ -60,7 +60,7 @@ The `<Form />` component is a wrapper around the `react-hook-form` library. It p
 </Form>
 ```
 
-## Example
+## 示例
 
 ```tsx showLineNumbers
 const form = useForm()
@@ -81,7 +81,7 @@ const form = useForm()
 />
 ```
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -93,7 +93,7 @@ const form = useForm()
 
 <Steps>
 
-### Command
+### 命令行
 
 ```bash
 npx shadcn@latest add form
@@ -107,17 +107,17 @@ npx shadcn@latest add form
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-label @radix-ui/react-slot react-hook-form @hookform/resolvers zod
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="form" title="components/ui/form.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -125,11 +125,11 @@ npm install @radix-ui/react-label @radix-ui/react-slot react-hook-form @hookform
 
 </CodeTabs>
 
-## Usage
+## 用法
 
-### Create a form schema
+### 创建表单模式
 
-Define the shape of your form using a Zod schema. You can read more about using Zod in the [Zod documentation](https://zod.dev).
+使用 Zod 定义表单结构，更多用法请参考 [Zod 文档](https://zod.dev)。
 
 ```tsx showLineNumbers title="components/example-form.tsx" {3,5-7}
 "use client"
@@ -141,9 +141,9 @@ const formSchema = z.object({
 })
 ```
 
-### Define a form
+### 定义表单
 
-Use the `useForm` hook from `react-hook-form` to create a form.
+通过 `react-hook-form` 的 `useForm` 钩子创建表单。
 
 ```tsx showLineNumbers title="components/example-form.tsx" {3-4,14-20,22-27}
 "use client"
@@ -159,7 +159,7 @@ const formSchema = z.object({
 })
 
 export function ProfileForm() {
-  // 1. Define your form.
+  // 1. 定义表单。
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -167,20 +167,20 @@ export function ProfileForm() {
     },
   })
 
-  // 2. Define a submit handler.
+  // 2. 定义提交处理函数。
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
+    // 在这里处理表单数据。
+    // ✅ 经过类型与校验保障。
     console.log(values)
   }
 }
 ```
 
-Since `FormField` is using a controlled component, you need to provide a default value for the field. See the [React Hook Form docs](https://react-hook-form.com/docs/usecontroller) to learn more about controlled components.
+由于 `FormField` 基于受控组件，需要为字段提供默认值。更多说明可查阅 [React Hook Form 文档](https://react-hook-form.com/docs/usecontroller)。
 
-### Build your form
+### 构建表单
 
-We can now use the `<Form />` components to build our form.
+现在即可使用 `<Form />` 组件搭建表单。
 
 ```tsx showLineNumbers title="components/example-form.tsx" {7-17,28-50}
 "use client"
@@ -218,24 +218,24 @@ export function ProfileForm() {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>用户名</FormLabel>
               <FormControl>
                 <Input placeholder="shadcn" {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display name.
+                这是你的公开显示名称。
               </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">提交</Button>
       </form>
     </Form>
   )
 }
 ```
 
-### Done
+### 完成
 
-That's it. You now have a fully accessible form that is type-safe with client-side validation.
+这样就得到了一个具备可访问性、类型安全并包含客户端校验的表单。

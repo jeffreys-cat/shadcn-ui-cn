@@ -1,6 +1,6 @@
 ---
 title: Radio Group
-description: A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.
+description: 单选按钮组，同一时间仅允许选择一个选项。
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/radio-group
@@ -9,10 +9,10 @@ links:
 
 <ComponentPreview
   name="radio-group-demo"
-  description="A radio group with 3 items."
+  description="包含 3 个选项的单选组。"
 />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -32,17 +32,17 @@ npx shadcn@latest add radio-group
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-radio-group
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="radio-group" title="components/ui/radio-group.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -50,7 +50,7 @@ npm install @radix-ui/react-radio-group
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import { Label } from "@/components/ui/label"
@@ -61,11 +61,11 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 <RadioGroup defaultValue="option-one">
   <div className="flex items-center space-x-2">
     <RadioGroupItem value="option-one" id="option-one" />
-    <Label htmlFor="option-one">Option One</Label>
+    <Label htmlFor="option-one">选项一</Label>
   </div>
   <div className="flex items-center space-x-2">
     <RadioGroupItem value="option-two" id="option-two" />
-    <Label htmlFor="option-two">Option Two</Label>
+    <Label htmlFor="option-two">选项二</Label>
   </div>
 </RadioGroup>
 ```

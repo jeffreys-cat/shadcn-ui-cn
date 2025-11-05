@@ -1,6 +1,6 @@
 ---
 title: Input Group
-description: Display additional information or actions to an input or textarea.
+description: 为输入框或文本域添加额外信息或操作的组合组件。
 component: true
 ---
 
@@ -8,7 +8,7 @@ import { IconInfoCircle } from "@tabler/icons-react"
 
 <ComponentPreview name="input-group-demo" className="[&_.preview]:p-4" />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -28,11 +28,11 @@ npx shadcn@latest add input-group
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="input-group" title="components/ui/input-group.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -40,7 +40,7 @@ npx shadcn@latest add input-group
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import {
@@ -55,17 +55,17 @@ import {
 
 ```tsx showLineNumbers
 <InputGroup>
-  <InputGroupInput placeholder="Search..." />
+  <InputGroupInput placeholder="搜索..." />
   <InputGroupAddon>
     <SearchIcon />
   </InputGroupAddon>
   <InputGroupAddon align="inline-end">
-    <InputGroupButton>Search</InputGroupButton>
+    <InputGroupButton>搜索</InputGroupButton>
   </InputGroupAddon>
 </InputGroup>
 ```
 
-## Examples
+## 示例
 
 ### Icon
 
@@ -73,49 +73,49 @@ import {
 
 ### Text
 
-Display additional text information alongside inputs.
+在输入框旁展示额外文本信息。
 
 <ComponentPreview name="input-group-text" className="[&_.preview]:p-4" />
 
 ### Button
 
-Add buttons to perform actions within the input group.
+在输入组中加入按钮以触发操作。
 
 <ComponentPreview name="input-group-button" className="[&_.preview]:p-4" />
 
 ### Tooltip
 
-Add tooltips to provide additional context or help.
+添加提示信息以提供额外说明。
 
 <ComponentPreview name="input-group-tooltip" className="[&_.preview]:p-4" />
 
 ### Textarea
 
-Input groups also work with textarea components. Use `block-start` or `block-end` for alignment.
+输入组同样适用于文本域，可通过 `block-start` 或 `block-end` 控制对齐。
 
 <ComponentPreview name="input-group-textarea" className="[&_.preview]:p-4" />
 
 ### Spinner
 
-Show loading indicators while processing input.
+在处理输入时展示加载状态。
 
 <ComponentPreview name="input-group-spinner" className="[&_.preview]:p-4" />
 
 ### Label
 
-Add labels within input groups to improve accessibility.
+在输入组中添加标签提升可访问性。
 
 <ComponentPreview name="input-group-label" className="[&_.preview]:p-4" />
 
 ### Dropdown
 
-Pair input groups with dropdown menus for complex interactions.
+与下拉菜单组合实现更复杂的交互。
 
 <ComponentPreview name="input-group-dropdown" className="[&_.preview]:p-4" />
 
 ### Button Group
 
-Wrap input groups with button groups to create prefixes and suffixes.
+结合按钮组创建前缀或后缀。
 
 <ComponentPreview
   name="input-group-button-group"
@@ -124,9 +124,9 @@ Wrap input groups with button groups to create prefixes and suffixes.
 
 ### Custom Input
 
-Add the `data-slot="input-group-control"` attribute to your custom input for automatic behavior and focus state handling.
+为自定义输入添加 `data-slot="input-group-control"` 属性，即可自动获得行为与聚焦状态处理。
 
-No style is applied to the custom input. Apply your own styles using the `className` prop.
+组件不会对自定义输入应用样式，可通过 `className` 自行定制。
 
 <ComponentPreview
   name="input-group-custom"
@@ -151,11 +151,11 @@ export function InputGroupCustom() {
 }
 ```
 
-## API Reference
+## API 参考
 
 ### InputGroup
 
-The main component that wraps inputs and addons.
+负责包裹输入与附加内容的主组件。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -170,11 +170,10 @@ The main component that wraps inputs and addons.
 
 ### InputGroupAddon
 
-Displays icons, text, buttons, or other content alongside inputs.
+用于在输入两侧展示图标、文本、按钮等内容。
 
 <Callout icon={<IconInfoCircle />} title="Focus Navigation">
-  For proper focus navigation, the `InputGroupAddon` component should be placed
-  after the input. Set the `align` prop to position the addon.
+  为确保焦点顺序正确，应将 `InputGroupAddon` 放在输入控件之后，并通过 `align` 属性调整位置。
 </Callout>
 
 | Prop        | Type                                                             | Default          |
@@ -188,9 +187,9 @@ Displays icons, text, buttons, or other content alongside inputs.
 </InputGroupAddon>
 ```
 
-**For `<InputGroupInput />`, use the `inline-start` or `inline-end` alignment. For `<InputGroupTextarea />`, use the `block-start` or `block-end` alignment.**
+**在 `<InputGroupInput />` 中使用 `inline-start` 或 `inline-end`，在 `<InputGroupTextarea />` 中使用 `block-start` 或 `block-end`。**
 
-The `InputGroupAddon` component can have multiple `InputGroupButton` components and icons.
+`InputGroupAddon` 内可以包含多个 `InputGroupButton` 以及图标。
 
 ```tsx
 <InputGroupAddon>
@@ -201,7 +200,7 @@ The `InputGroupAddon` component can have multiple `InputGroupButton` components 
 
 ### InputGroupButton
 
-Displays buttons within input groups.
+在输入组中展示按钮。
 
 | Prop        | Type                                                                          | Default   |
 | ----------- | ----------------------------------------------------------------------------- | --------- |
@@ -218,13 +217,13 @@ Displays buttons within input groups.
 
 ### InputGroupInput
 
-Replacement for `<Input />` when building input groups. This component has the input group styles pre-applied and uses the unified `data-slot="input-group-control"` for focus state handling.
+在输入组场景下替代 `<Input />`，预置了输入组样式，并通过统一的 `data-slot="input-group-control"` 处理焦点状态。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
 | `className` | `string` |         |
 
-All other props are passed through to the underlying `<Input />` component.
+其余属性会透传给底层 `<Input />` 组件。
 
 ```tsx
 <InputGroup>
@@ -237,13 +236,13 @@ All other props are passed through to the underlying `<Input />` component.
 
 ### InputGroupTextarea
 
-Replacement for `<Textarea />` when building input groups. This component has the textarea group styles pre-applied and uses the unified `data-slot="input-group-control"` for focus state handling.
+输入组场景下替代 `<Textarea />`，预置文本域样式，并使用统一的 `data-slot="input-group-control"` 处理焦点状态。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
 | `className` | `string` |         |
 
-All other props are passed through to the underlying `<Textarea />` component.
+其余属性会透传给底层 `<Textarea />` 组件。
 
 ```tsx
 <InputGroup>
@@ -254,8 +253,8 @@ All other props are passed through to the underlying `<Textarea />` component.
 </InputGroup>
 ```
 
-## Changelog
+## 更新日志
 
 ### 2025-10-06 `InputGroup`
 
-Add the `min-w-0` class to the `InputGroup` component. See [diff](https://github.com/shadcn-ui/ui/pull/8341/files#diff-0e2ee95d0050ca4c5d82339df86c54e14a6739dc4638fdda0eec8f73aebc2da9).
+为 `InputGroup` 组件新增 `min-w-0` 类。详见 [diff](https://github.com/shadcn-ui/ui/pull/8341/files#diff-0e2ee95d0050ca4c5d82339df86c54e14a6739dc4638fdda0eec8f73aebc2da9)。

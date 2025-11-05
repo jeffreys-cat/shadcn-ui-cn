@@ -1,6 +1,6 @@
 ---
 title: Popover
-description: Displays rich content in a portal, triggered by a button.
+description: 通过按钮触发，在 Portal 中展示丰富内容的组件。
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/popover
@@ -9,10 +9,10 @@ links:
 
 <ComponentPreview
   name="popover-demo"
-  description="A popover component with a form."
+  description="带表单的弹出层组件。"
 />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -32,17 +32,17 @@ npx shadcn@latest add popover
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-popover
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="popover" title="components/ui/popover.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -50,7 +50,7 @@ npm install @radix-ui/react-popover
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import {
@@ -62,7 +62,7 @@ import {
 
 ```tsx showLineNumbers
 <Popover>
-  <PopoverTrigger>Open</PopoverTrigger>
-  <PopoverContent>Place content for the popover here.</PopoverContent>
+  <PopoverTrigger>打开</PopoverTrigger>
+  <PopoverContent>在此放置弹出内容。</PopoverContent>
 </Popover>
 ```

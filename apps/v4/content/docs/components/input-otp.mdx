@@ -1,18 +1,18 @@
 ---
 title: Input OTP
-description: Accessible one-time password component with copy paste functionality.
+description: 支持复制粘贴且可访问的一次性密码输入组件。
 component: true
 links:
   doc: https://input-otp.rodz.dev
 ---
 
-<ComponentPreview name="input-otp-demo" description="An 6 digits input OTP." />
+<ComponentPreview name="input-otp-demo" description="6 位 OTP 输入示例。" />
 
-## About
+## 关于
 
-Input OTP is built on top of [input-otp](https://github.com/guilhermerodz/input-otp) by [@guilherme_rodz](https://twitter.com/guilherme_rodz).
+Input OTP 基于 [@guilherme_rodz](https://twitter.com/guilherme_rodz) 的 [input-otp](https://github.com/guilhermerodz/input-otp) 构建。
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -24,7 +24,7 @@ Input OTP is built on top of [input-otp](https://github.com/guilhermerodz/input-
 
 <Steps>
 
-<Step>Run the following command:</Step>
+<Step>执行以下命令：</Step>
 
 ```bash
 npx shadcn@latest add input-otp
@@ -38,17 +38,17 @@ npx shadcn@latest add input-otp
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install input-otp
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="input-otp" title="components/ui/input-otp.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -56,7 +56,7 @@ npm install input-otp
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import {
@@ -83,11 +83,11 @@ import {
 </InputOTP>
 ```
 
-## Examples
+## 示例
 
 ### Pattern
 
-Use the `pattern` prop to define a custom pattern for the OTP input.
+通过 `pattern` 属性为 OTP 输入定义自定义模式。
 
 <ComponentPreview
   name="input-otp-pattern"
@@ -112,7 +112,7 @@ import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
 
 ### Separator
 
-You can use the `<InputOTPSeparator />` component to add a separator between the input groups.
+使用 `<InputOTPSeparator />` 在输入组之间添加分隔符。
 
 <ComponentPreview
   name="input-otp-separator"
@@ -144,7 +144,7 @@ import {
 
 ### Controlled
 
-You can use the `value` and `onChange` props to control the input value.
+可通过 `value` 与 `onChange` 实现受控输入。
 
 <ComponentPreview name="input-otp-controlled" />
 
@@ -152,26 +152,25 @@ You can use the `value` and `onChange` props to control the input value.
 
 <ComponentPreview name="input-otp-form" />
 
-## Changelog
+## 更新日志
 
-### 2024-03-19 Composition
+### 2024-03-19 组件化写法
 
-We've made some updates and replaced the render props pattern with composition. Here's how to update your code if you prefer the composition pattern.
+我们将渲染属性模式重构为组合式用法。如果你想使用组合模式，可按以下步骤更新代码。
 
 <Callout className="mt-6">
-  **Note:** You are not required to update your code if you are using the
-  `render` prop. It is still supported.
+  **注意：** 如果你仍使用 `render` 属性，可继续保留，现阶段依然受支持。
 </Callout>
 
 <Steps>
 
-<Step>Update to the latest version of `input-otp`.</Step>
+<Step>升级到最新版 `input-otp`。</Step>
 
 ```bash
 npm install input-otp@latest
 ```
 
-<Step>Update `input-otp.tsx`</Step>
+<Step>更新 `input-otp.tsx`。</Step>
 
 ```diff showLineNumbers title="input-otp.tsx" {2,8-11}
 - import { OTPInput, SlotProps } from "input-otp"
@@ -187,7 +186,7 @@ npm install input-otp@latest
 +   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
 ```
 
-<Step>Then replace the `render` prop in your code.</Step>
+<Step>最后在代码中替换掉 `render` 属性。</Step>
 
 ```diff showLineNumbers {2-12}
 <InputOTP maxLength={6}>
