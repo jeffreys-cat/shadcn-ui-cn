@@ -1,12 +1,12 @@
 ---
 title: Empty
-description: Use the Empty component to display an empty state.
+description: 使用 Empty 组件展示空状态。
 component: true
 ---
 
 <ComponentPreview name="empty-demo" className="[&_.preview]:p-0" />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
@@ -26,11 +26,11 @@ npx shadcn@latest add empty
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="empty" title="components/ui/empty.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -38,7 +38,7 @@ npx shadcn@latest add empty
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx
 import {
@@ -57,20 +57,20 @@ import {
     <EmptyMedia variant="icon">
       <Icon />
     </EmptyMedia>
-    <EmptyTitle>No data</EmptyTitle>
-    <EmptyDescription>No data found</EmptyDescription>
+    <EmptyTitle>暂无数据</EmptyTitle>
+    <EmptyDescription>未找到相关数据</EmptyDescription>
   </EmptyHeader>
   <EmptyContent>
-    <Button>Add data</Button>
+    <Button>添加数据</Button>
   </EmptyContent>
 </Empty>
 ```
 
-## Examples
+## 示例
 
 ### Outline
 
-Use the `border` utility class to create an outline empty state.
+使用 `border` 工具类即可创建带描边的空状态。
 
 <ComponentPreview
   name="empty-outline"
@@ -79,33 +79,33 @@ Use the `border` utility class to create an outline empty state.
 
 ### Background
 
-Use the `bg-*` and `bg-gradient-*` utilities to add a background to the empty state.
+通过 `bg-*` 与 `bg-gradient-*` 工具类为空状态添加背景。
 
 <ComponentPreview name="empty-background" className="[&_.preview]:p-0" />
 
 ### Avatar
 
-Use the `EmptyMedia` component to display an avatar in the empty state.
+使用 `EmptyMedia` 在空状态中展示头像。
 
 <ComponentPreview name="empty-avatar" className="[&_.preview]:p-0" />
 
 ### Avatar Group
 
-Use the `EmptyMedia` component to display an avatar group in the empty state.
+使用 `EmptyMedia` 展示头像组。
 
 <ComponentPreview name="empty-avatar-group" className="[&_.preview]:p-0" />
 
 ### InputGroup
 
-You can add an `InputGroup` component to the `EmptyContent` component.
+可以在 `EmptyContent` 中嵌入 `InputGroup` 组件。
 
 <ComponentPreview name="empty-input-group" className="[&_.preview]:p-0" />
 
-## API Reference
+## API 参考
 
 ### Empty
 
-The main component of the empty state. Wraps the `EmptyHeader` and `EmptyContent` components.
+空状态的主体组件，用于包裹 `EmptyHeader` 与 `EmptyContent`。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -120,7 +120,7 @@ The main component of the empty state. Wraps the `EmptyHeader` and `EmptyContent
 
 ### EmptyHeader
 
-The `EmptyHeader` component wraps the empty media, title, and description.
+`EmptyHeader` 用于包裹媒体、标题与描述。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -136,7 +136,7 @@ The `EmptyHeader` component wraps the empty media, title, and description.
 
 ### EmptyMedia
 
-Use the `EmptyMedia` component to display the media of the empty state such as an icon or an image. You can also use it to display other components such as an avatar.
+`EmptyMedia` 用于呈现空状态的媒体内容（图标或图片），也可以放置头像等组件。
 
 | Prop        | Type                  | Default   |
 | ----------- | --------------------- | --------- |
@@ -160,7 +160,7 @@ Use the `EmptyMedia` component to display the media of the empty state such as a
 
 ### EmptyTitle
 
-Use the `EmptyTitle` component to display the title of the empty state.
+`EmptyTitle` 用于展示空状态标题。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -172,7 +172,7 @@ Use the `EmptyTitle` component to display the title of the empty state.
 
 ### EmptyDescription
 
-Use the `EmptyDescription` component to display the description of the empty state.
+`EmptyDescription` 用于展示空状态描述。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -184,7 +184,7 @@ Use the `EmptyDescription` component to display the description of the empty sta
 
 ### EmptyContent
 
-Use the `EmptyContent` component to display the content of the empty state such as a button, input or a link.
+`EmptyContent` 用于放置按钮、输入框或链接等内容。
 
 | Prop        | Type     | Default |
 | ----------- | -------- | ------- |
@@ -192,6 +192,6 @@ Use the `EmptyContent` component to display the content of the empty state such 
 
 ```tsx
 <EmptyContent>
-  <Button>Add Project</Button>
+  <Button>创建项目</Button>
 </EmptyContent>
 ```
