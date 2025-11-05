@@ -148,7 +148,7 @@ npm run dev
 编写注册表组件时，可参考以下建议：
 
 - 将条目放在 `registry/[STYLE]/[NAME]` 目录下。文中示例使用 `new-york`，你也可以自定义，只要位于 `registry` 目录即可。
-- 区块定义必须包含：`name`、`description`、`type`、`files`。
+- Blocks 定义必须包含：`name`、`description`、`type`、`files`。
 - 建议为条目提供清晰的名称与描述，便于 LLM 理解组件用途。
 - 确保在 `registryDependencies` 中列出所有注册表依赖。依赖可以是注册表内的组件名称（如 `input`、`button`、`card`），也可以是注册表 URL（如 `http://localhost:3000/r/editor.json`）。
 - 在 `dependencies` 中列出所有包依赖。依赖应使用包名（如 `zod`、`sonner`），需要指定版本时可使用 `name@version` 格式，例如 `zod@^3.20.0`。

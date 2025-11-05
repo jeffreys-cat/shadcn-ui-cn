@@ -53,10 +53,10 @@ export default function BlocksLayout({
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm">
-            <a href="#blocks">浏览区块</a>
+            <a href="#blocks">浏览 Blocks</a>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link href="/docs/blocks">添加区块</Link>
+            <Link href="/docs/blocks">添加 Blocks</Link>
           </Button>
         </PageActions>
       </PageHeader>
@@ -68,7 +68,7 @@ export default function BlocksLayout({
           size="sm"
           className="mr-7 hidden shadow-none lg:flex"
         >
-          <Link href="/blocks/sidebar">浏览所有区块</Link>
+          <Link href="/blocks/sidebar">浏览所有 Blocks</Link>
         </Button>
       </PageNav>
       <div className="container-wrapper section-soft flex-1 md:py-12">

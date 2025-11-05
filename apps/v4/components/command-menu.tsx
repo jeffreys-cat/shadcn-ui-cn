@@ -347,7 +347,7 @@ export function CommandMenu({
             ))}
             {blocks?.length ? (
               <CommandGroup
-                heading="区块"
+                heading="Blocks"
                 className="!p-0 [&_[cmdk-group-heading]]:!p-3"
               >
                 {blocks.map((block) => (

@@ -26,7 +26,7 @@ export default async function BlocksPage() {
       <div className="container-wrapper">
         <div className="container flex justify-center py-6">
           <Button asChild variant="outline">
-            <Link href="/blocks/sidebar">查看更多区块</Link>
+            <Link href="/blocks/sidebar">查看更多 Blocks</Link>
           </Button>
         </div>
       </div>

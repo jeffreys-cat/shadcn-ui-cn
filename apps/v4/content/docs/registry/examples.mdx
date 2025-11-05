@@ -10,7 +10,7 @@ description: "注册表条目示例：样式、组件、CSS 变量等。"
 下面的注册表条目是在 shadcn/ui 基础上的自定义样式。执行 `npx shadcn init` 时，它会：
 
 - 安装 `@tabler/icons-react` 作为依赖。
-- 将 `login-01` 区块与 `calendar` 组件添加到项目中。
+- 将 `login-01` Blocks 与 `calendar` 组件添加到项目中。
 - 从远程注册表引入 `editor`。
 - 将 `font-sans` 变量设置为 `Inter, sans-serif`。
 - 在明暗模式下安装 `brand` 配色。
@@ -145,9 +145,9 @@ description: "注册表条目示例：样式、组件、CSS 变量等。"
 
 ## registry:block
 
-### 自定义区块
+### 自定义 Blocks
 
-该条目会从 shadcn/ui 注册表安装 `login-01` 区块。
+该条目会从 shadcn/ui 注册表安装 `login-01` Blocks。
 
 ```json title="login-01.json" showLineNumbers
 {
@@ -172,13 +172,13 @@ description: "注册表条目示例：样式、组件、CSS 变量等。"
 }
 ```
 
-### 安装区块并覆写基础组件
+### 安装Blocks并覆写基础组件
 
-你可以从 shadcn/ui 注册表安装区块，并用自定义原子组件进行覆写。
+你可以从 shadcn/ui 注册表安装Blocks，并用自定义原子组件进行覆写。
 
 执行 `npx shadcn add` 时，将会：
 
-- 从 shadcn/ui 注册表添加 `login-01` 区块。
+- 从 shadcn/ui 注册表添加 `login-01` Blocks。
 - 使用远程注册表中的 `button`、`input`、`label` 覆写基础组件。
 
 ```json title="example-style.json" showLineNumbers
