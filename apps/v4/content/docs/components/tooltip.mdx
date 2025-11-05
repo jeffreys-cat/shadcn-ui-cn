@@ -1,21 +1,21 @@
 ---
 title: Tooltip
-description: A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
+description: 当元素获得键盘焦点或鼠标悬停时显示相关信息的弹窗。
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/tooltip
   api: https://www.radix-ui.com/docs/primitives/components/tooltip#api-reference
 ---
 
-<ComponentPreview name="tooltip-demo" description="A tooltip component." />
+<ComponentPreview name="tooltip-demo" description="提示气泡组件示例。" />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">手动</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
@@ -29,17 +29,17 @@ npx shadcn@latest add tooltip
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-tooltip
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="tooltip" title="components/ui/tooltip.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -47,7 +47,7 @@ npm install @radix-ui/react-tooltip
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx showLineNumbers
 import {
@@ -61,17 +61,17 @@ import {
 <Tooltip>
   <TooltipTrigger>Hover</TooltipTrigger>
   <TooltipContent>
-    <p>Add to library</p>
+    <p>加入资料库</p>
   </TooltipContent>
 </Tooltip>
 ```
 
 ---
 
-## Changelog
+## 更新日志
 
-### 2025-09-22 Update tooltip colors
+### 2025-09-22 更新提示颜色
 
-We've updated the tooltip colors to use the foreground color for the background and the background color for the foreground.
+我们更新了提示气泡的配色，让前景色用作背景色，背景色用作前景色。
 
-Replace `bg-primary text-primary-foreground` with `bg-foreground text-background` for both `<TooltipContent />` and `<TooltipArrow />`.
+请在 `<TooltipContent />` 和 `<TooltipArrow />` 上将 `bg-primary text-primary-foreground` 替换为 `bg-foreground text-background`。
