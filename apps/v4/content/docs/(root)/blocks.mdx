@@ -1,35 +1,35 @@
 ---
 title: Blocks
-description: Contribute components to the blocks library.
+description: 为 Blocks 库贡献组件。
 ---
 
-We are inviting the community to contribute to the [blocks library](/blocks). Share your components and blocks with other developers and help build a library of high-quality, reusable components.
+我们邀请社区一同完善 [Blocks 库](/blocks)，分享你的组件与区块，帮助更多开发者构建高质量、可复用的组件集合。
 
-We'd love to see all types of blocks: applications, marketing, products, and more.
+欢迎提交各种类型的区块：应用、营销页、产品展示等都可以。
 
-## Setup your workspace
+## 准备开发环境
 
 <Steps>
 
-### Fork the repository
+### Fork 仓库
 
 ```bash
 git clone https://github.com/shadcn-ui/ui.git
 ```
 
-### Create a new branch
+### 创建新分支
 
 ```bash
 git checkout -b username/my-new-block
 ```
 
-### Install dependencies
+### 安装依赖
 
 ```bash
 pnpm install
 ```
 
-### Start the dev server
+### 启动开发服务器
 
 ```bash
 pnpm www:dev
@@ -37,15 +37,15 @@ pnpm www:dev
 
 </Steps>
 
-## Add a block
+## 添加区块
 
-A block can be a single component (eg. a variation of a ui component) or a complex component (eg. a dashboard) with multiple components, hooks, and utils.
+区块可以是单个组件（例如某个 UI 组件的变体），也可以是复杂组件（如仪表盘）包含多个组件、hook 和工具函数。
 
 <Steps>
 
-### Create a new block
+### 创建区块目录
 
-Create a new folder in the `apps/www/registry/new-york/blocks` directory. Make sure the folder is named in kebab-case and under `new-york`.
+在 `apps/www/registry/new-york/blocks` 下创建文件夹，名称使用 kebab-case，并确保位于 `new-york` 样式目录下。
 
 ```txt
 apps
@@ -57,14 +57,12 @@ apps
 ```
 
 <Callout className="mt-6">
-
-**Note:** The build script will take care of building the block for the `default` style.
-
+  **提示：** 构建脚本会自动为 `default` 样式生成对应区块。
 </Callout>
 
-### Add your block files
+### 添加区块文件
 
-Add your files to the block folder. Here is an example of a block with a page, components, hooks, and utils.
+把页面、组件、hooks 与工具函数放入该目录，例如：
 
 ```txt
 dashboard-01
@@ -79,22 +77,18 @@ dashboard-01
 ```
 
 <Callout className="mt-6">
-
-**Note:** You can start with one file and add more files later.
-
+  **提示：** 可以从单个文件开始，后续再补充更多结构。
 </Callout>
 
 </Steps>
 
-## Add your block to the registry
+## 将区块加入注册表
 
 <Steps>
 
-### Add your block definition to `registry-blocks.tsx`
+### 在 `registry-blocks.tsx` 中注册区块
 
-To add your block to the registry, you need to add your block definition to `registry-blocks.ts`.
-
-This follows the registry schema at [https://ui.shadcn.com/schema/registry-item.json](https://ui.shadcn.com/schema/registry-item.json).
+要让区块出现在注册表中，需要在 `registry-blocks.ts` 中新增定义。其结构遵循 [https://ui.shadcn.com/schema/registry-item.json](https://ui.shadcn.com/schema/registry-item.json)。
 
 ```tsx title="apps/www/registry/registry-blocks.tsx" showLineNumbers
 export const blocks = [
@@ -135,23 +129,21 @@ export const blocks = [
 ]
 ```
 
-Make sure you add a name, description, type, registryDependencies, dependencies, files, and categories. We'll go over each of these in more detail in the schema docs (coming soon).
+确保填写了 `name`、`description`、`type`、`registryDependencies`、`dependencies`、`files` 和 `categories`。更多细节会在 schema 文档中补充（敬请期待）。
 
-### Run the build script
+### 运行构建脚本
 
 ```bash
 pnpm registry:build
 ```
 
 <Callout className="mt-6">
-
-**Note:** you do not need to run this script for every change. You only need to run it when you update the block definition.
-
+  **提示：** 不必每次改动都运行构建脚本，仅在更新区块定义时执行即可。
 </Callout>
 
-### View your block
+### 预览区块
 
-Once the build script is finished, you can view your block at `http://localhost:3333/blocks/[CATEGORY]` or a full screen preview at `http://localhost:3333/view/styles/new-york/dashboard-01`.
+脚本完成后，可在 `http://localhost:3333/blocks/[CATEGORY]` 查看区块，或访问 `http://localhost:3333/view/styles/new-york/dashboard-01` 获得全屏预览。
 
 <Image
   src="/images/block-preview-light.png"
@@ -168,53 +160,47 @@ Once the build script is finished, you can view your block at `http://localhost:
   className="mt-6 hidden w-full overflow-hidden rounded-lg border shadow-sm dark:block"
 />
 
-### Build your block
+### 构建你的区块
 
-You can now build your block by editing the files in the block folder and viewing the changes in the browser.
-
-If you add more files, make sure to add them to the `files` array in the block definition.
+在区块目录中编辑文件，即可实时在浏览器中查看效果。如果增加了文件，记得同步更新区块定义里的 `files` 数组。
 
 </Steps>
 
-## Publish your block
+## 发布区块
 
-Once you're ready to publish your block, you can submit a pull request to the main repository.
+准备就绪后，可向主仓库提交 Pull Request。
 
 <Steps>
 
-### Run the build script
+### 运行构建脚本
 
 ```bash
 pnpm registry:build
 ```
 
-### Capture a screenshot
+### 捕捉截图
 
 ```bash
 pnpm registry:capture
 ```
 
 <Callout className="mt-6">
-
-**Note:** If you've run the capture script before, you might need to delete the existing screenshots (both light and dark) at `apps/www/public/r/styles/new-york` and run the script again.
-
+  **提示：** 如果之前运行过截图脚本，可能需要先删除 `apps/www/public/r/styles/new-york` 目录下已有的浅色/深色截图，再重新生成。
 </Callout>
 
-### Submit a pull request
+### 提交 Pull Request
 
-Commit your changes and submit a pull request to the main repository.
-
-Your block will be reviewed and merged. Once merged it will be published to the website and available to be installed via the CLI.
+提交你的改动并发起 PR。区块通过审核后会合并到主仓库，同时发布到网站并可通过 CLI 安装。
 
 </Steps>
 
-## Categories
+## 分类
 
-The `categories` property is used to organize your block in the registry.
+`categories` 属性用于在注册表中对区块进行分类。
 
-### Add a category
+### 新增分类
 
-If you need to add a new category, you can do so by adding it to the `registryCategories` array in `apps/www/registry/registry-categories.ts`.
+如果需要添加新分类，请在 `apps/www/registry/registry-categories.ts` 的 `registryCategories` 数组中添加条目。
 
 ```tsx title="apps/www/registry/registry-categories.ts" showLineNumbers
 export const registryCategories = [
@@ -227,12 +213,12 @@ export const registryCategories = [
 ]
 ```
 
-## Guidelines
+## 提交规范
 
-Here are some guidelines to follow when contributing to the blocks library.
+贡献区块时请遵循以下约定：
 
-- The following properties are required for the block definition: `name`, `description`, `type`, `files`, and `categories`.
-- Make sure to list all registry dependencies in `registryDependencies`. A registry dependency is the name of the component in the registry eg. `input`, `button`, `card`, etc.
-- Make sure to list all dependencies in `dependencies`. A dependency is the name of the package in the registry eg. `zod`, `sonner`, etc.
-- If your block has a page (optional), it should be the first entry in the `files` array and it should have a `target` property. This helps the CLI place the page in the correct location for file-based routing.
-- **Imports should always use the `@/registry` path.** eg. `import { Input } from "@/registry/new-york/input"`
+- 区块定义必须包含：`name`、`description`、`type`、`files`、`categories`。
+- `registryDependencies` 中应列出所有依赖的注册表组件（如 `input`、`button`、`card` 等）。
+- `dependencies` 中应列出所有外部包依赖（如 `zod`、`sonner` 等）。
+- 如果区块包含页面（可选），应在 `files` 数组首位，且带有 `target` 字段，方便 CLI 正确放置页面文件。
+- **导入语句需使用 `@/registry` 路径**，例如 `import { Input } from "@/registry/new-york/input"`。

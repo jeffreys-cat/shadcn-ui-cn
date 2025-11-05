@@ -1,77 +1,75 @@
 ---
-title: Introduction
-description: shadcn/ui is a set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks and AI models. Open Source. Open Code.
+title: 介绍
+description: shadcn/ui 提供一套精心设计、可访问的组件与代码分发平台，兼容你喜欢的框架和 AI 模型。开源，开放代码。
 ---
 
-**This is not a component library. It is how you build your component library.**
+**这不是一个传统的组件库，而是构建你自己组件库的方法。**
 
-You know how most traditional component libraries work: you install a package from NPM, import the components, and use them in your app.
+我们都熟悉传统组件库的工作方式：从 NPM 安装一个包，按需导入组件，然后在应用中使用。
 
-This approach works well until you need to customize a component to fit your design system or require one that isn’t included in the library. **Often, you end up wrapping library components, writing workarounds to override styles, or mixing components from different libraries with incompatible APIs.**
+这种方式在需要快速使用组件时很方便，但一旦需要深度定制以适配设计系统，或者库里缺少某个组件，就会开始变得麻烦。**你很可能不得不包一层组件、写各种 hack 来覆盖样式，甚至混用多个 API 不兼容的库。**
 
-This is what shadcn/ui aims to solve. It is built around the following principles:
+shadcn/ui 正是为了解决这些问题而生，围绕以下原则构建：
 
-- **Open Code:** The top layer of your component code is open for modification.
-- **Composition:** Every component uses a common, composable interface, making them predictable.
-- **Distribution:** A flat-file schema and command-line tool make it easy to distribute components.
-- **Beautiful Defaults:** Carefully chosen default styles, so you get great design out-of-the-box.
-- **AI-Ready:** Open code for LLMs to read, understand, and improve.
+- **开放代码：** 组件的顶层代码完全开放，随时可修改。
+- **可组合性：** 所有组件共享一致、可组合的接口，行为可预期。
+- **易分发：** 基于扁平文件结构与 CLI，组件分发变得简单。
+- **精致默认：** 默认样式经过精心打磨，开箱即用就很好看。
+- **面向 AI：** 开放代码方便 LLM 阅读、理解并提出优化。
 
-## Open Code
+## 开放代码
 
-shadcn/ui hands you the actual component code. You have full control to customize and extend the components to your needs. This means:
+shadcn/ui 会把真实的组件代码交到你手中，你可以完全掌控、自由定制和扩展。这意味着：
 
-- **Full Transparency:** You see exactly how each component is built.
-- **Easy Customization:** Modify any part of a component to fit your design and functionality requirements.
-- **AI Integration:** Access to the code makes it straightforward for LLMs to read, understand, and even improve your components.
+- **完全透明：** 组件如何实现一目了然。
+- **易于定制：** 任何部分都能按需求改动，满足设计与功能要求。
+- **便于接入 AI：** 代码开放，LLM 可以轻松阅读、理解甚至帮助改进。
 
-_In a typical library, if you need to change a button’s behavior, you have to override styles or wrap the component. With shadcn/ui, you simply edit the button code directly._
+_在传统组件库里，想修改按钮行为通常要覆盖样式或包一层组件；在 shadcn/ui 中，你只需直接修改按钮代码即可。_
 
 <Accordion collapsible>
   <AccordionItem value="faq-1" className="border-none">
     <AccordionTrigger>
-      How do I pull upstream updates in an Open Code approach?
+      在开放代码的模式下如何同步上游更新？
     </AccordionTrigger>
     <AccordionContent>
       <p>
-        shadcn/ui follows a headless component architecture. This means the core
-        of your app can receive fixes by updating your dependencies, for
-        instance, radix-ui or input-otp.
+        shadcn/ui 采用无头组件架构。这意味着你可以通过更新依赖（例如 radix-ui 或 input-otp）
+        来获取核心层面的修复。
       </p>
       <p className="mt-4">
-        The topmost layer, i.e., the one closest to your design system, is not
-        coupled with the implementation of the library. It stays open for
-        modification.
+        最顶层——也就是最贴近你设计系统的那一层——不会与库的实现强耦合，会一直保持开放，
+        方便随时调整。
       </p>
     </AccordionContent>
   </AccordionItem>
 </Accordion>
 
-## Composition
+## 可组合性
 
-Every component in shadcn/ui shares a common, composable interface. **If a component does not exist, we bring it in, make it composable, and adjust its style to match and work with the rest of the design system.**
+shadcn/ui 的每个组件都遵循统一的可组合接口。**如果某个组件尚不存在，我们会把它引入、封装成可组合的形式，并调整风格让它与整个设计系统一致。**
 
-_A shared, composable interface means it's predictable for both your team and LLMs. You are not learning different APIs for every new component. Even for third-party ones._
+_统一的可组合接口既让团队更容易上手，也方便 LLM。新增组件不需要学习全新的 API，即便是第三方组件也能快速融入。_
 
-## Distribution
+## 分发
 
-shadcn/ui is also a code distribution system. It defines a schema for components and a CLI to distribute them.
+shadcn/ui 同样还是一个代码分发系统，通过 schema 描述组件，并提供 CLI 来进行分发。
 
-- **Schema:** A flat-file structure that defines the components, their dependencies, and properties.
-- **CLI:** A command-line tool to distribute and install components across projects with cross-framework support.
+- **Schema：** 采用扁平文件结构描述组件、依赖与属性。
+- **CLI：** 命令行工具支持跨项目、跨框架安装与分发组件。
 
-_You can use the schema to distribute your components to other projects or have AI generate completely new components based on existing schema._
+_你可以利用 schema 把组件分发到其他项目，或让 AI 基于既有 schema 生成全新的组件。_
 
-## Beautiful Defaults
+## 精致的默认样式
 
-shadcn/ui comes with a large collection of components that have carefully chosen default styles. They are designed to look good on their own and to work well together as a consistent system:
+shadcn/ui 附带大量组件，并提供经过反复打磨的默认样式。它们既要独立时好看，也要作为一个一致的系统协同工作：
 
-- **Good Out-of-the-Box:** Your UI has a clean and minimal look without extra work.
-- **Unified Design:** Components naturally fit with one another. Each component is built to match the others, keeping your UI consistent.
-- **Easily Customizable:** If you want to change something, it's simple to override and extend the defaults.
+- **开箱即用的美观：** 不做额外工作，你的 UI 就能保持简洁与质感。
+- **统一的设计语言：** 组件之间自然协作，整体体验始终如一。
+- **轻松定制：** 想改哪里都很简单，默认样式易于覆盖和扩展。
 
-## AI-Ready
+## 面向 AI
 
-The design of shadcn/ui makes it easy for AI tools to work with your code. Its open code and consistent API allow AI models to read, understand, and even generate new components.
+shadcn/ui 的设计天然适配 AI 工具。开放的代码与一致的 API 便于 AI 模型读取、理解，甚至生成新的组件。
 
-_An AI model can learn how your components work and suggest improvements or even create new components that integrate with your existing design._
+_AI 模型可以学习组件的运作方式，提出改进建议，甚至创建与你现有设计完美融合的新组件。_
