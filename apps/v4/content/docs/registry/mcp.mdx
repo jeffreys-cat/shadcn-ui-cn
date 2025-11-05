@@ -1,25 +1,24 @@
----
-title: MCP Server
-description: MCP support for registry developers
----
-
-The [shadcn MCP server](/docs/mcp) works out of the box with any shadcn-compatible registry. You do not need to do anything special to enable MCP support for your registry.
-
+title: MCP 服务
+description: 为注册表开发者提供 MCP 支持
 ---
 
-## Prerequisites
-
-The MCP server works by requesting your registry index. Make sure you have a registry item file at the root of your registry named `registry`.
-
-For example, if your registry is hosted at `https://acme.com/r/[name].json`, you should have a file at `https://acme.com/r/registry.json` or `https://acme.com/r/registry` if you're using a JSON file extension.
-
-This file must be a valid JSON file that conforms to the [registry schema](/docs/registry/registry-json).
+[shadcn MCP 服务](/docs/mcp) 可直接搭配任意兼容 shadcn 的注册表使用，无需额外配置即可启用。
 
 ---
 
-## Configuring MCP
+## 前置条件
 
-Ask your registry consumers to configure your registry in their `components.json` file and install the shadcn MCP server:
+MCP 服务会读取注册表索引，请确保在注册表根路径提供名为 `registry` 的条目文件。
+
+例如，若注册表托管在 `https://acme.com/r/[name].json`，那么应同时提供 `https://acme.com/r/registry.json`（或不带扩展名的 `https://acme.com/r/registry`）。
+
+该文件必须是符合 [registry Schema](/docs/registry/registry-json) 的合法 JSON。
+
+---
+
+## 配置 MCP
+
+提示注册表使用者在项目的 `components.json` 中添加你的注册表，并安装 shadcn MCP 服务：
 
 <Tabs defaultValue="claude">
   <TabsList>
@@ -29,7 +28,7 @@ Ask your registry consumers to configure your registry in their `components.json
     <TabsTrigger value="codex">Codex</TabsTrigger>
   </TabsList>
   <TabsContent value="claude" className="mt-4">
-    **Configure your registry** in your `components.json` file:
+    **在 `components.json` 中配置注册表：**
 
     ```json title="components.json" showLineNumbers
     {
@@ -39,22 +38,22 @@ Ask your registry consumers to configure your registry in their `components.json
     }
     ```
 
-    **Run the following command** in your project:
+    **在项目中执行下面的命令：**
 
     ```bash
     npx shadcn@latest mcp init --client claude
     ```
 
-    **Restart Claude Code** and try the following prompts:
+    **重启 Claude Code**，尝试以下提示语：
        - Show me the components in the acme registry
        - Create a landing page using items from the acme registry
 
-    **Note:** You can use `/mcp` command in Claude Code to debug the MCP server.
+    **提示：** 可在 Claude Code 中使用 `/mcp` 调试 MCP 服务。
 
   </TabsContent>
 
   <TabsContent value="cursor" className="mt-4">
-    **Configure your registry** in your `components.json` file:
+    **在 `components.json` 中配置注册表：**
 
     ```json title="components.json" showLineNumbers
     {
@@ -63,19 +62,19 @@ Ask your registry consumers to configure your registry in their `components.json
       }
     }
     ```
-    **Run the following command** in your project:
+    **在项目中执行下面的命令：**
        ```bash
        npx shadcn@latest mcp init --client cursor
        ```
 
-    Open **Cursor Settings** and **Enable the MCP server** for shadcn. Then try the following prompts:
+    打开 **Cursor Settings** 并为 shadcn **启用 MCP 服务**，然后尝试以下提示语：
        - Show me the components in the acme registry
        - Create a landing page using items from the acme registry
 
   </TabsContent>
 
   <TabsContent value="vscode" className="mt-4">
-    **Configure your registry** in your `components.json` file:
+    **在 `components.json` 中配置注册表：**
 
     ```json title="components.json" showLineNumbers
     {
@@ -84,19 +83,19 @@ Ask your registry consumers to configure your registry in their `components.json
       }
     }
     ```
-    **Run the following command** in your project:
+    **在项目中执行下面的命令：**
        ```bash
        npx shadcn@latest mcp init --client vscode
        ```
 
-    Open `.vscode/mcp.json` and click **Start** next to the shadcn server. Then try the following prompts with GitHub Copilot:
+    打开 `.vscode/mcp.json`，点击 shadcn 服务旁的 **Start**。随后在 GitHub Copilot 中尝试以下提示语：
        - Show me the components in the acme registry
        - Create a landing page using items from the acme registry
 
   </TabsContent>
 
   <TabsContent value="codex" className="mt-4">
-    **Configure your registry** in your `components.json` file:
+    **在 `components.json` 中配置注册表：**
 
     ```json title="components.json" showLineNumbers
     {
@@ -106,29 +105,29 @@ Ask your registry consumers to configure your registry in their `components.json
     }
     ```
 
-    **Add the following configuration** to `~/.codex/config.toml`:
+    **将以下配置添加到 `~/.codex/config.toml`：**
        ```toml
        [mcp_servers.shadcn]
        command = "npx"
        args = ["shadcn@latest", "mcp"]
        ```
 
-    **Restart Codex** and try the following prompts:
+    **重启 Codex** 并尝试以下提示语：
        - Show me the components in the acme registry
        - Create a landing page using items from the acme registry
 
   </TabsContent>
 </Tabs>
 
-You can read more about the MCP server in the [MCP documentation](/docs/mcp).
+更多内容可参考 [MCP 文档](/docs/mcp)。
 
 ---
 
-## Best Practices
+## 最佳实践
 
-Here are some best practices for MCP-compatible registries:
+针对支持 MCP 的注册表，建议遵循以下规范：
 
-1. **Clear Descriptions**: Add concise, informative descriptions that help AI assistants understand what a registry item is for and how to use it.
-2. **Proper Dependencies**: List all `dependencies` accurately so MCP can install them automatically.
-3. **Registry Dependencies**: Use `registryDependencies` to indicate relationships between items.
-4. **Consistent Naming**: Use kebab-case for component names and maintain consistency across your registry.
+1. **描述清晰**：提供简洁且信息量充足的描述，帮助 AI 助手理解条目用途。
+2. **依赖准确**：完整列出 `dependencies`，便于 MCP 自动安装。
+3. **声明依赖关系**：使用 `registryDependencies` 表达条目之间的关联。
+4. **命名一致**：组件名称统一使用 kebab-case，保持注册表风格一致。

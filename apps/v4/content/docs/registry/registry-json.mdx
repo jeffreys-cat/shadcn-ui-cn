@@ -1,9 +1,8 @@
----
 title: registry.json
-description: Schema for running your own component registry.
+description: 自建组件注册表所需的 Schema。
 ---
 
-The `registry.json` schema is used to define your custom component registry.
+`registry.json` Schema 用于描述自定义组件注册表。
 
 ```json title="registry.json" showLineNumbers
 {
@@ -33,13 +32,13 @@ The `registry.json` schema is used to define your custom component registry.
 }
 ```
 
-## Definitions
+## 字段说明
 
-You can see the JSON Schema for `registry.json` [here](https://ui.shadcn.com/schema/registry.json).
+可在[此处](https://ui.shadcn.com/schema/registry.json)查看完整 JSON Schema。
 
 ### $schema
 
-The `$schema` property is used to specify the schema for the `registry.json` file.
+`$schema` 字段用于声明 `registry.json` 所对应的 Schema。
 
 ```json title="registry.json" showLineNumbers
 {
@@ -49,7 +48,7 @@ The `$schema` property is used to specify the schema for the `registry.json` fil
 
 ### name
 
-The `name` property is used to specify the name of your registry. This is used for data attributes and other metadata.
+`name` 表示注册表名称，会用于数据属性及其他元信息。
 
 ```json title="registry.json" showLineNumbers
 {
@@ -59,7 +58,7 @@ The `name` property is used to specify the name of your registry. This is used f
 
 ### homepage
 
-The homepage of your registry. This is used for data attributes and other metadata.
+注册表主页地址，同样会用于数据属性及其他元信息。
 
 ```json title="registry.json" showLineNumbers
 {
@@ -69,7 +68,7 @@ The homepage of your registry. This is used for data attributes and other metada
 
 ### items
 
-The `items` in your registry. Each item must implement the [registry-item schema specification](https://ui.shadcn.com/schema/registry-item.json).
+注册表中的条目列表。每个条目都必须符合 [registry-item Schema](https://ui.shadcn.com/schema/registry-item.json)。
 
 ```json title="registry.json" showLineNumbers
 {
@@ -96,4 +95,4 @@ The `items` in your registry. Each item must implement the [registry-item schema
 }
 ```
 
-See the [registry-item schema documentation](/docs/registry/registry-item-json) for more information.
+更多细节请参阅 [registry-item Schema 文档](/docs/registry/registry-item-json)。

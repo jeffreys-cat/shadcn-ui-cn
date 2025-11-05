@@ -1,22 +1,20 @@
----
 title: Open in v0
-description: Integrate your registry with Open in v0.
+description: 将你的注册表集成到 Open in v0。
 ---
 
-If your registry is hosted and publicly accessible via a URL, you can open a registry item in v0 by using the `https://v0.dev/chat/api/open?url=[URL]` endpoint.
+如果注册表可通过公开 URL 访问，可使用 `https://v0.dev/chat/api/open?url=[URL]` 接口在 v0 中打开对应条目。
 
 eg. [https://v0.dev/chat/api/open?url=https://ui.shadcn.com/r/styles/new-york/login-01.json](https://v0.dev/chat/api/open?url=https://ui.shadcn.com/r/styles/new-york/login-01.json)
 
 <Callout className="mt-6">
-  **Important:** `Open in v0` does not support `cssVars`, `css`, `envVars`,
-  namespaced registries, or advanced authentication methods.
+  **重要：** `Open in v0` 不支持 `cssVars`、`css`、`envVars`、命名空间注册表或高级认证方式。
 </Callout>
 
-## Button
+## 按钮
 
-See [Build your Open in v0 button](https://v0.dev/chat/button) for more information on how to build your own `Open in v0` button.
+关于如何构建 `Open in v0` 按钮，可参考 [Build your Open in v0 button](https://v0.dev/chat/button)。
 
-Here's a simple example of how to add a `Open in v0` button to your site.
+以下示例演示如何在站点中添加一个 `Open in v0` 按钮：
 
 ```jsx showLineNumbers
 import { Button } from "@/components/ui/button"
@@ -59,24 +57,24 @@ export function OpenInV0Button({ url }: { url: string }) {
 <OpenInV0Button url="https://example.com/r/hello-world.json" />
 ```
 
-## Authentication
+## 身份验证
 
-Open in v0 only supports query parameter authentication. It does not support namespaced registries or advanced authentication methods like Bearer tokens or API keys in headers.
+Open in v0 仅支持查询参数认证，不支持命名空间注册表或 Bearer Token、API Key 等高级认证方式。
 
-### Using Query Parameter Authentication
+### 使用查询参数认证
 
-To add authentication to your registry for Open in v0, use a `token` query parameter:
+若要在 Open in v0 中启用认证，可使用 `token` 查询参数：
 
 ```
 https://registry.company.com/r/hello-world.json?token=your_secure_token_here
 ```
 
-When implementing this on your registry server:
+在服务端实现时可遵循以下步骤：
 
-1. Check for the `token` query parameter
-2. Validate the token against your authentication system
-3. Return a `401 Unauthorized` response if the token is invalid or missing
-4. Both the shadcn CLI and Open in v0 will handle the 401 response and display an appropriate message to users
+1. 检查请求中的 `token` 参数
+2. 与认证系统校验 Token
+3. 若无效或缺失，返回 `401 Unauthorized`
+4. shadcn CLI 与 Open in v0 会处理 401 并向用户展示提示
 
 ### Example Implementation
 
@@ -101,6 +99,5 @@ export async function GET(request: NextRequest) {
 ```
 
 <Callout className="mt-6">
-  **Security Note:** Make sure to encrypt and expire tokens. Never expose
-  production tokens in documentation or examples.
+  **安全提示：** 请确保 Token 会被加密并设置过期时间，切勿在文档或示例中泄露生产环境的 Token。
 </Callout>
