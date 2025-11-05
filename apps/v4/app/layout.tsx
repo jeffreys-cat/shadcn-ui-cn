@@ -15,7 +15,7 @@ import "@/styles/globals.css"
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    template: `%s - ${siteConfig.name} | shadcn 中文文档  | shadcn 文档 | shadcnui 文档 | shadcn/ui 中文文档 | shadcn/ui 文档 | shadcnui 中文文档 `,
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
   description: siteConfig.description,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "shadcn",
-      url: "https://shadcn.com",
+      url: "https://shadcn.com.cn",
     },
   ],
   creator: "shadcn",

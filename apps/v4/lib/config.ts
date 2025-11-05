@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: "shadcn/ui",
-  url: "https://ui.shadcn.com",
-  ogImage: "https://ui.shadcn.com/og.jpg",
+  name: "shadcn/ui 中文站",
+  url: "https://www.shadcn.com.cn",
+  ogImage: "https://www.shadcn.com.cn/og.jpg",
   description:
     "一组精心设计的组件，你可以自定义、扩展并在此基础上构建。从这里开始，让它成为你的作品。开源，开放代码。",
   links: {
@@ -19,7 +19,7 @@ export const siteConfig = {
     },
     {
       href: "/blocks",
-      label: "区块",
+      label: "Blocks",
     },
     {
       href: "/charts/area",
