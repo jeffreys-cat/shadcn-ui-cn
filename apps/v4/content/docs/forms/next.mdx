@@ -1,15 +1,15 @@
 ---
 title: Next.js
-description: Build forms in React using useActionState and Server Actions.
+description: 使用 useActionState 和 Server Actions 在 React 中构建表单。
 ---
 
 import { InfoIcon } from "lucide-react"
 
-In this guide, we will take a look at building forms with Next.js using `useActionState` and Server Actions. We'll cover building forms, validation, pending states, accessibility, and more.
+在本指南中，我们将了解如何在 Next.js 中使用 `useActionState` 与 Server Actions 构建表单。内容涵盖表单搭建、校验、等待态、可访问性等多个方面。
 
-## Demo
+## 演示
 
-We are going to build the following form with a simple text input and a textarea. On submit, we'll use a server action to validate the form data and update the form state.
+我们将实现一个包含单行输入与多行文本区域的表单。提交后会通过 Server Action 校验表单数据并更新表单状态。
 
 <ComponentPreview
   name="form-next-demo"
@@ -17,24 +17,23 @@ We are going to build the following form with a simple text input and a textarea
 />
 
 <Callout icon={<InfoIcon />}>
-  **Note:** The examples on this page intentionally disable browser validation
-  to show how schema validation and form errors work in server actions.
+  **注意：** 为了演示如何在 Server Action 中执行模式校验并展示错误，本页示例特意关闭了浏览器级别的验证。实际生产环境可视情况开启基础校验。
 </Callout>
 
-## Approach
+## 实现思路
 
-This form leverages Next.js and React's built-in capabilities for form handling. We'll build our form using the `<Field />` component, which gives you **complete flexibility over the markup and styling**.
+该表单依托 Next.js 与 React 的原生表单能力。我们会围绕 `<Field />` 组件搭建表单，以获得对标记与样式的**完全掌控**。
 
-- Uses Next.js `<Form />` component for navigation and progressive enhancement.
-- `<Field />` components for building accessible forms.
-- `useActionState` for managing form state and errors.
-- Handles loading states with pending prop.
-- Server Actions for handling form submissions.
-- Server-side validation using Zod.
+- 使用 Next.js 的 `<Form />` 组件以支持导航与渐进增强。
+- 借助 `<Field />` 组件构建可访问的表单。
+- 使用 `useActionState` 管理表单状态与错误。
+- 通过 `pending` 属性处理加载状态。
+- 使用 Server Actions 处理表单提交。
+- 在服务端利用 Zod 完成校验。
 
-## Anatomy
+## 结构
 
-Here's a basic example of a form using the `<Field />` component.
+下面是一个使用 `<Field />` 组件的基础表单示例。
 
 ```tsx showLineNumbers
 <Form action={formAction}>
@@ -62,16 +61,14 @@ Here's a basic example of a form using the `<Field />` component.
 </Form>
 ```
 
-## Usage
+## 使用方式
 
-### Create a form schema
+### 创建表单模式
 
-We'll start by defining the shape of our form using a Zod schema in a `schema.ts` file.
+首先在 `schema.ts` 文件中使用 Zod 定义表单的数据结构。
 
 <Callout icon={<InfoIcon />}>
-  **Note:** This example uses `zod v3` for schema validation, but you can
-  replace it with any other schema validation library. Make sure your schema
-  library conforms to the Standard Schema specification.
+  **注意：** 示例使用 `zod v3` 执行模式校验，你也可以替换成其他符合 Standard Schema 规范的校验库。
 </Callout>
 
 ```tsx showLineNumbers title="schema.ts"
@@ -89,9 +86,9 @@ export const formSchema = z.object({
 })
 ```
 
-### Define the form state type
+### 定义表单状态类型
 
-Next, we'll create a type for our form state that includes values, errors, and success status. This will be used to type the form state on the client and server.
+接下来定义一个包含表单值、错误与成功状态的类型，便于在客户端和服务端共享。
 
 ```tsx showLineNumbers title="schema.ts"
 import { z } from "zod"
@@ -103,39 +100,39 @@ export type FormState = {
 }
 ```
 
-**Important:** We define the schema and the `FormState` type in a separate file so we can import them into both the client and server components.
+**重要：** 将模式与 `FormState` 类型放在独立文件中，便于在客户端组件与服务端逻辑之间复用。
 
-### Create the Server Action
+### 创建 Server Action
 
-A server action is a function that runs on the server and can be called from the client. We'll use it to validate the form data and update the form state.
+Server Action 是运行在服务端并能从客户端调用的函数。我们通过它来校验表单数据并更新表单状态。
 
 <ComponentSource
   src="/registry/new-york-v4/examples/form-next-demo-action.ts"
   title="actions.ts"
 />
 
-**Note:** We're returning `values` for error cases. This is because we want to keep the user submitted values in the form state. For success cases, we're returning empty values to reset the form.
+**注意：** 在发生错误时返回 `values`，以保留用户输入；成功时返回空值，以便重置表单。
 
-### Build the form
+### 构建表单
 
-We can now build the form using the `<Field />` component. We'll use the `useActionState` hook to manage the form state, server action, and pending state.
+现在可以借助 `<Field />` 组件搭建表单，并使用 `useActionState` 管理表单状态、Server Action 以及等待态。
 
 <ComponentSource
   src="/registry/new-york-v4/examples/form-next-demo.tsx"
   title="form.tsx"
 />
 
-### Done
+### 完成
 
-That's it. You now have a fully accessible form with client and server-side validation.
+到此为止，你已经拥有一个可访问且同时具备客户端与服务端校验的表单。
 
-When you submit the form, the `formAction` function will be called on the server. The server action will validate the form data and update the form state.
+当表单提交时，服务器会调用 `formAction`。该 Server Action 会验证表单数据并更新表单状态。
 
-If the form data is invalid, the server action will return the errors to the client. If the form data is valid, the server action will return the success status and update the form state.
+若数据无效，Server Action 会把错误返回给客户端；若数据有效，则返回成功状态并更新表单。
 
-## Pending States
+## 等待状态
 
-Use the `pending` prop from `useActionState` to show loading indicators and disable form inputs.
+利用 `useActionState` 返回的 `pending` 状态展示加载指示并禁用表单输入。
 
 ```tsx showLineNumbers {11,26-34}
 "use client"
@@ -174,11 +171,11 @@ export function BugReportForm() {
 }
 ```
 
-## Disabled States
+## 禁用状态
 
-### Submit Button
+### 提交按钮
 
-To disable the submit button, use the `pending` prop on the button's `disabled` prop.
+通过 `pending` 状态控制按钮的 `disabled` 属性，可以在加载时禁用提交按钮。
 
 ```tsx showLineNumbers
 <Button type="submit" disabled={pending}>
@@ -186,9 +183,9 @@ To disable the submit button, use the `pending` prop on the button's `disabled` 
 </Button>
 ```
 
-### Field
+### 表单字段
 
-To apply a disabled state and styling to a `<Field />` component, use the `data-disabled` prop on the `<Field />` component.
+若要为 `<Field />` 组件设置禁用态与样式，可在组件上添加 `data-disabled` 属性。
 
 ```tsx showLineNumbers
 <Field data-disabled={pending}>
@@ -197,11 +194,11 @@ To apply a disabled state and styling to a `<Field />` component, use the `data-
 </Field>
 ```
 
-## Validation
+## 校验
 
-### Server-side Validation
+### 服务端校验
 
-Use `safeParse()` on your schema in your server action to validate the form data.
+在 Server Action 中使用模式的 `safeParse()` 方法验证表单数据。
 
 ```tsx showLineNumbers title="actions.ts" {12-20}
 "use server"
@@ -232,11 +229,11 @@ export async function bugReportFormAction(
 }
 ```
 
-### Business Logic Validation
+### 业务逻辑校验
 
-You can add additional custom validation logic in your server action.
+可以在 Server Action 中加入额外的业务校验逻辑。
 
-Make sure to return the values on validation errors. This is to ensure that the form state maintains the user's input.
+当校验失败时务必返回用户输入的值，以便保持表单状态。
 
 ```tsx showLineNumbers title="actions.ts" {22-35}
 "use server"
@@ -282,9 +279,9 @@ export async function bugReportFormAction(
 }
 ```
 
-## Displaying Errors
+## 展示错误
 
-Display errors next to the field using `<FieldError />`. Make sure to add the `data-invalid` prop to the `<Field />` component and `aria-invalid` prop to the input.
+使用 `<FieldError />` 在字段旁展示错误信息。别忘了在 `<Field />` 上添加 `data-invalid` 属性，并在输入控件上设置 `aria-invalid`。
 
 ```tsx showLineNumbers
 <Field data-invalid={!!formState.errors?.email?.length}>
@@ -301,13 +298,13 @@ Display errors next to the field using `<FieldError />`. Make sure to add the `d
 </Field>
 ```
 
-## Resetting the Form
+## 重置表单
 
-When you submit a form with a server action, React will automatically reset the form state to the initial values.
+当通过 Server Action 提交表单时，React 会自动将表单状态重置为初始值。
 
-### Reset on Success
+### 成功后重置
 
-To reset the form on success, you can omit the `values` from the server action and React will automatically reset the form state to the initial values. This is standard React behavior.
+若希望成功提交后重置表单，只需在 Server Action 的返回值中省略 `values`，React 会自动恢复初始状态，这是 React 的默认行为。
 
 ```tsx showLineNumbers title="actions.ts" {22-26}
 export async function demoFormAction(
@@ -339,9 +336,9 @@ export async function demoFormAction(
 }
 ```
 
-### Preserve on Validation Errors
+### 校验失败时保留输入
 
-To prevent the form from being reset on failure, you can return the values in the server action. This is to ensure that the form state maintains the user's input.
+如果想在校验失败时保留用户输入，可以在 Server Action 中返回 `values`，以确保表单状态不会被重置。
 
 ```tsx showLineNumbers title="actions.ts" {12-17}
 export async function demoFormAction(
@@ -365,9 +362,9 @@ export async function demoFormAction(
 }
 ```
 
-## Complex Forms
+## 复杂表单
 
-Here is an example of a more complex form with multiple fields and validation.
+下面提供一个包含多字段与复杂校验的示例。
 
 <ComponentPreview
   name="form-next-complex"
@@ -375,14 +372,14 @@ Here is an example of a more complex form with multiple fields and validation.
   hideCode
 />
 
-### Schema
+### 模式
 
 <ComponentSource
   src="/registry/new-york-v4/examples/form-next-complex-schema.ts"
   title="schema.ts"
 />
 
-### Form
+### 表单
 
 <ComponentSource
   src="/registry/new-york-v4/examples/form-next-complex.tsx"
