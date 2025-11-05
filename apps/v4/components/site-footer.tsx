@@ -22,7 +22,7 @@ export function SiteFooter() {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              Vercel
+              Vercel{" "}
             </a>
             构建。源代码可在{" "}
             <a
@@ -31,7 +31,7 @@ export function SiteFooter() {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              GitHub
+              {" "}GitHub{" "}
             </a>
             上获取。
           </div>
