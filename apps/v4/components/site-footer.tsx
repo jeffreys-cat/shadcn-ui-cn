@@ -13,18 +13,9 @@ export function SiteFooter() {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              shadcn
+              Dory Lab
             </a>{" "}
-            在{" "}
-            <a
-              href="https://vercel.com/new?utm_source=shadcn_site&utm_medium=web&utm_campaign=docs_cta_deploy_now_callout"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Vercel{" "}
-            </a>
-            构建。源代码可在{" "}
+            维护。源代码可在{" "}
             <a
               href={siteConfig.links.github}
               target="_blank"

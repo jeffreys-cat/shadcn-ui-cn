@@ -16,7 +16,7 @@ import { Button } from "@/registry/new-york-v4/ui/button"
 export const dynamic = "force-static"
 export const revalidate = false
 
-const title = "为你的设计系统打好基础"
+const title = "shadcn/ui - 为你的设计系统打好基础"
 const description =
   "一组精心设计的组件，你可以自定义、扩展并在此基础上构建。从这里开始，让它成为你的作品。开源，开放代码。"
 
