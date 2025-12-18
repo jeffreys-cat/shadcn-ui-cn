@@ -12,9 +12,9 @@ import {
 import { PageNav } from "@/components/page-nav"
 import { Button } from "@/registry/new-york-v4/ui/button"
 
-const title = "Building Blocks for the Web"
+const title = "面向 Web 的构建模块"
 const description =
-  "Clean, modern building blocks. Copy and paste into your apps. Works with all React frameworks. Open Source. Free forever."
+  "干净、现代的构建模块。复制并粘贴到你的应用中。适配所有 React 框架。开源，永久免费。"
 
 export const metadata: Metadata = {
   title,

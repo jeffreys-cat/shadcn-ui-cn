@@ -11,11 +11,11 @@ export const siteConfig = {
   navItems: [
     {
       href: "/docs/installation",
-      label: "Docs",
+      label: "文档",
     },
     {
       href: "/docs/components",
-      label: "Components",
+      label: "组件",
     },
     {
       href: "/blocks",
@@ -23,11 +23,11 @@ export const siteConfig = {
     },
     {
       href: "/charts/area",
-      label: "Charts",
+      label: "图表",
     },
     {
       href: "/docs/directory",
-      label: "Directory",
+      label: "目录",
     },
     {
       href: "/create",
