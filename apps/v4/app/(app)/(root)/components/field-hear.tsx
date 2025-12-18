@@ -12,20 +12,20 @@ import {
 
 const options = [
   {
-    label: "Social Media",
+    label: "社交媒体",
     value: "social-media",
   },
 
   {
-    label: "Search Engine",
+    label: "搜索引擎",
     value: "search-engine",
   },
   {
-    label: "Referral",
+    label: "推荐",
     value: "referral",
   },
   {
-    label: "Other",
+    label: "其他",
     value: "other",
   },
 ]
@@ -37,9 +37,9 @@ export function FieldHear() {
         <form>
           <FieldGroup>
             <FieldSet className="gap-4">
-              <FieldLegend>How did you hear about us?</FieldLegend>
+              <FieldLegend>你是如何了解到我们的？</FieldLegend>
               <FieldDescription className="line-clamp-1">
-                Select the option that best describes how you heard about us.
+                请选择最符合你了解我们的方式。
               </FieldDescription>
               <FieldGroup className="flex flex-row flex-wrap gap-2 [--radius:9999rem]">
                 {options.map((option) => (

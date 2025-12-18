@@ -26,11 +26,11 @@ export function InputGroupDemo() {
   return (
     <div className="grid w-full max-w-sm gap-6">
       <InputGroup>
-        <InputGroupInput placeholder="Search..." />
+        <InputGroupInput placeholder="搜索..." />
         <InputGroupAddon>
           <Search />
         </InputGroupAddon>
-        <InputGroupAddon align="inline-end">12 results</InputGroupAddon>
+        <InputGroupAddon align="inline-end">12 个结果</InputGroupAddon>
       </InputGroup>
       <InputGroup>
         <InputGroupInput placeholder="example.com" className="!pl-1" />
@@ -43,41 +43,41 @@ export function InputGroupDemo() {
               <InputGroupButton
                 className="rounded-full"
                 size="icon-xs"
-                aria-label="Info"
+                aria-label="信息"
               >
                 <IconInfoCircle />
               </InputGroupButton>
             </TooltipTrigger>
-            <TooltipContent>This is content in a tooltip.</TooltipContent>
+            <TooltipContent>这是提示中的内容。</TooltipContent>
           </Tooltip>
         </InputGroupAddon>
       </InputGroup>
       <InputGroup>
-        <InputGroupTextarea placeholder="Ask, Search or Chat..." />
+        <InputGroupTextarea placeholder="提问、搜索或聊天..." />
         <InputGroupAddon align="block-end">
           <InputGroupButton
             variant="outline"
             className="rounded-full"
             size="icon-xs"
-            aria-label="Add"
+            aria-label="添加"
           >
             <IconPlus />
           </InputGroupButton>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <InputGroupButton variant="ghost">Auto</InputGroupButton>
+              <InputGroupButton variant="ghost">自动</InputGroupButton>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               side="top"
               align="start"
               className="[--radius:0.95rem]"
             >
-              <DropdownMenuItem>Auto</DropdownMenuItem>
-              <DropdownMenuItem>Agent</DropdownMenuItem>
-              <DropdownMenuItem>Manual</DropdownMenuItem>
+              <DropdownMenuItem>自动</DropdownMenuItem>
+              <DropdownMenuItem>代理</DropdownMenuItem>
+              <DropdownMenuItem>手动</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <InputGroupText className="ml-auto">52% used</InputGroupText>
+          <InputGroupText className="ml-auto">已使用 52%</InputGroupText>
           <Separator orientation="vertical" className="!h-4" />
           <InputGroupButton
             variant="default"
@@ -85,7 +85,7 @@ export function InputGroupDemo() {
             size="icon-xs"
           >
             <ArrowUpIcon />
-            <span className="sr-only">Send</span>
+            <span className="sr-only">发送</span>
           </InputGroupButton>
         </InputGroupAddon>
       </InputGroup>

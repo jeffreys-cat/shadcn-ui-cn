@@ -20,7 +20,7 @@ import { RootComponents } from "./components"
 
 const title = "shadcn/ui - 为你的设计系统打好基础"
 const description =
-  "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code."
+  "一套精心设计的组件，你可以自定义、扩展并在其之上构建。先从这里开始，然后做成你自己的。开源。开放代码。"
 
 export const dynamic = "force-static"
 export const revalidate = false
@@ -60,11 +60,11 @@ export default function IndexPage() {
           <Button asChild size="sm" className="h-[31px] rounded-lg">
             <Link href="/create">
               <HugeiconsIcon icon={PlusSignIcon} />
-              New Project
+              新建项目
             </Link>
           </Button>
           <Button asChild size="sm" variant="ghost" className="rounded-lg">
-            <Link href="/docs/components">View Components</Link>
+            <Link href="/docs/components">查看组件</Link>
           </Button>
         </PageActions>
       </PageHeader>
@@ -79,7 +79,7 @@ export default function IndexPage() {
               src="/r/styles/new-york-v4/dashboard-01-light.png"
               width={1400}
               height={875}
-              alt="Dashboard"
+              alt="仪表盘"
               className="block dark:hidden"
               priority
             />
@@ -87,7 +87,7 @@ export default function IndexPage() {
               src="/r/styles/new-york-v4/dashboard-01-dark.png"
               width={1400}
               height={875}
-              alt="Dashboard"
+              alt="仪表盘"
               className="hidden dark:block"
               priority
             />

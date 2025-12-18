@@ -25,25 +25,25 @@ export function FieldDemo() {
       <form>
         <FieldGroup>
           <FieldSet>
-            <FieldLegend>Payment Method</FieldLegend>
+            <FieldLegend>付款方式</FieldLegend>
             <FieldDescription>
-              All transactions are secure and encrypted
+              所有交易均安全加密
             </FieldDescription>
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="checkout-7j9-card-name-43j">
-                  Name on Card
+                  持卡人姓名
                 </FieldLabel>
                 <Input
                   id="checkout-7j9-card-name-43j"
-                  placeholder="John Doe"
+                  placeholder="张三"
                   required
                 />
               </Field>
               <div className="grid grid-cols-3 gap-4">
                 <Field className="col-span-2">
                   <FieldLabel htmlFor="checkout-7j9-card-number-uw1">
-                    Card Number
+                    卡号
                   </FieldLabel>
                   <Input
                     id="checkout-7j9-card-number-uw1"
@@ -51,7 +51,7 @@ export function FieldDemo() {
                     required
                   />
                   <FieldDescription>
-                    Enter your 16-digit number.
+                    请输入 16 位卡号。
                   </FieldDescription>
                 </Field>
                 <Field className="col-span-1">
@@ -62,7 +62,7 @@ export function FieldDemo() {
               <div className="grid grid-cols-2 gap-4">
                 <Field>
                   <FieldLabel htmlFor="checkout-7j9-exp-month-ts6">
-                    Month
+                    月份
                   </FieldLabel>
                   <Select defaultValue="">
                     <SelectTrigger id="checkout-7j9-exp-month-ts6">
@@ -86,7 +86,7 @@ export function FieldDemo() {
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="checkout-7j9-exp-year-f59">
-                    Year
+                    年份
                   </FieldLabel>
                   <Select defaultValue="">
                     <SelectTrigger id="checkout-7j9-exp-year-f59">
@@ -107,9 +107,9 @@ export function FieldDemo() {
           </FieldSet>
           <FieldSeparator />
           <FieldSet>
-            <FieldLegend>Billing Address</FieldLegend>
+            <FieldLegend>账单地址</FieldLegend>
             <FieldDescription>
-              The billing address associated with your payment method
+              与你的付款方式关联的账单地址
             </FieldDescription>
             <FieldGroup>
               <Field orientation="horizontal">
@@ -121,7 +121,7 @@ export function FieldDemo() {
                   htmlFor="checkout-7j9-same-as-shipping-wgm"
                   className="font-normal"
                 >
-                  Same as shipping address
+                  同收货地址
                 </FieldLabel>
               </Field>
             </FieldGroup>
@@ -131,19 +131,19 @@ export function FieldDemo() {
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="checkout-7j9-optional-comments">
-                  Comments
+                  备注
                 </FieldLabel>
                 <Textarea
                   id="checkout-7j9-optional-comments"
-                  placeholder="Add any additional comments"
+                  placeholder="添加其他备注"
                 />
               </Field>
             </FieldGroup>
           </FieldSet>
           <Field orientation="horizontal">
-            <Button type="submit">Submit</Button>
+            <Button type="submit">提交</Button>
             <Button variant="outline" type="button">
-              Cancel
+              取消
             </Button>
           </Field>
         </FieldGroup>

@@ -46,9 +46,9 @@ export function AppearanceSettings() {
     <FieldSet>
       <FieldGroup>
         <FieldSet>
-          <FieldLegend>Compute Environment</FieldLegend>
+          <FieldLegend>计算环境</FieldLegend>
           <FieldDescription>
-            Select the compute environment for your cluster.
+            选择集群的计算环境。
           </FieldDescription>
           <RadioGroup defaultValue="kubernetes">
             <FieldLabel htmlFor="kubernetes-r2h">
@@ -56,8 +56,7 @@ export function AppearanceSettings() {
                 <FieldContent>
                   <FieldTitle>Kubernetes</FieldTitle>
                   <FieldDescription>
-                    Run GPU workloads on a K8s configured cluster. This is the
-                    default.
+                    在已配置 K8s 的集群上运行 GPU 工作负载。这是默认选项。
                   </FieldDescription>
                 </FieldContent>
                 <RadioGroupItem
@@ -70,16 +69,15 @@ export function AppearanceSettings() {
             <FieldLabel htmlFor="vm-z4k">
               <Field orientation="horizontal">
                 <FieldContent>
-                  <FieldTitle>Virtual Machine</FieldTitle>
+                  <FieldTitle>虚拟机</FieldTitle>
                   <FieldDescription>
-                    Access a VM configured cluster to run workloads. (Coming
-                    soon)
+                    访问已配置的 VM 集群以运行工作负载。（即将推出）
                   </FieldDescription>
                 </FieldContent>
                 <RadioGroupItem
                   value="vm"
                   id="vm-z4k"
-                  aria-label="Virtual Machine"
+                  aria-label="虚拟机"
                 />
               </Field>
             </FieldLabel>
@@ -88,8 +86,8 @@ export function AppearanceSettings() {
         <FieldSeparator />
         <Field orientation="horizontal">
           <FieldContent>
-            <FieldLabel htmlFor="number-of-gpus-f6l">Number of GPUs</FieldLabel>
-            <FieldDescription>You can add more later.</FieldDescription>
+            <FieldLabel htmlFor="number-of-gpus-f6l">GPU 数量</FieldLabel>
+            <FieldDescription>之后可以再增加。</FieldDescription>
           </FieldContent>
           <ButtonGroup>
             <Input
@@ -104,7 +102,7 @@ export function AppearanceSettings() {
               variant="outline"
               size="icon-sm"
               type="button"
-              aria-label="Decrement"
+              aria-label="减少"
               onClick={() => handleGpuAdjustment(-1)}
               disabled={gpuCount <= 1}
             >
@@ -114,7 +112,7 @@ export function AppearanceSettings() {
               variant="outline"
               size="icon-sm"
               type="button"
-              aria-label="Increment"
+              aria-label="增加"
               onClick={() => handleGpuAdjustment(1)}
               disabled={gpuCount >= 99}
             >
@@ -125,9 +123,9 @@ export function AppearanceSettings() {
         <FieldSeparator />
         <Field orientation="horizontal">
           <FieldContent>
-            <FieldLabel htmlFor="tinting">Wallpaper Tinting</FieldLabel>
+            <FieldLabel htmlFor="tinting">壁纸着色</FieldLabel>
             <FieldDescription>
-              Allow the wallpaper to be tinted.
+              允许壁纸着色。
             </FieldDescription>
           </FieldContent>
           <Switch id="tinting" defaultChecked />

@@ -18,10 +18,10 @@ export function FieldChoiceCard() {
       <FieldGroup>
         <FieldSet>
           <FieldLabel htmlFor="compute-environment-p8w">
-            Compute Environment
+            计算环境
           </FieldLabel>
           <FieldDescription>
-            Select the compute environment for your cluster.
+            选择集群的计算环境。
           </FieldDescription>
           <RadioGroup defaultValue="kubernetes">
             <FieldLabel htmlFor="kubernetes-r2h">
@@ -34,7 +34,7 @@ export function FieldChoiceCard() {
                 <FieldContent>
                   <FieldTitle>Kubernetes</FieldTitle>
                   <FieldDescription>
-                    Run GPU workloads on a K8s configured cluster.
+                    在已配置 K8s 的集群上运行 GPU 工作负载。
                   </FieldDescription>
                 </FieldContent>
               </Field>
@@ -44,12 +44,12 @@ export function FieldChoiceCard() {
                 <RadioGroupItem
                   value="vm"
                   id="vm-z4k"
-                  aria-label="Virtual Machine"
+                  aria-label="虚拟机"
                 />
                 <FieldContent>
-                  <FieldTitle>Virtual Machine</FieldTitle>
+                  <FieldTitle>虚拟机</FieldTitle>
                   <FieldDescription>
-                    Access a VM configured cluster to run workloads.
+                    访问已配置的 VM 集群以运行工作负载。
                   </FieldDescription>
                 </FieldContent>
               </Field>
