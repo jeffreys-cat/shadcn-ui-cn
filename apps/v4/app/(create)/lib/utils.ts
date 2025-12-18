@@ -2,7 +2,7 @@ import { type RegistryItem } from "shadcn/schema"
 
 const mapping = {
   "registry:block": "Blocks",
-  "registry:example": "Components",
+  "registry:example": "组件",
 }
 
 export function groupItemsByType(

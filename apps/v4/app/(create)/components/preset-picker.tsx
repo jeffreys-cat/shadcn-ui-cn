@@ -80,9 +80,9 @@ export function PresetPicker({
     <Picker>
       <PickerTrigger>
         <div className="flex flex-col justify-start text-left">
-          <div className="text-muted-foreground text-xs">Preset</div>
+          <div className="text-muted-foreground text-xs">预设</div>
           <div className="text-foreground line-clamp-1 text-sm font-medium">
-            {currentPreset?.description ?? "Custom"}
+            {currentPreset?.description ?? "自定义"}
           </div>
         </div>
       </PickerTrigger>

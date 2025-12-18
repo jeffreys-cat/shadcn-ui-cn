@@ -30,7 +30,7 @@ export function MenuAccentPicker({
       <Picker>
         <PickerTrigger>
           <div className="flex flex-col justify-start text-left">
-            <div className="text-muted-foreground text-xs">Menu Accent</div>
+            <div className="text-muted-foreground text-xs">菜单强调色</div>
             <div className="text-foreground text-sm font-medium">
               {currentAccent?.label}
             </div>

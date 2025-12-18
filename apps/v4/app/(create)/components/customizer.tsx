@@ -44,14 +44,14 @@ export function Customizer() {
           className="size-4"
           strokeWidth={2}
         />
-        <div className="relative flex flex-col gap-1 rounded-lg text-[13px]/snug">
-          <div className="flex items-center gap-1 font-medium text-balance">
-            Build your own shadcn/ui
+          <div className="relative flex flex-col gap-1 rounded-lg text-[13px]/snug">
+            <div className="flex items-center gap-1 font-medium text-balance">
+            构建你的 shadcn/ui
+            </div>
+            <div className="hidden md:flex">
+            完成后，点击“创建项目”开始新项目。
+            </div>
           </div>
-          <div className="hidden md:flex">
-            When you&apos;re done, click Create Project to start a new project.
-          </div>
-        </div>
       </div>
       <div className="no-scrollbar h-14 overflow-x-auto overflow-y-hidden p-px md:h-full md:overflow-x-hidden md:overflow-y-auto">
         <FieldGroup className="flex h-full flex-1 flex-row gap-2 md:flex-col md:gap-0">

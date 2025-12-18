@@ -13,7 +13,7 @@ export function SiteFooter() {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              Dory Lab
+              Jeffrey
             </a>{" "}
             维护。源代码可在{" "}
             <a

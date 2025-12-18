@@ -31,7 +31,7 @@ export function RadiusPicker({
       <Picker>
         <PickerTrigger>
           <div className="flex flex-col justify-start text-left">
-            <div className="text-muted-foreground text-xs">Radius</div>
+            <div className="text-muted-foreground text-xs">圆角</div>
             <div className="text-foreground text-sm font-medium">
               {currentRadius?.label}
             </div>
@@ -75,7 +75,7 @@ export function RadiusPicker({
                   <div className="flex flex-col justify-start pointer-coarse:gap-1">
                     <div>{defaultRadius.label}</div>
                     <div className="text-muted-foreground text-xs pointer-coarse:text-sm">
-                      Use radius from style
+                      使用样式中的圆角
                     </div>
                   </div>
                 </PickerRadioItem>

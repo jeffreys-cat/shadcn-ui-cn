@@ -19,7 +19,7 @@ import { useDesignSystemSearchParams } from "@/app/(create)/lib/search-params"
 const MENU_OPTIONS = [
   {
     value: "default" as const,
-    label: "Default",
+    label: "默认",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ const MENU_OPTIONS = [
   },
   {
     value: "inverted" as const,
-    label: "Inverted",
+    label: "反转",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ export function MenuColorPicker({
       <Picker>
         <PickerTrigger disabled={mounted && resolvedTheme === "dark"}>
           <div className="flex flex-col justify-start text-left">
-            <div className="text-muted-foreground text-xs">Menu Color</div>
+            <div className="text-muted-foreground text-xs">菜单颜色</div>
             <div className="text-foreground text-sm font-medium">
               {currentMenu?.label}
             </div>

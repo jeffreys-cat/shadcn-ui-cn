@@ -46,20 +46,19 @@ export function WelcomeDialog() {
         </div>
         <DialogHeader className="gap-1 p-4">
           <DialogTitle className="text-left text-base">
-            Build your own shadcn/ui
+            构建你的 shadcn/ui
           </DialogTitle>
           <DialogDescription className="text-foreground text-left leading-relaxed">
-            Customize everything from the ground up. Pick your component
-            library, font, color scheme, and more.
+            从零开始自定义一切。选择你的组件库、字体、配色等。
           </DialogDescription>
           <DialogDescription className="text-foreground mt-2 text-left leading-relaxed font-medium">
-            Available for Next.js, Vite, TanStack Start, and v0.
+            支持 Next.js、Vite、TanStack Start 与 v0。
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="p-4 pt-0">
           <DialogClose asChild>
             <Button className="w-full rounded-lg shadow-none">
-              Get Started
+              开始使用
             </Button>
           </DialogClose>
         </DialogFooter>

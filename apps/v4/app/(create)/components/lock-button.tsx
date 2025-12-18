@@ -35,7 +35,7 @@ export function LockButton({
             "flex size-4 cursor-pointer items-center justify-center rounded opacity-0 transition-opacity group-focus-within/picker:opacity-100 group-hover/picker:opacity-100 focus:opacity-100 data-[locked=true]:opacity-100 pointer-coarse:hidden",
             className
           )}
-          aria-label={locked ? "Unlock" : "Lock"}
+          aria-label={locked ? "解锁" : "锁定"}
         >
           <HugeiconsIcon
             icon={locked ? SquareLock01Icon : SquareUnlock01Icon}
@@ -44,7 +44,7 @@ export function LockButton({
           />
         </button>
       </TooltipTrigger>
-      <TooltipContent>{locked ? "Unlock" : "Lock"}</TooltipContent>
+      <TooltipContent>{locked ? "解锁" : "锁定"}</TooltipContent>
     </Tooltip>
   )
 }

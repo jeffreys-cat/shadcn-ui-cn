@@ -64,10 +64,10 @@ export function ShareButton() {
           ) : (
             <HugeiconsIcon icon={Share03Icon} strokeWidth={2} />
           )}
-          Share
+          分享
         </Button>
       </TooltipTrigger>
-      <TooltipContent>Copy Link</TooltipContent>
+      <TooltipContent>复制链接</TooltipContent>
     </Tooltip>
   )
 }

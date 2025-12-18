@@ -115,9 +115,9 @@ export function ToolbarControls() {
     })
     setOpen(false)
     setHasCopied(true)
-    toast("Command copied to clipboard.", {
+    toast("命令已复制到剪贴板。", {
       description:
-        "Paste and run the command in your terminal to create a new shadcn/ui project.",
+        "在终端中粘贴并运行该命令以创建新的 shadcn/ui 项目。",
       position: "bottom-center",
       classNames: {
         content: "rounded-xl",
@@ -153,21 +153,21 @@ export function ToolbarControls() {
             icon={ComputerTerminal01Icon}
             className="hidden xl:flex"
           />
-          Create Project
+          创建项目
         </Button>
       </DialogTrigger>
       <DialogContent className="dialog-ring min-w-0 overflow-hidden rounded-xl sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Create Project</DialogTitle>
+          <DialogTitle>创建项目</DialogTitle>
           <DialogDescription className="text-balance">
-            Select a template and run this command to create a{" "}
-            {selectedTemplate?.title} + shadcn/ui project.
+            选择模板并运行该命令，以创建 {selectedTemplate?.title} +
+            shadcn/ui 项目。
           </DialogDescription>
         </DialogHeader>
         <FieldGroup>
           <Field>
             <FieldLabel htmlFor="template" className="sr-only">
-              Template
+              模板
             </FieldLabel>
             <RadioGroup
               id="template"
@@ -236,11 +236,11 @@ export function ToolbarControls() {
                   ) : (
                     <HugeiconsIcon icon={Copy01Icon} className="size-4" />
                   )}
-                  <span className="sr-only">Copy command</span>
+                  <span className="sr-only">复制命令</span>
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                {hasCopied ? "Copied!" : "Copy command"}
+                {hasCopied ? "已复制！" : "复制命令"}
               </TooltipContent>
             </Tooltip>
           </div>
@@ -264,7 +264,7 @@ export function ToolbarControls() {
             onClick={handleCopy}
             className="h-9 w-full rounded-lg"
           >
-            Copy Command
+            复制命令
           </Button>
         </DialogFooter>
       </DialogContent>

@@ -45,7 +45,7 @@ export function TemplatePicker({
     <Picker>
       <PickerTrigger className="hidden md:flex">
         <div className="flex flex-col justify-start text-left">
-          <div className="text-muted-foreground text-xs">Template</div>
+          <div className="text-muted-foreground text-xs">模板</div>
           <div className="text-foreground text-sm font-medium">
             {currentTemplate?.title}
           </div>

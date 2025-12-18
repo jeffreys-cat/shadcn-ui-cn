@@ -43,7 +43,7 @@ export function FontPicker({
       <Picker>
         <PickerTrigger>
           <div className="flex flex-col justify-start text-left">
-            <div className="text-muted-foreground text-xs">Font</div>
+            <div className="text-muted-foreground text-xs">字体</div>
             <div className="text-foreground text-sm font-medium">
               {currentFont?.name}
             </div>
@@ -79,8 +79,7 @@ export function FontPicker({
                         <ItemDescription
                           style={{ fontFamily: font.font.style.fontFamily }}
                         >
-                          Designers love packing quirky glyphs into test
-                          phrases.
+                          设计师喜欢把有趣的字形塞进测试短句里。
                         </ItemDescription>
                       </ItemContent>
                     </Item>

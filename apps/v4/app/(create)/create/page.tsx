@@ -28,13 +28,13 @@ export const revalidate = false
 export const dynamic = "force-static"
 
 export const metadata: Metadata = {
-  title: "New Project",
+  title: "新建项目",
   description:
-    "Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of shadcn/ui.",
+    "自定义一切。选择你的组件库、图标、基色、主题与字体，打造属于你的 shadcn/ui 版本。",
   openGraph: {
-    title: "New Project",
+    title: "新建项目",
     description:
-      "Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of shadcn/ui.",
+      "自定义一切。选择你的组件库、图标、基色、主题与字体，打造属于你的 shadcn/ui 版本。",
     type: "website",
     url: absoluteUrl("/create"),
     images: [
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "New Project",
+    title: "新建项目",
     description:
-      "Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of shadcn/ui.",
+      "自定义一切。选择你的组件库、图标、基色、主题与字体，打造属于你的 shadcn/ui 版本。",
     images: [siteConfig.ogImage],
     creator: "@shadcn",
   },
@@ -91,7 +91,7 @@ export default async function CreatePage({
               >
                 <Link href="/">
                   <ArrowLeftIcon />
-                  Back
+                  返回
                 </Link>
               </Button>
               <Separator
@@ -99,7 +99,7 @@ export default async function CreatePage({
                 className="mx-2 hidden sm:mx-4 lg:flex"
               />
               <div className="text-muted-foreground hidden text-sm font-medium lg:flex">
-                New Project
+                新建项目
               </div>
             </div>
             <div className="fixed inset-x-0 bottom-0 ml-auto flex flex-1 items-center gap-2 px-4.5 pb-4 sm:static sm:justify-end sm:p-0 lg:ml-0 xl:justify-center">

@@ -25,13 +25,13 @@ export function PreviewControls() {
         }}
         className="gap-1 *:data-[slot=toggle-group-item]:!size-6 *:data-[slot=toggle-group-item]:!rounded-sm"
       >
-        <ToggleGroupItem value="100" title="Desktop">
+        <ToggleGroupItem value="100" title="桌面">
           <Monitor />
         </ToggleGroupItem>
-        <ToggleGroupItem value="60" title="Tablet">
+        <ToggleGroupItem value="60" title="平板">
           <Tablet />
         </ToggleGroupItem>
-        <ToggleGroupItem value="30" title="Mobile">
+        <ToggleGroupItem value="30" title="手机">
           <Smartphone />
         </ToggleGroupItem>
       </ToggleGroup>

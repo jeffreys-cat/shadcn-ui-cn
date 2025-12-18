@@ -51,7 +51,7 @@ export function ThemePicker({
       <Picker>
         <PickerTrigger>
           <div className="flex flex-col justify-start text-left">
-            <div className="text-muted-foreground text-xs">Theme</div>
+            <div className="text-muted-foreground text-xs">主题</div>
             <div className="text-foreground text-sm font-medium">
               {currentTheme?.title}
             </div>
@@ -114,7 +114,7 @@ export function ThemePicker({
                         <div className="flex flex-col justify-start pointer-coarse:gap-1">
                           <div>{theme.title}</div>
                           <div className="text-muted-foreground text-xs pointer-coarse:text-sm">
-                            Match base color
+                            匹配基色
                           </div>
                         </div>
                       </div>

@@ -112,13 +112,13 @@ export function Preview() {
           ref={iframeRef}
           src={iframeSrc}
           className="z-10 size-full flex-1"
-          title="Preview"
+          title="预览"
         />
         <Badge
           className="absolute right-2 bottom-2 isolate z-10"
           variant="secondary"
         >
-          Preview
+          预览
         </Badge>
       </div>
     </div>

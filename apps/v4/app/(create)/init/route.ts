@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
     if (!parseResult.success) {
       return NextResponse.json(
         {
-          error: "Invalid registry base item",
+          error: "无效的 registry 基础项",
           details: parseResult.error.format(),
         },
         { status: 500 }
@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         error:
-          error instanceof Error ? error.message : "An unknown error occurred",
+          error: error instanceof Error ? error.message : "发生未知错误",
       },
       { status: 500 }
     )

@@ -43,7 +43,7 @@ export function BasePicker({
     <Picker>
       <PickerTrigger>
         <div className="flex flex-col justify-start text-left">
-          <div className="text-muted-foreground text-xs">Component Library</div>
+          <div className="text-muted-foreground text-xs">组件库</div>
           <div className="text-foreground text-sm font-medium">
             {currentBase?.title}
           </div>

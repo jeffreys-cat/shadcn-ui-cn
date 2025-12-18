@@ -33,7 +33,7 @@ export function StylePicker({
       <Picker>
         <PickerTrigger>
           <div className="flex flex-col justify-start text-left">
-            <div className="text-muted-foreground text-xs">Style</div>
+            <div className="text-muted-foreground text-xs">风格</div>
             <div className="text-foreground text-sm font-medium">
               {currentStyle?.title}
             </div>

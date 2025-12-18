@@ -97,7 +97,7 @@ export function ItemPicker({
         render={
           <Button
             variant="outline"
-            aria-label="Select item"
+            aria-label="选择项目"
             size="sm"
             className="data-popup-open:bg-muted dark:data-popup-open:bg-muted/50 bg-muted/50 sm:bg-background md:dark:bg-background border-foreground/10 dark:bg-muted/50 h-[calc(--spacing(13.5))] flex-1 touch-manipulation justify-between gap-2 rounded-xl pr-4! pl-2.5 text-left shadow-none select-none *:data-[slot=combobox-trigger-icon]:hidden sm:h-8 sm:max-w-56 sm:rounded-lg sm:pr-2! xl:max-w-md"
           />
@@ -108,14 +108,14 @@ export function ItemPicker({
             <>
               <div className="flex flex-col justify-start text-left sm:hidden">
                 <div className="text-muted-foreground text-xs font-normal">
-                  Preview
+                  预览
                 </div>
                 <div className="text-foreground text-sm font-medium">
-                  {value?.title || "Not Found"}
+                  {value?.title || "未找到"}
                 </div>
               </div>
               <div className="text-foreground hidden flex-1 text-sm sm:flex">
-                {value?.title || "Not Found"}
+                {value?.title || "未找到"}
               </div>
             </>
           )}
@@ -129,10 +129,10 @@ export function ItemPicker({
       >
         <ComboboxInput
           showTrigger={false}
-          placeholder="Search"
+          placeholder="搜索"
           className="bg-muted h-8 rounded-lg shadow-none has-focus-visible:border-inherit! has-focus-visible:ring-0! pointer-coarse:hidden"
         />
-        <ComboboxEmpty>No items found.</ComboboxEmpty>
+        <ComboboxEmpty>未找到项目。</ComboboxEmpty>
         <ComboboxList className="no-scrollbar scroll-my-1 pb-1">
           {(group) => (
             <ComboboxGroup key={group.type} items={group.items}>

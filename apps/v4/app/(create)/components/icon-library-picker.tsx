@@ -215,7 +215,7 @@ export function IconLibraryPicker({
       <Picker>
         <PickerTrigger>
           <div className="flex flex-col justify-start text-left">
-            <div className="text-muted-foreground text-xs">Icon Library</div>
+            <div className="text-muted-foreground text-xs">图标库</div>
             <div className="text-foreground text-sm font-medium">
               {currentIconLibrary?.title}
             </div>

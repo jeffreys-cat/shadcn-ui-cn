@@ -41,12 +41,12 @@ export function V0Button({ className }: { className?: string }) {
               href={`${process.env.NEXT_PUBLIC_V0_URL}/chat/api/open?url=${encodeURIComponent(url)}&title=${params.item}`}
               target="_blank"
             >
-              Open in <Icons.v0 className="size-5" />
+              在 <Icons.v0 className="size-5" /> 中打开
             </a>
           </Button>
         </TooltipTrigger>
         <TooltipContent>
-          <p>Open current design in v0</p>
+          <p>在 v0 中打开当前设计</p>
         </TooltipContent>
       </Tooltip>
     </>
