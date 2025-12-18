@@ -1,21 +1,21 @@
 ---
 title: Toggle
-description: A two-state button that can be either on or off.
+description: 一个具有开启/关闭两种状态的按钮。
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/toggle
   api: https://www.radix-ui.com/docs/primitives/components/toggle#api-reference
 ---
 
-<ComponentPreview name="toggle-demo" description="A toggle component." />
+<ComponentPreview name="toggle-demo" description="切换按钮组件示例。" />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">手动</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
@@ -29,17 +29,17 @@ npx shadcn@latest add toggle
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-toggle
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="toggle" title="components/ui/toggle.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -47,7 +47,7 @@ npm install @radix-ui/react-toggle
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx
 import { Toggle } from "@/components/ui/toggle"
@@ -57,37 +57,37 @@ import { Toggle } from "@/components/ui/toggle"
 <Toggle>Toggle</Toggle>
 ```
 
-## Examples
+## 示例
 
-### Default
+### 默认
 
-<ComponentPreview name="toggle-demo" description="A toggle component." />
+<ComponentPreview name="toggle-demo" description="切换按钮组件示例。" />
 
-### Outline
+### 描边
 
 <ComponentPreview
   name="toggle-outline"
-  description="A toggle component using the outline variant."
+  description="使用描边外观的切换按钮。"
 />
 
-### With Text
+### 带文本
 
 <ComponentPreview
   name="toggle-with-text"
-  description="A toggle component with text."
+  description="带文本的切换按钮。"
 />
 
-### Small
+### 小号
 
-<ComponentPreview name="toggle-sm" description="A small toggle component." />
+<ComponentPreview name="toggle-sm" description="小号切换按钮。" />
 
-### Large
+### 大号
 
-<ComponentPreview name="toggle-lg" description="A large toggle component." />
+<ComponentPreview name="toggle-lg" description="大号切换按钮。" />
 
-### Disabled
+### 禁用
 
 <ComponentPreview
   name="toggle-disabled"
-  description="A disabled toggle component."
+  description="禁用状态的切换按钮。"
 />

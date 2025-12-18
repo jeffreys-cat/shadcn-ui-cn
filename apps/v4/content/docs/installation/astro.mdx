@@ -1,21 +1,21 @@
 ---
 title: Astro
-description: Install and configure shadcn/ui for Astro
+description: 在 Astro 中安装并配置 shadcn/ui。
 ---
 
 <Steps>
 
-### Create project
+### 创建项目
 
-Start by creating a new Astro project:
+先创建一个新的 Astro 项目：
 
 ```bash
 npx create-astro@latest astro-app  --template with-tailwindcss --install --add react --git
 ```
 
-### Edit tsconfig.json file
+### 编辑 tsconfig.json
 
-Add the following code to the `tsconfig.json` file to resolve paths:
+在 `tsconfig.json` 中加入以下配置以解析路径别名：
 
 ```ts title="tsconfig.json" {4-9} showLineNumbers
 {
@@ -32,23 +32,23 @@ Add the following code to the `tsconfig.json` file to resolve paths:
 }
 ```
 
-### Run the CLI
+### 运行 CLI
 
-Run the `shadcn` init command to setup your project:
+执行 `shadcn` 的 `init` 命令完成项目初始化：
 
 ```bash
 npx shadcn@latest init
 ```
 
-### Add Components
+### 添加组件
 
-You can now start adding components to your project.
+现在可以向项目中添加组件。
 
 ```bash
 npx shadcn@latest add button
 ```
 
-The command above will add the `Button` component to your project. You can then import it like this:
+上述命令会加入 `Button` 组件，你可以按如下方式导入：
 
 ```astro title="src/pages/index.astro" {2,16} showLineNumbers
 ---

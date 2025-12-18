@@ -1,21 +1,21 @@
 ---
 title: Combobox
-description: Autocomplete input and command palette with a list of suggestions.
+description: 支持自动补全与命令面板的输入组件，附带建议列表。
 component: true
 ---
 
 <ComponentPreview
   name="combobox-demo"
-  description="A combobox with a list of frameworks."
+  description="列出框架选项的组合框。"
 />
 
-## Installation
+## 安装
 
-The Combobox is built using a composition of the `<Popover />` and the `<Command />` components.
+Combobox 由 `<Popover />` 与 `<Command />` 组合而成。
 
-See installation instructions for the [Popover](/docs/components/popover#installation) and the [Command](/docs/components/command#installation) components.
+请参考 [Popover](/docs/components/popover#installation) 及 [Command](/docs/components/command#installation) 的安装说明。
 
-## Usage
+## 用法
 
 <CodeCollapsibleWrapper>
 
@@ -79,15 +79,15 @@ export function ExampleCombobox() {
         >
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
-            : "Select framework..."}
+            : "选择框架..."}
           <ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." />
+          <CommandInput placeholder="搜索框架..." />
           <CommandList>
-            <CommandEmpty>No framework found.</CommandEmpty>
+            <CommandEmpty>未找到匹配的框架。</CommandEmpty>
             <CommandGroup>
               {frameworks.map((framework) => (
                 <CommandItem
@@ -118,28 +118,28 @@ export function ExampleCombobox() {
 
 </CodeCollapsibleWrapper>
 
-## Examples
+## 示例
 
 ### Combobox
 
 <ComponentPreview
   name="combobox-demo"
-  description="A combobox with a list of frameworks."
+  description="列出框架选项的组合框。"
 />
 
 ### Popover
 
 <ComponentPreview name="combobox-popover" />
 
-### Dropdown menu
+### 下拉菜单
 
 <ComponentPreview
   name="combobox-dropdown-menu"
-  description="A combobox in a dropdown menu"
+  description="嵌入下拉菜单中的组合框"
 />
 
-### Responsive
+### 响应式
 
-You can create a responsive combobox by using the `<Popover />` on desktop and the `<Drawer />` components on mobile.
+可以在桌面端使用 `<Popover />`，在移动端使用 `<Drawer />`，从而实现响应式组合框。
 
 <ComponentPreview name="combobox-responsive" />

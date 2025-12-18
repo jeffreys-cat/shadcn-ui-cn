@@ -1,6 +1,6 @@
 ---
 title: Toggle Group
-description: A set of two-state buttons that can be toggled on or off.
+description: 一组可切换开启/关闭状态的按钮集合。
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/toggle-group
@@ -9,13 +9,13 @@ links:
 
 <ComponentPreview name="toggle-group-spacing" />
 
-## Installation
+## 安装
 
 <CodeTabs>
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="manual">手动</TabsTrigger>
 </TabsList>
 <TabsContent value="cli">
 
@@ -29,17 +29,17 @@ npx shadcn@latest add toggle-group
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
+<Step>安装下列依赖：</Step>
 
 ```bash
 npm install @radix-ui/react-toggle-group
 ```
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>将下面的代码复制到你的项目中。</Step>
 
 <ComponentSource name="toggle-group" title="components/ui/toggle-group.tsx" />
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>根据项目结构调整导入路径。</Step>
 
 </Steps>
 
@@ -47,7 +47,7 @@ npm install @radix-ui/react-toggle-group
 
 </CodeTabs>
 
-## Usage
+## 用法
 
 ```tsx
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
@@ -61,60 +61,60 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 </ToggleGroup>
 ```
 
-## Examples
+## 示例
 
-### Outline
+### 描边样式
 
 <ComponentPreview
   name="toggle-group-outline"
-  description="A toggle group using the outline variant."
+  description="使用描边外观的切换组。"
 />
 
-### Single
+### 单选
 
 <ComponentPreview
   name="toggle-group-single"
-  description="A toggle group with single selection."
+  description="仅支持单选的切换组。"
 />
 
-### Small
+### 小号
 
 <ComponentPreview
   name="toggle-group-sm"
-  description="A toggle group using the small size."
+  description="使用小号尺寸的切换组。"
 />
 
-### Large
+### 大号
 
 <ComponentPreview
   name="toggle-group-lg"
-  description="A toggle group using the large size."
+  description="使用大号尺寸的切换组。"
 />
 
-### Disabled
+### 禁用
 
 <ComponentPreview
   name="toggle-group-disabled"
-  description="A disabled toggle group."
+  description="禁用状态的切换组。"
 />
 
-### Spacing
+### 间距
 
-Use `spacing={2}` to add spacing between toggle group items.
+通过 `spacing={2}` 在分组项之间添加间距。
 
 <ComponentPreview
   name="toggle-group-spacing"
-  description="A toggle group with spacing."
+  description="带有间距的切换组。"
 />
 
-## API Reference
+## API 参考
 
 ### ToggleGroup
 
-The main component that wraps toggle group items.
+用于包裹切换组项的核心组件。
 
-| Prop        | Type                        | Default     |
-| ----------- | --------------------------- | ----------- |
+| 属性         | 类型                         | 默认值        |
+| ------------ | ---------------------------- | ------------- |
 | `type`      | `"single" \| "multiple"`    | `"single"`  |
 | `variant`   | `"default" \| "outline"`    | `"default"` |
 | `size`      | `"default" \| "sm" \| "lg"` | `"default"` |
@@ -130,9 +130,9 @@ The main component that wraps toggle group items.
 
 ### ToggleGroupItem
 
-Individual toggle items within a toggle group. Remember to add an `aria-label` to each item for accessibility.
+切换组中的单个按钮。请为每个项添加 `aria-label` 以确保无障碍体验。
 
-| Prop        | Type     | Default  |
-| ----------- | -------- | -------- |
-| `value`     | `string` | Required |
-| `className` | `string` |          |
+| 属性         | 类型      | 默认值 |
+| ------------ | -------- | ------ |
+| `value`     | `string` | 必填   |
+| `className` | `string` |        |

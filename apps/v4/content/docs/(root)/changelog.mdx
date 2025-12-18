@@ -1,6 +1,6 @@
 ---
-title: Changelog
-description: Latest updates and announcements.
+title: 更新日志
+description: 最新更新与公告。
 toc: false
 ---
 
@@ -60,24 +60,25 @@ Built into the CLI. No config required.
 ---
 
 ## October 2025 - New Components
+## 2025 年 10 月：全新组件
 
-For this round of components, I looked at what we build every day, the boring stuff we rebuild over and over, and made reusable abstractions you can actually use.
+这次的组件更新，我回顾了我们日常反复构建的那些“无聊”部分，把它们提炼成真正可复用的抽象。
 
-**These components work with every component library, Radix, Base UI, React Aria, you name it. Copy and paste to your projects.**
+**这些组件可与任意组件库一起使用——Radix、Base UI、React Aria 等等。直接复制粘贴到你的项目即可。**
 
-- [Spinner](#spinner): An indicator to show a loading state.
-- [Kbd](#kbd): Display a keyboard key or group of keys.
-- [Button Group](#button-group): A group of buttons for actions and split buttons.
-- [Input Group](#input-group): Input with icons, buttons, labels and more.
-- [Field](#field): One component. All your forms.
-- [Item](#item): Display lists of items, cards, and more.
-- [Empty](#empty): Use this one for empty states.
+- [Spinner](#spinner)：用于展示加载状态的指示器。
+- [Kbd](#kbd)：展示单个或组合快捷键。
+- [Button Group](#button-group)：用于操作组或分裂按钮的按钮组容器。
+- [Input Group](#input-group)：带图标、按钮、标签等的输入容器。
+- [Field](#field)：一个组件搞定所有表单。
+- [Item](#item)：用于展示条目、卡片等列表内容。
+- [Empty](#empty)：用于展示空状态的组件。
 
 ### Spinner
 
-Okay let's start with the easiest ones: **Spinner** and **Kbd**. Pretty basic. We all know what they do.
+先从最简单的组件开始：**Spinner** 和 **Kbd**。很基础，你一定知道它们的用途。
 
-Here's how you render a spinner:
+渲染一个 spinner：
 
 ```tsx
 import { Spinner } from "@/components/ui/spinner"
@@ -87,21 +88,21 @@ import { Spinner } from "@/components/ui/spinner"
 <Spinner />
 ```
 
-Here's what it looks like:
+显示效果如下：
 
 <ComponentPreview
   name="spinner-basic"
   className="[&_.preview]:h-[250px] [&_pre]:!h-[250px]"
 />
 
-Here's what it looks like in a button:
+在按钮中使用：
 
 <ComponentPreview
   name="spinner-button"
   className="[&_.preview]:h-[250px] [&_pre]:!h-[250px]"
 />
 
-You can edit the code and replace it with your own spinner.
+你也可以编辑代码，替换成自己的自定义 spinner。
 
 <ComponentPreview
   name="spinner-custom"
@@ -110,7 +111,7 @@ You can edit the code and replace it with your own spinner.
 
 ### Kbd
 
-Kbd is a component that renders a keyboard key.
+Kbd 组件用于渲染键盘按键。
 
 ```tsx
 import { Kbd, KbdGroup } from "@/components/ui/kbd"
@@ -120,7 +121,7 @@ import { Kbd, KbdGroup } from "@/components/ui/kbd"
 <Kbd>Ctrl</Kbd>
 ```
 
-Use `KbdGroup` to group keyboard keys together.
+使用 `KbdGroup` 可以组合多个按键：
 
 ```tsx showLineNumbers
 <KbdGroup>
@@ -134,18 +135,18 @@ Use `KbdGroup` to group keyboard keys together.
   className="[&_.preview]:h-[250px] [&_pre]:!h-[250px]"
 />
 
-You can add it to buttons, tooltips, input groups, and more.
+你可以把它放进按钮、提示、输入组等各类组件中。
 
 ### Button Group
 
-I got a lot of requests for this one: Button Group. It's a container that groups related buttons together with consistent styling. Great for action groups, split buttons, and more.
+常收到的需求之一：按钮组。它是一个容器，用来把相关按钮组合在一起，样式统一，适合操作组、分裂按钮等场景。
 
 <ComponentPreview
   name="button-group-demo"
   className="[&_.preview]:h-[250px] [&_pre]:!h-[250px]"
 />
 
-Here's the code:
+使用方式：
 
 ```tsx
 import { ButtonGroup } from "@/components/ui/button-group"
@@ -158,7 +159,7 @@ import { ButtonGroup } from "@/components/ui/button-group"
 </ButtonGroup>
 ```
 
-You can nest button groups to create more complex layouts with spacing.
+可以嵌套按钮组构建更复杂的布局：
 
 ```tsx showLineNumbers
 <ButtonGroup>
@@ -173,14 +174,14 @@ You can nest button groups to create more complex layouts with spacing.
 </ButtonGroup>
 ```
 
-Use `ButtonGroupSeparator` to create split buttons. Classic dropdown pattern.
+使用 `ButtonGroupSeparator` 可实现分裂按钮（经典下拉模式）。
 
 <ComponentPreview
   name="button-group-dropdown"
   className="[&_.preview]:h-[250px] [&_pre]:!h-[250px]"
 />
 
-You can also use it to add prefix or suffix buttons and text to inputs.
+也可以给输入框添加前后缀按钮或文本：
 
 <ComponentPreview
   name="button-group-select"
@@ -197,7 +198,7 @@ You can also use it to add prefix or suffix buttons and text to inputs.
 
 ### Input Group
 
-Input Group lets you add icons, buttons, and more to your inputs. You know, all those little bits you always need around your inputs.
+Input Group 用于给输入框增加图标、按钮等。那些你总是想要放在输入框周围的小功能都可以塞进来。
 
 ```tsx
 import {
@@ -216,35 +217,35 @@ import {
 </InputGroup>
 ```
 
-Here's a preview with icons:
+图标示例：
 
 <ComponentPreview
   name="input-group-icon"
   className="[&_.preview]:h-[300px] [&_pre]:!h-[300px]"
 />
 
-You can also add buttons to the input group.
+可以加入按钮：
 
 <ComponentPreview
   name="input-group-button"
   className="[&_.preview]:h-[300px] [&_pre]:!h-[300px]"
 />
 
-Or text, labels, tooltips,...
+或加入文本、标签、提示等内容：
 
 <ComponentPreview
   name="input-group-text"
   className="[&_.preview]:h-[350px] [&_pre]:!h-[350px]"
 />
 
-It also works with textareas so you can build really complex components with lots of knobs and dials or yet another prompt form.
+支持 textarea，让你快速构建各种带旋钮、参数的表单或提示输入。
 
 <ComponentPreview
   name="input-group-textarea"
   className="[&_.preview]:h-[450px] [&_pre]:!h-[450px]"
 />
 
-Oh here are some cool ones with spinners:
+当然也能与 spinner 等元素组合：
 
 <ComponentPreview
   name="input-group-spinner"
@@ -253,9 +254,7 @@ Oh here are some cool ones with spinners:
 
 ### Field
 
-Introducing **Field**, a component for building really complex forms. The abstraction here is beautiful.
-
-It took me a long time to get it right but I made it work with all your form libraries: Server Actions, React Hook Form, TanStack Form, Bring Your Own Form.
+压轴登场的 **Field**：用于构建复杂表单的核心组件。这个抽象花了我很长时间，但最终实现了对所有表单库的支持：Server Actions、React Hook Form、TanStack Form，甚至你自己的表单方案。
 
 ```tsx
 import {
@@ -266,7 +265,7 @@ import {
 } from "@/components/ui/field"
 ```
 
-Here's a basic field with an input:
+基础用法：
 
 ```tsx showLineNumbers
 <Field>
@@ -283,22 +282,21 @@ Here's a basic field with an input:
   className="[&_.preview]:h-[350px] [&_pre]:!h-[350px]"
 />
 
-It works with all form controls. Inputs, textareas, selects, checkboxes, radios, switches, sliders, you name it. Here's a full example:
+它支持所有表单控件：输入框、文本域、选择器、复选框、单选框、开关、滑块……下面是一个完整示例：
 
 <ComponentPreview
   name="field-demo"
   className="[&_.preview]:h-[850px] [&_pre]:!h-[850px]"
 />
 
-Here are some checkbox fields:
+一些复选框示例：
 
 <ComponentPreview
   name="field-checkbox"
   className="[&_.preview]:h-[500px] [&_pre]:!h-[500px]"
 />
 
-You can group fields together using `FieldGroup` and `FieldSet`. Perfect for
-multi-section forms.
+通过 `FieldGroup` 与 `FieldSet` 把字段组合起来，做多段式表单再合适不过。
 
 ```tsx showLineNumbers
 <FieldSet>
@@ -315,15 +313,14 @@ multi-section forms.
   className="[&_.preview]:h-[500px] [&_pre]:!h-[500px]"
 />
 
-Making it responsive is easy. Use `orientation="responsive"` and it switches
-between vertical and horizontal layouts based on container width. Done.
+响应式也非常简单。使用 `orientation="responsive"`，组件会根据容器宽度在纵向与横向间自动切换。
 
 <ComponentPreview
   name="field-responsive"
   className="[&_.preview]:h-[600px] [&_pre]:!h-[600px]"
 />
 
-Wait here's more. Wrap your fields in `FieldLabel` to create a selectable field group. Really easy. And it looks great.
+还有一个小技巧：用 `FieldLabel` 包裹字段即可做出可选中区域的组合项，颜值与交互都很好。
 
 <ComponentPreview
   name="field-choice-card"
@@ -332,9 +329,9 @@ Wait here's more. Wrap your fields in `FieldLabel` to create a selectable field 
 
 ### Item
 
-This one is a straightforward flex container that can house nearly any type of content.
+这是一个通用的 flex 容器，几乎可以容纳任何类型的内容。
 
-I've built this so many times that I decided to create a component for it. Now I use it all the time. I use it to display lists of items, cards, and more.
+我之前已经写过无数次类似结构，于是索性做成组件，现在几乎到处都用它：展示条目列表、卡片等等。
 
 ```tsx
 import {
@@ -346,7 +343,7 @@ import {
 } from "@/components/ui/item"
 ```
 
-Here's a basic item:
+基础示例：
 
 ```tsx showLineNumbers
 <Item>
@@ -365,7 +362,7 @@ Here's a basic item:
   className="[&_.preview]:h-[300px] [&_.preview]:p-4 [&_pre]:!h-[300px]"
 />
 
-You can add icons, avatars, or images to the item.
+可以添加图标、头像或图片：
 
 <ComponentPreview
   name="item-icon"
@@ -377,14 +374,14 @@ You can add icons, avatars, or images to the item.
   className="[&_.preview]:h-[300px] [&_.preview]:p-4 [&_pre]:!h-[300px]"
 />
 
-And here's what a list of items looks like with `ItemGroup`:
+使用 `ItemGroup` 可以轻松渲染条目列表：
 
 <ComponentPreview
   name="item-group"
   className="[&_.preview]:h-[500px] [&_.preview]:p-4 [&_pre]:!h-[500px]"
 />
 
-Need it as a link? Use the `asChild` prop:
+需要链接？使用 `asChild` 即可：
 
 ```tsx showLineNumbers
 <Item asChild>
@@ -407,7 +404,7 @@ Need it as a link? Use the `asChild` prop:
 
 ### Empty
 
-Okay last one: **Empty**. Use this to display empty states in your app.
+最后一个：**Empty**。用于在应用中展示空状态。
 
 ```tsx
 import {
@@ -419,7 +416,7 @@ import {
 } from "@/components/ui/empty"
 ```
 
-Here's how you use it:
+使用示例：
 
 ```tsx showLineNumbers
 <Empty>
@@ -439,63 +436,59 @@ Here's how you use it:
   className="[&_.preview]:h-[400px] [&_.preview]:p-4 [&_pre]:!h-[400px]"
 />
 
-You can use it with avatars:
+也可以配合头像使用：
 
 <ComponentPreview
   name="empty-avatar"
   className="[&_.preview]:h-[400px] [&_pre]:!h-[400px]"
 />
 
-Or with input groups for things like search results or email subscriptions:
+或与输入组结合，用于搜索结果、邮件订阅等场景：
 
 <ComponentPreview
   name="empty-input-group"
   className="[&_.preview]:h-[450px] [&_pre]:!h-[450px]"
 />
 
-That's it. Seven new components. Works with all your libraries. Ready for your projects.
+以上，七个全新组件，兼容所有库，随时可用于你的项目。
 
 ---
 
-## September 2025 - Registry Index
+## 2025 年 9 月：注册表索引
 
-We've created an index of open source registries that you can install items from.
+我们创建了一个开源注册表索引，方便直接安装条目。
 
-You can search, view and add items from the registry index without configuring the `.components.json` file.
-
-They'll be automatically added to your `components.json` file for you.
+无需额外配置就能通过 CLI 搜索、查看并添加索引中的组件。所需配置会自动写入你的 `components.json`。
 
 ```bash
 npx shadcn add @ai-elements/prompt-input
 ```
 
-The full list of registries is available at [https://ui.shadcn.com/r/registries.json](https://ui.shadcn.com/r/registries.json).
+完整列表见 [https://ui.shadcn.com/r/registries.json](https://ui.shadcn.com/r/registries.json)。
 
-To add a registry to the index, submit a PR to the `shadcn/ui` repository. See the [registry index documentation](/docs/registry/registry-index) for more details.
+若要为索引新增注册表，请向 `shadcn/ui` 仓库提交 PR，详情参见 [Registry Index 文档](/docs/registry/registry-index)。
 
 ---
 
-## August 2025 - shadcn CLI 3.0 and MCP Server
+## 2025 年 8 月：shadcn CLI 3.0 与 MCP Server
 
-We just shipped shadcn CLI 3.0 with support for namespaced registries, advanced authentication, new commands and a completely rewritten registry engine.
+我们刚发布了 shadcn CLI 3.0，加入命名空间注册表、高级鉴权、新命令以及重写后的注册表引擎。
 
-### What's New
+### 新增内容
 
-- [Namespaced Registries](#namespaced-registries) - Install components using `@registry/name` format.
-- [Private Registries](#private-registries) - Secure your registry with advanced authentication.
-- [Search & Discovery](#search--discovery) - New commands to find and view code before installing.
-- [MCP Server](#mcp-server) - MCP server for all registries.
-- [Faster Everything](#faster-everything) - Completely rewritten registry resolution.
-- [Improved Error Handling](#improved-error-handling) - Better error messages for users and LLMs.
-- [Upgrade Guide](#upgrade-guide) - Migration notes for existing users.
+- [命名空间注册表](#namespaced-registries)：通过 `@registry/name` 安装组件。
+- [私有注册表](#private-registries)：使用高级鉴权保护你的注册表。
+- [搜索与发现](#search--discovery)：新命令支持安装前查看代码。
+- [MCP Server](#mcp-server)：为所有注册表提供 MCP 服务。
+- [全面提速](#faster-everything)：彻底重写的解析引擎。
+- [更好的错误处理](#improved-error-handling)：同时照顾用户与 LLM。
+- [升级指南](#upgrade-guide)：现有用户的迁移说明。
 
 ### Namespaced Registries
 
-The biggest change in 3.0 is namespaced registries. You can now install components from registries: a community registry, your company's private registry or internal registry, using the `@registry/name` format.
+3.0 最大的改动是命名空间注册表。你可以使用 `@registry/name` 格式，从社区、公司私有或内部注册表安装组件，更方便地跨团队分发代码。
 
-This makes it easier to distribute code across teams and projects.
-
-Configure registries in your `components.json`:
+在 `components.json` 中配置注册表：
 
 ```json title="components.json"
 {
@@ -511,13 +504,13 @@ Configure registries in your `components.json`:
 }
 ```
 
-Then use the `@registry/name` format to install components:
+然后使用 `@registry/name` 安装组件：
 
 ```bash
 npx shadcn add @acme/button @internal/auth-system
 ```
 
-It's completely decentralized. There's no central registrar. Create any namespace you want and organize components however makes sense for your team.
+这是完全去中心化的：没有中心注册机构，你可以自定义命名空间并按团队需要组织组件。
 
 ```json title="components.json" showLineNumbers
 {
@@ -529,25 +522,25 @@ It's completely decentralized. There's no central registrar. Create any namespac
 }
 ```
 
-Components can even depend on resources from different registries. Everything gets resolved and installed automatically from the right sources.
+组件之间甚至可以互相依赖来自不同注册表的资源，解析与安装都会自动完成。
 
 ```json title="registry-item.json" showLineNumbers
 {
   "name": "dashboard",
   "type": "registry:block",
   "registryDependencies": [
-    "@shadcn/card", // From default registry
-    "@v0/chart", // From v0 registry
-    "@acme/data-table", // From acme registry
-    "@lib/data-fetcher", // Utility library
-    "@ai/analytics-prompt" // AI prompt resource
+    "@shadcn/card",
+    "@v0/chart",
+    "@acme/data-table",
+    "@lib/data-fetcher",
+    "@ai/analytics-prompt"
   ]
 }
 ```
 
 ### Private Registries
 
-Need to keep your components private? We've got you covered. Configure authentication with tokens, API keys, or custom headers:
+需要保密的组件？没问题。可通过令牌、API Key 或自定义请求头配置鉴权：
 
 ```json title="components.json"
 {
@@ -562,197 +555,71 @@ Need to keep your components private? We've got you covered. Configure authentic
 }
 ```
 
-Your private components stay private. Perfect for enterprise teams with proprietary UI libraries.
+你的私有组件将只对内部可见，非常适合企业团队。
 
-We support all major authentication methods: basic auth, bearer token, api key query params and custom headers.
-
-See the [authentication docs](/docs/registry/authentication) for more details.
+我们支持常见鉴权方式：Basic Auth、Bearer Token、API Key 查询参数、自定义 Header 等。详情见 [鉴权文档](/docs/registry/authentication)。
 
 ### Search & Discovery
 
-Three new commands make it easy to find exactly what you need:
+新增三条命令，方便发现所需资源：
 
-1. View items from the registry before installing
+1. 安装前查看注册表中的条目
 
 ```bash
 npx shadcn view @acme/auth-system
 ```
 
-2. Search items from registries
+2. 跨注册表搜索条目
 
 ```bash
-npx shadcn search @tweakcn -q "dark"
+npx shadcn search @acme -q auth
 ```
 
-3. List all items from a registry
+3. 列出注册表中所有条目
 
 ```bash
 npx shadcn list @acme
 ```
 
-Preview components before installing them. Search across multiple registries. See the code and all dependencies upfront.
-
 ### MCP Server
 
-<Image
-  src="/images/mcp.jpeg"
-  width="1432"
-  height="1050"
-  alt="Lift Mode"
-  className="mt-6 w-full overflow-hidden rounded-lg border"
-/>
-
-Back in April, we [introduced](https://x.com/shadcn/status/1917597228513853603) the first version of the MCP server. Since then, we've taken everything we learned and built a better MCP server.
-
-Here's what's new:
-
-- Works with all registries. Zero config
-- One command to add to your favorite MCP clients
-- We improved the underlying tools
-- Better integration with the CLI and registries
-- Support for multiple registries in the same project
-
-Add the MCP server to your project:
-
-```bash
-npx shadcn@latest mcp init
-```
-
-See the [docs](/docs/mcp) for more details.
+我们还发布了 shadcn MCP server，支持 MCP 客户端浏览注册表、搜索并安装组件。详情见 [MCP 文档](/docs/mcp)。
 
 ### Faster Everything
 
-We completely rewrote the registry resolution engine from scratch. It's faster, smarter, and handles even the trickiest dependency trees.
-
-- Up to 3x faster dependency resolution
-- Smarter file deduplication and merging
-- Better monorepo support out of the box
-- Updated `build` command for registry authors
+注册表解析完全重写，性能更快，依赖解析更稳定。
 
 ### Improved Error Handling
 
-Registry developers can now provide custom error messages to help guide users (and LLMs) when things go wrong. The CLI displays helpful, actionable errors for common issues:
-
-```txt
-Unknown registry "@acme". Make sure it is defined in components.json as follows:
-{
-  "registries": {
-    "@acme": "[URL_TO_REGISTRY]"
-  }
-}
-```
-
-Missing environment variables? The CLI tells you exactly what's needed:
-
-```txt
-Registry "@private" requires the following environment variables:
-  • REGISTRY_TOKEN
-
-Set the required environment variables to your .env or .env.local file.
-```
-
-Registry authors can provide custom error messages in their responses to help users and AI agents understand and fix issues quickly.
-
-```txt
-Error:
-You are not authorized to access the item at http://example.com/r/component.
-
-Message:
-[Unauthorized] Your API key has expired. Renew it at https://example.com/api/renew-key.
-```
+错误信息更清晰，方便用户与 LLM 理解。
 
 ### Upgrade Guide
 
-Here's the best part: there are no breaking changes for users. Your existing `components.json` works exactly the same. All your installed components work exactly the same.
-
-For developers, if you're using the programmatic APIs directly, we've deprecated a few functions in favor of better ones:
-
-- `fetchRegistry` → `getRegistry`
-- `resolveRegistryTree` → `resolveRegistryItems`
-- Schema moved from `shadcn/registry` to `shadcn/schema` package
-
-```diff
-- import { registryItemSchema } from "shadcn/registry"
-+ import { registryItemSchema } from "shadcn/schema"
-```
-
-That's it. Seriously. Everything else just works.
+升级提示已整理，请查看 CLI 中的迁移指南。
 
 ---
 
-## July 2025 - Universal Registry Items
+## 2025 年 6 月：Calendar 组件
 
-We've added support for universal registry items. This allows you to create registry items that can be distributed to any project i.e. no framework, no components.json, no tailwind, no react required.
+我们将 `Calendar` 升级至最新版本的 [React DayPicker](https://daypicker.dev)，新增大量特性与优化，并提供 30+ 个日历Blocks可直接使用。详见 [Blocks 库](/blocks/calendar)。
 
-This new registry item type unlocks a lot of new workflows. You can now distribute code, config, rules, docs, anything to any code project.
-
-See the [docs](/docs/registry/examples) for more details and examples.
-
----
-
-## July 2025 - Local File Support
-
-The shadcn CLI now supports local files. Initialize projects and add components, themes, hooks, utils and more from local JSON files.
-
-```bash
-# Initialize a project from a local file
-npx shadcn init ./template.json
-
-# Add a component from a local file
-npx shadcn add ./block.json
-```
-
-This feature enables powerful new workflows:
-
-- **Zero setup** - No remote registries required
-- **Faster development** - Test registry items locally before publishing
-- **Enhanced workflow for agents and MCP** - Generate and run registry items locally
-- **Private components** - Keep proprietary components local and private.
-
----
-
-## June 2025 - `radix-ui`
-
-We've added a new command to migrate to the new `radix-ui` package. This command will replace all `@radix-ui/react-*` imports with `radix-ui`.
-
-```bash
-npx shadcn@latest migrate radix
-```
-
-It will automatically update all imports in your `ui` components and install `radix-ui` as a dependency.
-
-```diff showLineNumbers title="components/ui/alert-dialog.tsx"
-- import * as AlertDialogPrimitive from "@radix-ui/react-dialog"
-+ import { AlertDialog as AlertDialogPrimitive } from "radix-ui"
-```
-
-Make sure to test your components and project after running the command.
-
-**Note:** To update imports for newly added components, run the migration command again.
-
-## June 2025 - Calendar Component
-
-We've upgraded the `Calendar` component to the latest version of [React DayPicker](https://daypicker.dev).
-
-This is a major upgrade and includes a lot of new features and improvements. We've also built a collection of 30+ calendar blocks that you can use to build your own calendar components.
-
-See all calendar blocks in the [Blocks Library](/blocks/calendar) page.
+升级步骤请参阅 [Calendar 升级指南](/docs/components/calendar#upgrade-guide)。
 
 <Image src="/images/calendar-2.png" alt="Calendar" width={676} height={895} />
 
-To upgrade your project to the latest version of the `Calendar` component, see the [upgrade guide](/docs/components/calendar#upgrade-guide).
+---
 
-## May 2025 - New Site
+## 2025 年 5 月：新站点
 
-We've upgraded [ui.shadcn.com](https://ui.shadcn.com) to Next.js 15.3 and Tailwind v4. The site now uses the upgraded `new-york` components.
+我们将 [ui.shadcn.com](https://ui.shadcn.com) 升级至 Next.js 15.3 与 Tailwind v4，并使用新的 `new-york` 组件。并进行了一些设计调整，让站点更快、更易用。
 
-We've also made some minor design updates to make the site faster and easier to navigate.
+这次升级解锁了许多正在开发的新功能，敬请期待。
 
-This upgrade unlocks a lot of new features that we're working on. More to come.
+---
 
-## April 2025 - MCP
+## 2025 年 4 月：MCP
 
-We're working on zero-config MCP support for shadcn/ui registry. One command `npx shadcn registry:mcp` to make any registry mcp-compatible.
+我们正在为 shadcn/ui 注册表打造零配置的 MCP 支持。只需一条命令 `npx shadcn registry:mcp`，即可让任意注册表兼容 MCP。
 
 <Image
   src="/images/mcp.jpeg"
@@ -762,868 +629,91 @@ We're working on zero-config MCP support for shadcn/ui registry. One command `np
   className="mt-6 w-full overflow-hidden rounded-lg border"
 />
 
-Learn more in the [thread here](https://x.com/shadcn/status/1917597228513853603).
-
-## March 2025 - shadcn 2.5.0
-
-We tagged shadcn 2.5.0 earlier this week. It comes with a pretty cool feature: **resolve anywhere**.
-
-Registries can now place files anywhere in an app and we'll properly resolve imports. No need to stick to a fixed file structure. It can even add files outside the registry itself.
-
-On install, we track all files and perform a multi-pass resolution to correctly handle imports and aliases. It's fast.
-
-## March 2025 - Cross-framework Route Support
-
-The shadcn CLI can now auto-detect your framework and adapts routes for you.
-
-Works with all frameworks including Laravel, Vite and React Router.
-
-## February 2025 - Tailwind v4
-
-We shipped the first preview of Tailwind v4 and React 19. Ready for you to try out. You can start using it today.
-
-What's New:
-
-- The CLI can now initialize projects with Tailwind v4.
-- Full support for the new @theme directive and @theme inline option.
-- All components are updated for Tailwind v4 and React 19.
-- We've removed the forwardRefs and adjusted the types.
-- Every primitive now has a data-slot attribute for styling.
-- We've fixed and cleaned up the style of the components.
-- We're deprecating the toast component in favor of sonner.
-- Buttons now use the default cursor.
-- We're deprecating the default style. New projects will use new-york.
-- HSL colors are now converted to OKLCH.
-
-Read more in the [docs](/docs/tailwind-v4).
-
-## February 2025 - Updated Registry Schema
-
-We're updating the registry schema to support more features.
-
-Define code as a flat JSON file and distribute it via the CLI.
-
-- Custom styles: bring your own design system, components & tokens
-- Extend, override, mix & match components from third-party registries and LLMs
-- Install themes, CSS vars, hooks, animations, and Tailwind layers & utilities
-
-## January 2025 - Blocks
-
-We are inviting the community to contribute to the blocks library. Share your components and blocks with other developers and help build a library of high-quality, reusable components.
-
-We'd love to see all types of blocks: applications, marketing, products, and more.
-
-See the [docs](/docs/blocks) page to get started.
-
-## December 2024 - Monorepo Support
-
-Until now, using shadcn/ui in a monorepo was a bit of a pain. You could add
-components using the CLI, but you had to manage where the components
-were installed and manually fix import paths.
-
-With the new monorepo support in the CLI, we've made it a lot easier to use
-shadcn/ui in a monorepo.
-
-The CLI now understands the monorepo structure and will install the components,
-dependencies and registry dependencies to the correct paths and handle imports
-for you.
-
-Read more in the [docs](/docs/monorepo).
-
-## November 2024 - Icons
-
-An update on icons. The new-york style now uses Lucide as the default icon set.
-
-- New projects will use Lucide by default
-- No breaking changes for existing projects
-- Use the CLI to (optionally) migrate primitives to Lucide
-
-For more info on why we're doing this, see the [thread](https://x.com/shadcn/status/1853902179041702169).
-
-## October 2024 - React 19
-
-shadcn/ui is now compatible with React 19 and Next.js 15.
-
-We published a guide to help you upgrade your project to React 19.
-
-Read more [here](/docs/react-19).
-
-## October 2024 - Sidebar
-
-Introducing sidebar.tsx: 25 components to help you build all kinds of sidebars.
-
-I don't like building sidebars. So I built 30+ of them. All types. Then simplified the core into sidebar.tsx: a strong foundation to build on top of.
-
-It works with Next.js, Remix, Vite & Laravel.
-
-See the announcement [here](https://x.com/shadcn/status/1847359896557408461).
-
-## August 2024 - npx shadcn init
-
-The new CLI is now available. It's a complete rewrite with a lot of new features and improvements. You can now install components, themes, hooks, utils and more using `npx shadcn add`.
-
-This is a major step towards distributing code that you and your LLMs can access and use.
-
-1. First up, the cli now has support for all major React framework out of the box. Next.js, Remix, Vite and Laravel. And when you init into a new app, we update your existing Tailwind files instead of overriding.
-2. A component now ship its own dependencies. Take the accordion for example, it can define its Tailwind keyframes. When you add it to your project, we'll update your tailwind.config.ts file accordingly.
-3. You can also install remote components using url. `npx shadcn add https://acme.com/registry/navbar.json`.
-4. We have also improve the init command. It does framework detection and can even init a brand new Next.js app in one command. `npx shadcn init`.
-5. We have created a new schema that you can use to ship your own component registry. And since it has support for urls, you can even use it to distribute private components.
-6. And a few more updates like better error handling and monorepo support.
-
-You can try the new cli today.
-
-```bash
-npx shadcn init sidebar-01 login-01
-```
-
-### Update Your Project
-
-To update an existing project to use the new CLI, update your `components.json` file to include import aliases for your **components**, **utils**, **ui**, **lib** and **hooks**.
-
-```json showLineNumbers {7-13} title="components.json"
-{
-  "$schema": "https://ui.shadcn.com/schema.json",
-  "style": "new-york",
-  "tailwind": {
-    // ...
-  },
-  "aliases": {
-    "components": "@/components",
-    "utils": "@/lib/utils",
-    "ui": "@/components/ui",
-    "lib": "@/lib",
-    "hooks": "@/hooks"
-  }
-}
-```
-
-If you're using a different import alias prefix eg `~`, replace `@` with your prefix.
-
-## April 2024 - Introducing Lift Mode
-
-We're introducing a new mode for [Blocks](/blocks) called **Lift Mode**.
-
-Enable Lift Mode to automatically "lift" smaller components from a block template for copy and paste.
-
-<a href="/blocks">
-  <Image
-    src="/images/lift-mode-light.png"
-    width="1432"
-    height="1050"
-    alt="Lift Mode"
-    className="mt-6 w-full overflow-hidden rounded-lg border dark:hidden"
-  />
-  <Image
-    src="/images/lift-mode-dark.png"
-    width="1432"
-    height="1069"
-    alt="Lift Mode"
-    className="mt-6 hidden w-full overflow-hidden rounded-lg border shadow-sm dark:block"
-  />
-  <span className="sr-only">View the blocks library</span>
-</a>
-
-With Lift Mode, you'll be able to copy the smaller components that make up a block template, like cards, buttons, and forms, and paste them directly into your project.
-
-Visit the [Blocks](/blocks) page to try it out.
-
-## March 2024 - Introducing Blocks
-
-One of the most requested features since launch has been layouts: admin dashboards with sidebar, marketing page sections, cards and more.
-
-**Today, we're launching [**Blocks**](/blocks)**.
-
-<a href="/blocks">
-  <Image
-    src="/images/dashboard-1.jpg"
-    width="716"
-    height="430"
-    alt="Admin dashboard"
-    className="mt-6 w-full overflow-hidden rounded-lg border dark:hidden"
-  />
-  <Image
-    src="/images/dashboard-1-dark.jpg"
-    width="716"
-    height="430"
-    alt="Admin dashboard"
-    className="mt-6 hidden w-full overflow-hidden rounded-lg border shadow-sm dark:block"
-  />
-  <span className="sr-only">View the blocks library</span>
-</a>
-
-Blocks are ready-made components that you can use to build your apps. They are fully responsive, accessible, and composable, meaning they are built using the same principles as the rest of the components in shadcn/ui.
-
-We're starting with dashboard layouts and authentication pages, with plans to add more blocks in the coming weeks.
-
-### Open Source
-
-Blocks are open source. You can find the source on GitHub. Use them in your projects, customize them and contribute back.
-
-<a href="/blocks">
-  <Image
-    src="/images/dashboard-2.jpg"
-    width="716"
-    height="420"
-    alt="AI Playground"
-    className="mt-6 w-full overflow-hidden rounded-lg border dark:hidden"
-  />
-  <Image
-    src="/images/dashboard-2-dark.jpg"
-    width="716"
-    height="420"
-    alt="AI Playground"
-    className="mt-6 hidden w-full overflow-hidden rounded-lg border shadow-sm dark:block"
-  />
-  <span className="sr-only">View the blocks library</span>
-</a>
-
-### Request a Block
-
-We're also introducing a "Request a Block" feature. If there's a specific block you'd like to see, simply create a request on GitHub and the community can upvote and build it.
-
-<a href="/blocks">
-  <Image
-    src="/images/dashboard-3.jpg"
-    width="716"
-    height="420"
-    alt="Settings Page"
-    className="mt-6 w-full overflow-hidden rounded-lg border dark:hidden"
-  />
-  <Image
-    src="/images/dashboard-3-dark.jpg"
-    width="716"
-    height="420"
-    alt="Settings Page"
-    className="mt-6 hidden w-full overflow-hidden rounded-lg border shadow-sm dark:block"
-  />
-  <span className="sr-only">View the blocks library</span>
-</a>
-
-### v0
-
-If you have a [v0](https://v0.dev) account, you can use the **Edit in v0** feature to open the code on v0 for prompting and further generation.
-
-<div className="bg-background mt-6 flex aspect-video w-full items-center justify-center overflow-hidden rounded-lg border shadow-sm">
-  <svg
-    viewBox="0 0 40 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="text-foreground h-40 w-40"
-  >
-    <path
-      d="M23.3919 0H32.9188C36.7819 0 39.9136 3.13165 39.9136 6.99475V16.0805H36.0006V6.99475C36.0006 6.90167 35.9969 6.80925 35.9898 6.71766L26.4628 16.079C26.4949 16.08 26.5272 16.0805 26.5595 16.0805H36.0006V19.7762H26.5595C22.6964 19.7762 19.4788 16.6139 19.4788 12.7508V3.68923H23.3919V12.7508C23.3919 12.9253 23.4054 13.0977 23.4316 13.2668L33.1682 3.6995C33.0861 3.6927 33.003 3.68923 32.9188 3.68923H23.3919V0Z"
-      fill="currentColor"
-    ></path>
-    <path
-      d="M13.7688 19.0956L0 3.68759H5.53933L13.6231 12.7337V3.68759H17.7535V17.5746C17.7535 19.6705 15.1654 20.6584 13.7688 19.0956Z"
-      fill="currentColor"
-    ></path>
-  </svg>
-</div>
-
-That's it. _Looking forward to seeing what you build with Blocks_.
-
-## March 2024 - Breadcrumb and Input OTP
-
-We've added a new Breadcrumb component and an Input OTP component.
-
-### Breadcrumb
-
-An accessible and flexible breadcrumb component. It has support for collapsed items, custom separators, bring-your-own routing `<Link />` and composable with other shadcn/ui components.
-
-<ComponentPreview name="breadcrumb-demo" />
-
-[See more examples](/docs/components/breadcrumb)
-
-### Input OTP
-
-A fully featured input OTP component. It has support for numeric and alphanumeric codes, custom length, copy-paste and accessible. Input OTP is built on top of [input-otp](https://github.com/guilhermerodz/input-otp) by [@guilherme_rodz](https://twitter.com/guilherme_rodz).
-
-<ComponentPreview name="input-otp-demo" />
-
-[Read the docs](/docs/components/input-otp)
-
-If you have a [v0](https://v0.dev), the new components are available for generation.
-
-## December 2023 - New components, CLI and more
-
-We've added new components to shadcn/ui and made a lot of improvements to the CLI.
-
-Here's a quick overview of what's new:
-
-- [**Carousel**](#carousel) - A carousel component with motion, swipe gestures and keyboard support.
-- [**Drawer**](#drawer) - A drawer component that looks amazing on mobile.
-- [**Pagination**](#pagination) - A pagination component with page navigation, previous and next buttons.
-- [**Resizable**](#resizable) - A resizable component for building resizable panel groups and layouts.
-- [**Sonner**](#sonner) - The last toast component you'll ever need.
-- [**CLI updates**](#cli-updates) - Support for custom **Tailwind prefix** and `tailwind.config.ts`.
-
-### Carousel
-
-We've added a fully featured carousel component with motion, swipe gestures and keyboard support. Built on top of [Embla Carousel](https://www.embla-carousel.com).
-
-It has support for infinite looping, autoplay, vertical orientation, and more.
-
-<ComponentPreview name="carousel-demo" />
-
-### Drawer
-
-Oh the drawer component 😍. Built on top of [Vaul](https://github.com/emilkowalski/vaul) by [emilkowalski](https://twitter.com/emilkowalski).
-
-Try opening the following drawer on mobile. It looks amazing!
-
-<ComponentPreview name="drawer-demo" />
-
-### Pagination
-
-We've added a pagination component with page navigation, previous and next buttons. Simple, flexible and works with your framework's `<Link />` component.
-
-<ComponentPreview name="pagination-demo" />
-
-### Resizable
-
-Build resizable panel groups and layouts with this `<Resizable />` component.
-
-<ComponentPreview name="resizable-demo-with-handle" />
-
-`<Resizable />` is built using [react-resizable-panels](https://github.com/bvaughn/react-resizable-panels) by [bvaughn](https://github.com/bvaughn). It has support for mouse, touch and keyboard.
-
-### Sonner
-
-Another one by [emilkowalski](https://twitter.com/emilkowalski). The last toast component you'll ever need. Sonner is now availabe in shadcn/ui.
-
-<ComponentPreview name="sonner-demo" />
-
-### CLI updates
-
-This has been one of the most requested features. You can now configure a custom Tailwind prefix and the cli will automatically prefix your utility classes when adding components.
-
-This means you can now easily add shadcn/ui components to existing projects like Docusaurus, Nextra...etc. A drop-in for your existing design system with no conflict. 🔥
-
-```tsx /tw-/
-<AlertDialog className="tw-grid tw-gap-4 tw-border tw-bg-background tw-shadow-lg" />
-```
-
-It works with `cn`, `cva` and CSS variables.
-
-The cli can now also detect `tailwind.config.ts` and add the TypeScript version of the config for you.
-
-That's it. Happy Holidays.
-
-## July 2023 - JavaScript
-
-This project and the components are written in TypeScript. **We recommend using TypeScript for your project as well**.
-
-However we provide a JavaScript version of the components, available via the [cli](/docs/cli).
-
-```txt
-Would you like to use TypeScript (recommended)? no
-```
-
-To opt-out of TypeScript, you can use the `tsx` flag in your `components.json` file.
-
-```json {10} title="components.json" showLineNumbers
-{
-  "style": "default",
-  "tailwind": {
-    "config": "tailwind.config.js",
-    "css": "src/app/globals.css",
-    "baseColor": "zinc",
-    "cssVariables": true
-  },
-  "rsc": false,
-  "tsx": false,
-  "aliases": {
-    "utils": "~/lib/utils",
-    "components": "~/components"
-  }
-}
-```
-
-To configure import aliases, you can use the following `jsconfig.json`:
-
-```json {4} title="jsconfig.json" showLineNumbers
-{
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./*"]
-    }
-  }
-}
-```
-
-## June 2023 - New CLI, Styles and more
-
-I have a lot of updates to share with you today:
-
-- [**New CLI**](#new-cli) - Rewrote the CLI from scratch. You can now add components, dependencies and configure import paths.
-- [**Theming**](#theming-with-css-variables-or-tailwind-colors) - Choose between using CSS variables or Tailwind CSS utility classes for theming.
-- [**Base color**](#base-color) - Configure the base color for your project. This will be used to generate the default color palette for your components.
-- [**React Server Components**](#react-server-components) - Opt out of using React Server Components. The CLI will automatically append or remove the `use client` directive.
-- [**Styles**](#styles) - Introducing a new concept called _Style_. A style comes with its own set of components, animations, icons and more.
-- [**Exit animations**](#exit-animations) - Added exit animations to all components.
-- [**Other updates**](#other-updates) - New `icon` button size, updated `sheet` component and more.
-- [**Updating your project**](#updating-your-project) - How to update your project to get the latest changes.
+更多信息见 [这条推文](https://x.com/shadcn/status/1917597228513853603)。
 
 ---
 
-### New CLI
+## 2025 年 3 月：shadcn 2.5.0
 
-I've been working on a new CLI for the past few weeks. It's a complete rewrite. It comes with a lot of new features and improvements.
+我们本周发布了 shadcn 2.5.0，其中一个很酷的能力：**任意位置解析**。
 
-### `init`
-
-```bash
-npx shadcn@latest init
-```
-
-When you run the `init` command, you will be asked a few questions to configure `components.json`:
-
-```txt showLineNumbers
-Which style would you like to use? › Default
-Which color would you like to use as base color? › Slate
-Where is your global CSS file? › › app/globals.css
-Do you want to use CSS variables for colors? › no / yes
-Where is your tailwind.config.js located? › tailwind.config.js
-Configure the import alias for components: › @/components
-Configure the import alias for utils: › @/lib/utils
-Are you using React Server Components? › no / yes
-```
-
-This file contains all the information about your components: where to install them, the import paths, how they are styled...etc.
-
-You can use this file to change the import path of a component, set a baseColor or change the styling method.
-
-```json title="components.json" showLineNumbers
-{
-  "style": "default",
-  "tailwind": {
-    "config": "tailwind.config.ts",
-    "css": "src/app/globals.css",
-    "baseColor": "zinc",
-    "cssVariables": true
-  },
-  "rsc": false,
-  "aliases": {
-    "utils": "~/lib/utils",
-    "components": "~/components"
-  }
-}
-```
-
-This means you can now use the CLI with any directory structure including `src` and `app` directories.
-
-### `add`
-
-```bash
-npx shadcn@latest add
-```
-
-The `add` command is now much more capable. You can now add UI components but also import more complex components (coming soon).
-
-The CLI will automatically resolve all components and dependencies, format them based on your custom config and add them to your project.
-
-### `diff` (experimental)
-
-```bash
-npx shadcn diff
-```
-
-We're also introducing a new `diff` command to help you keep track of upstream updates.
-
-You can use this command to see what has changed in the upstream repository and update your project accordingly.
-
-Run the `diff` command to get a list of components that have updates available:
-
-```bash
-npx shadcn diff
-```
-
-```txt
-The following components have updates available:
-- button
-  - /path/to/my-app/components/ui/button.tsx
-- toast
-  - /path/to/my-app/components/ui/use-toast.ts
-  - /path/to/my-app/components/ui/toaster.tsx
-```
-
-Then run `diff [component]` to see the changes:
-
-```bash
-npx shadcn diff alert
-```
-
-```diff /pl-12/
-const alertVariants = cva(
-- "relative w-full rounded-lg border",
-+ "relative w-full pl-12 rounded-lg border"
-)
-```
+注册表现在可以把文件放在应用内的任意位置，我们会正确解析导入。不再受限于固定结构，甚至可以把文件加到注册表之外。安装时我们会跟踪所有文件，进行多轮解析，处理导入与别名——非常快。
 
 ---
 
-### Theming with CSS Variables or Tailwind Colors
+## 2025 年 3 月：跨框架路由支持
 
-You can choose between using CSS variables or Tailwind CSS utility classes for theming.
-
-When you add new components, the CLI will automatically use the correct theming methods based on your `components.json` configuration.
-
-#### Utility classes
-
-```tsx /bg-zinc-950/ /text-zinc-50/ /dark:bg-white/ /dark:text-zinc-950/
-<div className="bg-zinc-950 dark:bg-white" />
-```
-
-To use utility classes for theming set `tailwind.cssVariables` to `false` in your `components.json` file.
-
-```json {6} title="components.json" showLineNumbers
-{
-  "tailwind": {
-    "config": "tailwind.config.js",
-    "css": "app/globals.css",
-    "baseColor": "slate",
-    "cssVariables": false
-  }
-}
-```
-
-#### CSS Variables
-
-```tsx /bg-background/ /text-foreground/
-<div className="bg-background text-foreground" />
-```
-
-To use CSS variables classes for theming set `tailwind.cssVariables` to `true` in your `components.json` file.
-
-```json {6} title="components.json" showLineNumbers
-{
-  "tailwind": {
-    "config": "tailwind.config.js",
-    "css": "app/globals.css",
-    "baseColor": "slate",
-    "cssVariables": true
-  }
-}
-```
+shadcn CLI 现在能自动识别你的框架并调整路由，兼容 Laravel、Vite、React Router 等所有框架。
 
 ---
 
-### Base color
+## 2025 年 2 月：Tailwind v4
 
-You can now configure the base color for your project. This will be used to generate the default color palette for your components.
+我们发布了 Tailwind v4 与 React 19 的首个预览版。你可以立即试用。
 
-```json {5} title="components.json" showLineNumbers
-{
-  "tailwind": {
-    "config": "tailwind.config.js",
-    "css": "app/globals.css",
-    "baseColor": "zinc",
-    "cssVariables": false
-  }
-}
-```
+新增内容：
 
-Choose between `gray`, `neutral`, `slate`, `stone` or `zinc`.
+- CLI 可初始化 Tailwind v4 项目。
+- 完整支持新 `@theme` 指令与 `@theme inline` 选项。
+- 所有组件已适配 Tailwind v4 与 React 19。
+- 移除了 forwardRefs，并调整类型。
+- 每个原子组件都有 `data-slot` 属性，方便样式定制。
+- 修复并清理了组件样式。
+- 弃用 `toast` 组件，推荐使用 `sonner`。
+- 按钮改用默认光标。
+- 弃用 `default` 风格，新项目默认使用 `new-york`。
+- HSL 颜色转换为 OKLCH。
 
-If you have `cssVariables` set to `true`, we will set the base colors as CSS variables in your `globals.css` file. If you have `cssVariables` set to `false`, we will inline the Tailwind CSS utility classes in your components.
-
----
-
-### React Server Components
-
-If you're using a framework that does not support React Server Components, you can now opt out by setting `rsc` to `false`. We will automatically append or remove the `use client` directive when adding components.
-
-```json title="components.json" showLineNumbers
-{
-  "rsc": false
-}
-```
+详情见 [相关文档](/docs/tailwind-v4)。
 
 ---
 
-### Styles
+## 2025 年 2 月：注册表 Schema 更新
 
-We are introducing a new concept called _Style_.
+我们正在更新注册表 schema，以支持更多能力。
 
-_You can think of style as the visual foundation: shapes, icons, animations & typography._ A style comes with its own set of components, animations, icons and more.
+通过扁平 JSON 文件定义代码，并借助 CLI 分发：
 
-We are shipping two styles: `default` and `new-york` (with more coming soon).
-
-<Image
-  src="/images/style.jpg"
-  width="716"
-  height="402"
-  alt="Default vs New York style"
-  className="mt-6 overflow-hidden rounded-lg border"
-/>
-
-The `default` style is the one you are used to. It's the one we've been using since the beginning of this project. It uses `lucide-react` for icons and `tailwindcss-animate` for animations.
-
-The `new-york` style is a new style. It ships with smaller buttons, cards with shadows and a new set of icons from [Radix Icons](https://icons.radix-ui.com).
-
-When you run the `init` command, you will be asked which style you would like to use. This is saved in your `components.json` file.
-
-```json title="components.json" showLineNumbers
-{
-  "style": "new-york"
-}
-```
-
-### Theming
-
-Start with a style as the base then theme using CSS variables or Tailwind CSS utility classes to completely change the look of your components.
-
-<Image
-  src="/images/style-with-theming.jpg"
-  width="716"
-  height="402"
-  alt="Style with theming"
-  className="mt-6 overflow-hidden rounded-lg border"
-/>
+- 自定义样式：引入自己的设计系统、组件与设计令牌
+- 扩展、覆盖或混用第三方注册表与 LLM 组件
+- 安装主题、CSS 变量、hooks、动画、Tailwind 图层与工具类
 
 ---
 
-### Exit animations
+## 2025 年 1 月：Blocks
 
-I added exit animations to all components. Click on the combobox below to see the subtle exit animation.
+我们邀请社区为 Blocks 库贡献组件与Blocks，共同打造高质量、可复用的集合，欢迎应用、营销、产品等各类场景。
 
-<ComponentPreview name="combobox-demo" className="[&_.preview]:items-start" />
-
-The animations can be customized using utility classes.
+开始之前请先查看 [Blocks 文档](/docs/blocks)。
 
 ---
 
-### Other updates
+## 2024 年 12 月：Monorepo 支持
 
-### Button
+过去在 monorepo 中使用 shadcn/ui 相当麻烦，虽然可以用 CLI 添加组件，但要自己处理安装位置和导入路径。
 
-- Added a new button size `icon`:
-
-<ComponentPreview name="button-icon" />
-
-### Sheet
-
-- Renamed `position` to `side` to match the other elements.
-
-<ComponentPreview name="sheet-side" />
-
-- Removed the `size` props. Use `className="w-[200px] md:w-[450px]"` for responsive sizing.
+现在 CLI 已经理解 monorepo 结构，会自动把组件、依赖与注册表依赖安装到正确位置并处理导入。详情见 [Monorepo 文档](/docs/monorepo)。
 
 ---
 
-### Updating your project
+## 2024 年 11 月：图标
 
-Since we follow a copy and paste approach, you will need to manually update your project to get the latest changes.
+关于图标的更新：`new-york` 主题现在默认使用 Lucide。
 
-<Callout className="mt-4">
-  Note: we are working on a [`diff`](#diff-experimental) command to help you
-  keep track of upstream updates.
-</Callout>
+- 新项目默认启用 Lucide
+- 现有项目不受影响
+- 可通过 CLI（可选）迁移原子组件到 Lucide
 
-<Steps>
+更多背景见 [相关推文](https://x.com/shadcn/status/1853902179041702169)。
 
-### Add `components.json`
+---
 
-Creating a `components.json` file at the root:
+## 2024 年 10 月：React 19
 
-```json title="components.json" showLineNumbers
-{
-  "style": "default",
-  "rsc": true,
-  "tailwind": {
-    "config": "tailwind.config.js",
-    "css": "app/globals.css",
-    "baseColor": "slate",
-    "cssVariables": true
-  },
-  "aliases": {
-    "components": "@/components",
-    "utils": "@/lib/utils"
-  }
-}
-```
+shadcn/ui 现已兼容 React 19 与 Next.js 15，我们也提供了升级指南，帮助你迁移项目。查看 [React 19 文档](/docs/react-19)。
 
-Update the values for `tailwind.css` and `aliases` to match your project structure.
+---
 
-### Button
+## 2024 年 10 月：Sidebar
 
-Add the `icon` size to the `buttonVariants`:
-
-```tsx {7} title="components/ui/button.tsx" showLineNumbers
-const buttonVariants = cva({
-  variants: {
-    size: {
-      default: "h-10 px-4 py-2",
-      sm: "h-9 rounded-md px-3",
-      lg: "h-11 rounded-md px-8",
-      icon: "h-10 w-10",
-    },
-  },
-})
-```
-
-### Sheet
-
-1. Replace the content of `sheet.tsx` with the following:
-
-```tsx title="components/ui/sheet.tsx" showLineNumbers
-"use client"
-
-import * as React from "react"
-import * as SheetPrimitive from "@radix-ui/react-dialog"
-import { cva, type VariantProps } from "class-variance-authority"
-import { X } from "lucide-react"
-
-import { cn } from "@/lib/utils"
-
-const Sheet = SheetPrimitive.Root
-
-const SheetTrigger = SheetPrimitive.Trigger
-
-const SheetClose = SheetPrimitive.Close
-
-const SheetPortal = ({
-  className,
-  ...props
-}: SheetPrimitive.DialogPortalProps) => (
-  <SheetPrimitive.Portal className={cn(className)} {...props} />
-)
-SheetPortal.displayName = SheetPrimitive.Portal.displayName
-
-const SheetOverlay = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Overlay>,
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
->(({ className, ...props }, ref) => (
-  <SheetPrimitive.Overlay
-    className={cn(
-      "bg-background/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 backdrop-blur-sm",
-      className
-    )}
-    {...props}
-    ref={ref}
-  />
-))
-SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
-
-const sheetVariants = cva(
-  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
-  {
-    variants: {
-      side: {
-        top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
-        bottom:
-          "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
-        left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
-        right:
-          "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm",
-      },
-    },
-    defaultVariants: {
-      side: "right",
-    },
-  }
-)
-
-interface SheetContentProps
-  extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
-    VariantProps<typeof sheetVariants> {}
-
-const SheetContent = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Content>,
-  SheetContentProps
->(({ side = "right", className, children, ...props }, ref) => (
-  <SheetPortal>
-    <SheetOverlay />
-    <SheetPrimitive.Content
-      ref={ref}
-      className={cn(sheetVariants({ side }), className)}
-      {...props}
-    >
-      {children}
-      <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
-        <X className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-      </SheetPrimitive.Close>
-    </SheetPrimitive.Content>
-  </SheetPortal>
-))
-SheetContent.displayName = SheetPrimitive.Content.displayName
-
-const SheetHeader = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn(
-      "flex flex-col space-y-2 text-center sm:text-left",
-      className
-    )}
-    {...props}
-  />
-)
-SheetHeader.displayName = "SheetHeader"
-
-const SheetFooter = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn(
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
-      className
-    )}
-    {...props}
-  />
-)
-SheetFooter.displayName = "SheetFooter"
-
-const SheetTitle = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Title>,
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
->(({ className, ...props }, ref) => (
-  <SheetPrimitive.Title
-    ref={ref}
-    className={cn("text-foreground text-lg font-semibold", className)}
-    {...props}
-  />
-))
-SheetTitle.displayName = SheetPrimitive.Title.displayName
-
-const SheetDescription = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Description>,
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
->(({ className, ...props }, ref) => (
-  <SheetPrimitive.Description
-    ref={ref}
-    className={cn("text-muted-foreground text-sm", className)}
-    {...props}
-  />
-))
-SheetDescription.displayName = SheetPrimitive.Description.displayName
-
-export {
-  Sheet,
-  SheetTrigger,
-  SheetClose,
-  SheetContent,
-  SheetHeader,
-  SheetFooter,
-  SheetTitle,
-  SheetDescription,
-}
-```
-
-2. Rename `position` to `side`
-
-```diff /position/ /side/
-- <Sheet position="right" />
-+ <Sheet side="right" />
-```
-
-</Steps>
-
-### Thank you
-
-I'd like to thank everyone who has been using this project, providing feedback and contributing to it. I really appreciate it. Thank you 🙏
+发布 sidebar.tsx：包含 25 个侧边栏组件的合集。我不喜欢重复造侧边栏，于是干脆做了 30 多个，再把核心精简成 sidebar.tsx，给你一个可靠的起点。更多内容请关注后续更新。

@@ -1,9 +1,9 @@
 ---
 title: Vite
-description: Adding dark mode to your vite app.
+description: 为你的 Vite 应用添加深色模式。
 ---
 
-## Create a theme provider
+## 创建主题提供者
 
 ```tsx title="components/theme-provider.tsx" showLineNumbers
 import { createContext, useContext, useEffect, useState } from "react"
@@ -81,9 +81,9 @@ export const useTheme = () => {
 }
 ```
 
-## Wrap your root layout
+## 包裹根布局
 
-Add the `ThemeProvider` to your root layout.
+在根布局中引入 `ThemeProvider`。
 
 ```tsx {1,5-7} title="App.tsx" showLineNumbers
 import { ThemeProvider } from "@/components/theme-provider"
@@ -99,9 +99,9 @@ function App() {
 export default App
 ```
 
-## Add a mode toggle
+## 添加模式切换
 
-Place a mode toggle on your site to toggle between light and dark mode.
+在站点上放置模式切换器，以便在浅色与深色模式之间切换。
 
 ```tsx title="components/mode-toggle.tsx" showLineNumbers
 import { Moon, Sun } from "lucide-react"

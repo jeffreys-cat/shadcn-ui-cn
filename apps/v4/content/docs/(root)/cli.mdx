@@ -1,19 +1,19 @@
 ---
 title: shadcn
-description: Use the shadcn CLI to add components to your project.
+description: 使用 shadcn CLI 将组件添加到你的项目中。
 ---
 
 ## init
 
-Use the `init` command to initialize configuration and dependencies for a new project.
+使用 `init` 命令为新项目初始化配置与依赖。
 
-The `init` command installs dependencies, adds the `cn` util and configures CSS variables for the project.
+`init` 会安装依赖、添加 `cn` 工具函数，并为项目配置 CSS 变量。
 
 ```bash
 npx shadcn@latest init
 ```
 
-**Options**
+**命令选项**
 
 ```bash
 Usage: shadcn init [options] [components...]
@@ -42,13 +42,13 @@ Options:
 
 ## add
 
-Use the `add` command to add components and dependencies to your project.
+使用 `add` 命令将组件及其依赖添加到项目中。
 
 ```bash
 npx shadcn@latest add [component]
 ```
 
-**Options**
+**命令选项**
 
 ```bash
 Usage: shadcn add [options] [components...]
@@ -76,25 +76,25 @@ Options:
 
 ## view
 
-Use the `view` command to view items from the registry before installing them.
+使用 `view` 命令在安装前预览注册表中的条目。
 
 ```bash
 npx shadcn@latest view [item]
 ```
 
-You can view multiple items at once:
+可以一次查看多个条目：
 
 ```bash
 npx shadcn@latest view button card dialog
 ```
 
-Or view items from namespaced registries:
+也可以查看带命名空间的注册表条目：
 
 ```bash
 npx shadcn@latest view @acme/auth @v0/dashboard
 ```
 
-**Options**
+**命令选项**
 
 ```bash
 Usage: shadcn view [options] <items...>
@@ -113,31 +113,31 @@ Options:
 
 ## search
 
-Use the `search` command to search for items from registries.
+使用 `search` 命令在注册表中搜索条目。
 
 ```bash
 npx shadcn@latest search [registry]
 ```
 
-You can search with a query:
+可以配合查询关键字使用：
 
 ```bash
 npx shadcn@latest search @shadcn -q "button"
 ```
 
-Or search multiple registries at once:
+也可以一次搜索多个注册表：
 
 ```bash
 npx shadcn@latest search @shadcn @v0 @acme
 ```
 
-The `list` command is an alias for `search`:
+`list` 命令是 `search` 的别名：
 
 ```bash
 npx shadcn@latest list @acme
 ```
 
-**Options**
+**命令选项**
 
 ```bash
 Usage: shadcn search|list [options] <registries...>
@@ -160,25 +160,13 @@ Options:
 
 ## list
 
-Use the `list` command to list all items from a registry.
+使用 `list` 命令列出某个注册表中的所有条目。
 
 ```bash
 npx shadcn@latest list @acme
 ```
 
-**Options**
-
-```bash
-Usage: shadcn list [options] <registries...>
-
-list items from registries
-
-Arguments:
-  registries             the registry names or urls to list items from. Names
-    must be prefixed with @.
-```
-
-**Options**
+**命令选项**
 
 ```bash
 Usage: shadcn list [options] <registries...>
@@ -194,15 +182,15 @@ Arguments:
 
 ## build
 
-Use the `build` command to generate the registry JSON files.
+使用 `build` 命令生成注册表 JSON 文件。
 
 ```bash
 npx shadcn@latest build
 ```
 
-This command reads the `registry.json` file and generates the registry JSON files in the `public/r` directory.
+该命令会读取 `registry.json`，并在 `public/r` 目录下生成对应的注册表 JSON 文件。
 
-**Options**
+**命令选项**
 
 ```bash
 Usage: shadcn build [options] [registry]
@@ -218,7 +206,7 @@ Options:
   -h, --help           display help for command
 ```
 
-To customize the output directory, use the `--output` option.
+可以通过 `--output` 参数自定义输出目录：
 
 ```bash
 npx shadcn@latest build --output ./public/registry

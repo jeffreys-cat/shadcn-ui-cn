@@ -1,13 +1,13 @@
 ---
 title: JavaScript
-description: How to use shadcn/ui with JavaScript
+description: 如何在 JavaScript 项目中使用 shadcn/ui
 ---
 
-This project and the components are written in TypeScript. We recommend using TypeScript for your project as well.
+当前项目及其组件均使用 TypeScript 编写，我们同样推荐你在项目中使用 TypeScript。
 
-However we provide a JavaScript version of the components as well. The JavaScript version is available via the [cli](/docs/cli).
+不过，我们也通过 [CLI](/docs/cli) 提供了 JavaScript 版本的组件。
 
-To opt-out of TypeScript, you can use the `tsx` flag in your `components.json` file.
+如果想停用 TypeScript，可以在 `components.json` 中将 `tsx` 标记设为 `false`：
 
 ```json {4} title="components.json" showLineNumbers
 {
@@ -31,7 +31,7 @@ To opt-out of TypeScript, you can use the `tsx` flag in your `components.json` f
 }
 ```
 
-To configure import aliases, you can use the following `jsconfig.json`:
+想要配置导入别名，可以使用如下 `jsconfig.json`：
 
 ```json {4} title="jsconfig.json" showLineNumbers
 {

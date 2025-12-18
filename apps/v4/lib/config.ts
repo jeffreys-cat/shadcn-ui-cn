@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: "shadcn/ui",
-  url: "https://ui.shadcn.com",
-  ogImage: "https://ui.shadcn.com/og.jpg",
+  name: "shadcn/ui 中文站",
+  url: "https://www.shadcn.com.cn",
+  ogImage: "https://www.shadcn.com.cn/og.jpg",
   description:
     "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code.",
   links: {
@@ -32,6 +32,10 @@ export const siteConfig = {
     {
       href: "/create",
       label: "Create",
+    },
+    {
+      href: "https://www.shadcn.com.cn/dashboard",
+      label: "Dashboard",
     },
   ],
 }

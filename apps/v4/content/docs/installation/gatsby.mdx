@@ -1,27 +1,25 @@
 ---
 title: Gatsby
-description: Install and configure Gatsby.
+description: 安装并配置 Gatsby 集成。
 ---
 
 <Callout className="mb-6 border-blue-600 bg-blue-50 dark:border-blue-900 dark:bg-blue-950 [&_code]:bg-blue-100 dark:[&_code]:bg-blue-900">
-  **Update:** We have added full support for React 19 and Tailwind v4 in the
-  `canary` release. See the docs for [Tailwind v4](/docs/tailwind-v4) for more
-  information.
+  **更新：** `canary` 版本已经完整支持 React 19 与 Tailwind v4。详情请参阅 [Tailwind v4](/docs/tailwind-v4) 文档。
 </Callout>
 
 <Steps>
 
-### Create project
+### 创建项目
 
-Start by creating a new Gatsby project using `create-gatsby`:
+先使用 `create-gatsby` 创建一个新的 Gatsby 项目：
 
 ```bash
 npm init gatsby
 ```
 
-### Configure your Gatsby project to use TypeScript and Tailwind CSS
+### 配置 TypeScript 与 Tailwind CSS
 
-You will be asked a few questions to configure your project:
+按照提示回答问题完成项目配置：
 
 ```txt showLineNumbers
 ✔ What would you like to call your site?
@@ -39,9 +37,9 @@ You will be asked a few questions to configure your project:
 ✔ Shall we do this? (Y/n) · Yes
 ```
 
-### Edit tsconfig.json file
+### 编辑 tsconfig.json
 
-Add the following code to the `tsconfig.json` file to resolve paths:
+在 `tsconfig.json` 中加入以下配置以解析路径别名：
 
 ```ts {4-9} showLineNumbers
 {
@@ -58,9 +56,9 @@ Add the following code to the `tsconfig.json` file to resolve paths:
 }
 ```
 
-### Create gatsby-node.ts file
+### 新建 gatsby-node.ts
 
-Create a `gatsby-node.ts` file at the root of your project if it doesn’t already exist, and add the code below to the `gatsby-node` file so your app can resolve paths:
+如果项目根目录尚未存在 `gatsby-node.ts`，请创建该文件，并加入以下代码以启用路径别名：
 
 ```ts
 import * as path from "path"
@@ -77,17 +75,17 @@ export const onCreateWebpackConfig = ({ actions }) => {
 }
 ```
 
-### Run the CLI
+### 运行 CLI
 
-Run the `shadcn` init command to setup your project:
+执行 `shadcn` 的 `init` 命令完成初始化：
 
 ```bash
 npx shadcn@latest init
 ```
 
-### Configure components.json
+### 配置 components.json
 
-You will be asked a few questions to configure `components.json`:
+根据提示回答以下问题以生成 `components.json`：
 
 ```txt showLineNumbers
 Would you like to use TypeScript (recommended)? no / yes
@@ -101,15 +99,15 @@ Configure the import alias for utils: › @/lib/utils
 Are you using React Server Components? › no
 ```
 
-### That's it
+### 完成
 
-You can now start adding components to your project.
+现在可以向项目中添加组件。
 
 ```bash
 npx shadcn@latest add button
 ```
 
-The command above will add the `Button` component to your project. You can then import it like this:
+上述命令会加入 `Button` 组件，你可以按如下方式导入：
 
 ```tsx {1,6} showLineNumbers
 import { Button } from "@/components/ui/button"

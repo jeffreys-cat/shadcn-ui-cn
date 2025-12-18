@@ -206,7 +206,7 @@ export default async function Page(props: {
           </div>
         ) : null}
         <div className="flex flex-1 flex-col gap-12 px-6">
-          <OpenInV0Cta />
+          {/* <OpenInV0Cta /> */}
         </div>
       </div>
     </div>
