@@ -200,8 +200,8 @@ export function CommandMenu({
           onClick={() => setOpen(true)}
           {...props}
         >
-          <span className="hidden lg:inline-flex">Search documentation...</span>
-          <span className="inline-flex lg:hidden">Search...</span>
+          <span className="hidden lg:inline-flex">搜索文档...</span>
+          <span className="inline-flex lg:hidden">搜索...</span>
           <div className="absolute top-1.5 right-1.5 hidden gap-1 group-has-[[data-slot=designer]]/body:hidden sm:flex">
             <Kbd>⌘K</Kbd>
           </div>
@@ -212,8 +212,8 @@ export function CommandMenu({
         className="rounded-xl border-none bg-clip-padding p-2 pb-11 shadow-2xl ring-4 ring-neutral-200/80 dark:bg-neutral-900 dark:ring-neutral-800"
       >
         <DialogHeader className="sr-only">
-          <DialogTitle>Search documentation...</DialogTitle>
-          <DialogDescription>Search for a command to run...</DialogDescription>
+          <DialogTitle>搜索文档...</DialogTitle>
+          <DialogDescription>搜索要执行的命令...</DialogDescription>
         </DialogHeader>
         <Command
           className="**:data-[slot=command-input-wrapper]:bg-input/50 **:data-[slot=command-input-wrapper]:border-input rounded-none bg-transparent **:data-[slot=command-input]:!h-9 **:data-[slot=command-input]:py-0 **:data-[slot=command-input-wrapper]:mb-0 **:data-[slot=command-input-wrapper]:!h-9 **:data-[slot=command-input-wrapper]:rounded-md **:data-[slot=command-input-wrapper]:border"
@@ -227,7 +227,7 @@ export function CommandMenu({
           }}
         >
           <div className="relative">
-            <CommandInput placeholder="Search documentation..." />
+            <CommandInput placeholder="搜索文档..." />
             {query.isLoading && (
               <div className="pointer-events-none absolute top-1/2 right-3 z-10 flex -translate-y-1/2 items-center justify-center">
                 <Spinner className="text-muted-foreground size-4" />
@@ -236,11 +236,11 @@ export function CommandMenu({
           </div>
           <CommandList className="no-scrollbar min-h-80 scroll-pt-2 scroll-pb-1.5">
             <CommandEmpty className="text-muted-foreground py-12 text-center text-sm">
-              {query.isLoading ? "Searching..." : "No results found."}
+              {query.isLoading ? "正在搜索..." : "未找到结果。"}
             </CommandEmpty>
             {navItems && navItems.length > 0 && (
               <CommandGroup
-                heading="Pages"
+                heading="页面"
                 className="!p-0 [&_[cmdk-group-heading]]:scroll-mt-16 [&_[cmdk-group-heading]]:!p-3 [&_[cmdk-group-heading]]:!pb-1"
               >
                 {navItems.map((item) => (
@@ -344,7 +344,7 @@ export function CommandMenu({
             ))}
             {blocks?.length ? (
               <CommandGroup
-                heading="Blocks"
+                heading="区块"
                 className="!p-0 [&_[cmdk-group-heading]]:!p-3"
               >
                 {blocks.map((block) => (
@@ -391,9 +391,9 @@ export function CommandMenu({
               <CornerDownLeftIcon />
             </CommandMenuKbd>{" "}
             {selectedType === "page" || selectedType === "component"
-              ? "Go to Page"
+              ? "前往页面"
               : null}
-            {selectedType === "color" ? "Copy OKLCH" : null}
+            {selectedType === "color" ? "复制 OKLCH" : null}
           </div>
           {copyPayload && (
             <>
@@ -501,7 +501,7 @@ function SearchResults({
   return (
     <CommandGroup
       className="!px-0 [&_[cmdk-group-heading]]:scroll-mt-16 [&_[cmdk-group-heading]]:!p-3 [&_[cmdk-group-heading]]:!pb-1"
-      heading="Search Results"
+      heading="搜索结果"
     >
       {uniqueResults.map((item) => {
         return (

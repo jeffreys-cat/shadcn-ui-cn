@@ -13,9 +13,9 @@ import { PageNav } from "@/components/page-nav"
 import { ThemeSelector } from "@/components/theme-selector"
 import { Button } from "@/registry/new-york-v4/ui/button"
 
-const title = "Beautiful Charts & Graphs"
+const title = "精美图表与图形"
 const description =
-  "A collection of ready-to-use chart components built with Recharts. From basic charts to rich data displays, copy and paste into your apps."
+  "一组基于 Recharts 的即用图表组件。从基础图表到丰富的数据展示，复制粘贴即可用于你的应用。"
 
 export const metadata: Metadata = {
   title,
@@ -54,10 +54,10 @@ export default function ChartsLayout({
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm">
-            <a href="#charts">Browse Charts</a>
+            <a href="#charts">浏览图表</a>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link href="/docs/components/chart">Documentation</Link>
+            <Link href="/docs/components/chart">文档</Link>
           </Button>
         </PageActions>
       </PageHeader>

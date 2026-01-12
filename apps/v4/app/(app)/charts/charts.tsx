@@ -200,7 +200,7 @@ export const charts: ChartGroups = {
   ],
 }
 
-// Export individual components for backward compatibility
+// 导出单个组件以保持向后兼容性
 export {
   ChartAreaDefault,
   ChartAreaLinear,

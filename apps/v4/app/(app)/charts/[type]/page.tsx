@@ -26,6 +26,15 @@ const chartTypes = [
   "tooltip",
 ] as const
 type ChartType = (typeof chartTypes)[number]
+const chartTypeLabels: Record<ChartType, string> = {
+  area: "面积图表",
+  bar: "柱状图表",
+  line: "折线图表",
+  pie: "饼图表",
+  radar: "雷达图表",
+  radial: "径向图表",
+  tooltip: "提示框",
+}
 
 export async function generateStaticParams() {
   return chartTypes.map((type) => ({
@@ -46,9 +55,7 @@ export default async function ChartPage({ params }: ChartPageProps) {
 
   return (
     <div className="grid flex-1 gap-12 lg:gap-24">
-      <h2 className="sr-only">
-        {type.charAt(0).toUpperCase() + type.slice(1)} Charts
-      </h2>
+      <h2 className="sr-only">{chartTypeLabels[chartType]}</h2>
       <div className="grid flex-1 scroll-mt-20 items-stretch gap-10 md:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-10">
         {Array.from({ length: 12 }).map((_, index) => {
           const chart = chartList[index]
