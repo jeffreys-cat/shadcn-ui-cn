@@ -12,6 +12,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/registry/bases/radix/ui/sonner"
 
 import "@/styles/globals.css"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   title: {
@@ -81,11 +82,13 @@ export default function RootLayout({
             `,
           }}
         />
-        <script
+        <Script
+          id="adsbygoogle"
           async
+          strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1978660857070046"
           crossOrigin="anonymous"
-        ></script>
+        />
         <meta name="theme-color" content={META_THEME_COLORS.light} />
       </head>
       <body
