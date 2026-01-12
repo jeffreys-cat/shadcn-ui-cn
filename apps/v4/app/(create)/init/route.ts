@@ -47,7 +47,6 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     return NextResponse.json(
       {
-        error:
           error: error instanceof Error ? error.message : "发生未知错误",
       },
       { status: 500 }
